@@ -21,7 +21,7 @@ title: Welcome to Oste's Realm of Knowledge
 
 <img align="right" alt="GIF" src="/assets/img/Posts/resources/code.gif" width="375" height="240" />
 
-Hello World ! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40px">
+Hello World !
 
 <!-- ![GIF](/assets/img/Posts/resources/code.gif) -->
 

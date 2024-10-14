@@ -161,7 +161,7 @@ Looking at it's WHOIS Records, we realise its origin is still in Turkey.
 
 ![image](https://user-images.githubusercontent.com/58165365/280511794-af53c3a9-912f-4ba9-bbc6-b4bbd72d4ff3.png)
 
-Doing a quick lookup on [VT]() i realised the IP is also linked to other uploaded `.eml` & `.msg` files.🚩🚩🚩
+Doing a quick lookup on VT i realised the IP is also linked to other uploaded `.eml` & `.msg` files.🚩🚩🚩
 
 ![image](https://user-images.githubusercontent.com/58165365/280511924-58db278c-6163-4da8-b485-68cf2001a7d7.png)
 
@@ -244,7 +244,7 @@ You can read more about it or track it [here](https://any.run/malware-trends/age
 
 **Linking the analysis above with the network traffic around that period, can identify what really transpired?**
 
-File can be downloaded [here]()
+File can be downloaded here
 
 - How long did it take to capture these packets? (25pts)
 
