@@ -3,7 +3,7 @@
 title: "Network Analysis – Ransomware"
 date: 2021-12-29 01:09:33 +0300
 author: oste
-image: (https://user-images.githubusercontent.com/58165365/147261135-0b76fd00-2269-41ea-ab16-f0c6b9273720.png)
+image: /assets/img/Posts/networkanalysisransomware.png
 categories: [BTLO, Security Operations]
 tags: [dridex, wireshark, malware, ransomware]
 ---

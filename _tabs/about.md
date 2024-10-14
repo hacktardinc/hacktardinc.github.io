@@ -1,31 +1,16 @@
 ---
 # the default layout is 'page'
+title: Welcome to Oste's Realm of Knowledge
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
 
-
-<!-- ---
-title: Welcome to Oste's Realm of Knowledge
-# The About page
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT License
---- -->
-
-
-
-<img align="right" alt="GIF" src="/assets/img/Posts/resources/code.gif" width="375" height="240" />
-
-Hello World !
-
-<!-- ![GIF](/assets/img/Posts/resources/code.gif) -->
 
 Hi there and welcome to my realm of knowledge. I'm Oste, a Security Analyst. I like to share the little I know with the community through my blog post where I delve into the intricacies of:
+
+![Desktop View](/assets/img/Posts/resources/code.gif){: .right }{: w="375" h="190" }
+
   - CTFs.
   - Hacking Vulnerable Machines.
   - Investigating & Analyzing incidences/malware.

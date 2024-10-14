@@ -28,7 +28,7 @@ For more functions, check out:
 
 HarmJ0y also has a good article on using some of PowerView’s interesting functionality.
 
-[Blog](http://www.harmj0y.net/blog/powershell/veil-powerview-a-usage-guide/)
+[Blog](https://www.harmj0y.net/blog/powershell/veil-powerview-a-usage-guide/)
 
 # 📝Personal Notes 📝
 
