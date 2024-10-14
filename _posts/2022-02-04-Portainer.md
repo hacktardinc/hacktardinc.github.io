@@ -167,6 +167,6 @@ You can do lots of stuff with portainer that i cannot exhaust on one blog😅. C
 
 Reason why i decided to start with portainer as my first project is because as we progress, we will deploy lots of containers. You will definately want a good way to monitor what containers are running, resource usage etc. This is where portainer comes in handy. Well...someone will ask, why not use the CLI? 🤷🏼‍♂️ I'd say it all boils down to your personal preference. If you are comfortable working around the CLI 👍🏼
 
-So what next? 🤔. On my next blog, i will show you how we can setup a dashboard that will contain links to the various apps we will deploy. I mean, who wants to remember the port of each and every app we'll deploy 🤷🏼‍♂️ This is where a dashboard comes in handy. In this case, i will be using [Homer](), super easy to use and modify.
+So what next? 🤔. On my next blog, i will show you how we can setup a dashboard that will contain links to the various apps we will deploy. I mean, who wants to remember the port of each and every app we'll deploy 🤷🏼‍♂️ This is where a dashboard comes in handy. In this case, i will be using Homer, super easy to use and modify.
 
 This brings me to the end of my blog, thanks for coming this far. Feel free to share i you found it useful. You can also buzz me on twitter if you have any questions or recommendations. Stay safe ✌🏼
