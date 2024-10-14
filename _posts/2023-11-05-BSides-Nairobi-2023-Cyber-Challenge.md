@@ -220,7 +220,7 @@ Dissecting the process ,we get the malware configuration:
 }
 ```
 
-> _A malware configuration refers to the set of instructions or parameters that dictate how the malware operates. These configurations can determine various aspects of the malware's behavior, including its communication methods, target information, exfiltration pathways, and more. The configuration is often stored in a structured format, such as JSON, XML, or a custom data structure, depending on the malware's design_
+> _ A malware configuration refers to the set of instructions or parameters that dictate how the malware operates. These configurations can determine various aspects of the malware's behavior, including its communication methods, target information, exfiltration pathways, and more. The configuration is often stored in a structured format, such as JSON, XML, or a custom data structure, depending on the malware's design_
 
 I also observed that the document could be linked to `CVE-2017-11882`
 
