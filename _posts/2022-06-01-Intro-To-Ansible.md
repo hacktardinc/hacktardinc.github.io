@@ -69,7 +69,7 @@ ansible 2.9.6
 ubuntu@oste:~$
 ```
 
-Please note that Ansible cannot run on a Windows host natively, though it can run under the Windows Subsystem for Linux (WSL). You can read more about this on [Matt Davis’s blog post](http://blog.rolpdog.com/2020/03/why-no-ansible-controller-for-windows.html).
+Please note that Ansible cannot run on a Windows host natively, though it can run under the Windows Subsystem for Linux (WSL). You can read more about this on [Matt Davis’s blog post](https://blog.rolpdog.com/2020/03/why-no-ansible-controller-for-windows.html).
 
 # Terminologies
 

@@ -343,7 +343,7 @@ Last night, the Knight Squad members were having relax and enjoying doughnuts an
 
 _During my holiday in Bahamas, I met a baby shark. The shark wanted to sing me something but couldn't. Can you sing that for me?_
 
-I'm gonna be honest with you...I have always thought Rev category was so difficult to solve but hey, i gave it a shot and got lucky with this one. I simply did a quick google search on how to reverse engineer a `.jar` file and i found a tool called [JD_GUI](http://java-decompiler.github.io/) that could do the trick.
+I'm gonna be honest with you...I have always thought Rev category was so difficult to solve but hey, i gave it a shot and got lucky with this one. I simply did a quick google search on how to reverse engineer a `.jar` file and i found a tool called [JD_GUI](https://java-decompiler.github.io/) that could do the trick.
 
 So, did a quick installation and launched it. Looking at the different classes, `Flag.class` sounded promising but contained a fake flag.
 

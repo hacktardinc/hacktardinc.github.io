@@ -282,7 +282,7 @@ You can download a copy of the tool [here](https://github.com/volatilityfoundati
 
 Other tools you can explore on memory forensics include:
 
-- [Rekall Framework](http://www.rekall-forensic.com/)
+- [Rekall Framework](https://www.rekall-forensic.com/)
 - [Redline](https://fireeye.market/apps/211364)
 
 Lets first begin by finding some information on the memory dump. We can do so by using the `imageinfo` plugin.

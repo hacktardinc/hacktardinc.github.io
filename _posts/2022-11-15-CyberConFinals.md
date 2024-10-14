@@ -29,7 +29,7 @@ Moving on, we can use a tool like [volatility](https://github.com/volatilityfoun
 
 Other tools you can explore on memory forensics include:
 
-- [Rekall Framework](http://www.rekall-forensic.com/)
+- [Rekall Framework](https://www.rekall-forensic.com/)
 - [Redline](https://fireeye.market/apps/211364)
 
 First, you need to find more information about the dump you are analying such as the image profile to use. To do so, you can use the `imageinfo` plugin or `kdbgscan`.
@@ -295,7 +295,7 @@ From CCC's report, i learnt that the backdoor was dubbed "R2D2" due to the "C3PO
 
 That wraps up my analysis of the R2D2 backdoor, atleast for the context of the CTF. Upon completion of my analysis, I stumbled upon several blog posts documenting analysis of the same sample. Please check them out!
 
-- [Invoke-IR - R2D2 Memory Sample Analysis ](http://www.invoke-ir.com/2013/08/r2d2-memory-sample-analysis.html)
+- [Invoke-IR - R2D2 Memory Sample Analysis ](https://www.invoke-ir.com/2013/08/r2d2-memory-sample-analysis.html)
 - [ka1d0 - Analyzing Memory Dumps — R2D2 Malware](https://nikhilh20.medium.com/analyzing-memory-dumps-r2d2-malware-7e44d7320fae)
 - [Skills that matter - Hunting R2D2 Malware](https://digitalitskills.com/volatility-forensic-analysis-r2d2-malware/)
 - [evild3ad - Federal Trojan aka R2D2](https://evild3ad.com/1136/volatility-memory-forensics-federal-trojan-aka-r2d2/)

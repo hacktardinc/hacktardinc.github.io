@@ -3,7 +3,7 @@
 title: "Shibboleth"
 date: 2022-04-23 01:09:33 +0300
 author: oste
-image: /assets/img/Posts/shibboleth.png
+# image: /assets/img/Posts/shibboleth.png
 categories: [HTB, HTB-Medium]
 tags: [metasploit, ThinVNC, CVE-2019-17662, THINVNC 1.0B1 PATH TRAVERSAL]
 ---

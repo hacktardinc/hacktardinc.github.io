@@ -28,7 +28,7 @@ Then click the `Network` tab and click the green icon with the `+` sign. You nee
 
 # Creating Virtual Machines
 
-This segment is for people who might be new to creating Windows Virtual Machines. If you already know how to do this, you can skip to []()
+This segment is for people who might be new to creating Windows Virtual Machines. If you already know how to do this, you can skip to
 
 Click on `New` icon
 
@@ -674,7 +674,7 @@ PresetPathAcl         : System.Security.AccessControl.DirectorySecurity
 # Resources
 
 - [VirtualBox](https://www.virtualbox.org/wiki/Downloads) / [Vmware](https://www.vmware.com/products/workstation-player.html)
-- [VirtualBox Guest Additions]()
+- VirtualBox Guest Additions
 - [Windows Server 2019](https://www.microsoft.com/en-US/evalcenter/evaluate-windows-server-2019?filetype=ISO)
 - [Windows 10](https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise)
 - [dievus/ADGenerator](https://github.com/dievus/ADGenerator)
