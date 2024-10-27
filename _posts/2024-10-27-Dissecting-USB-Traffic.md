@@ -940,5 +940,5 @@ Easy, right? 😅
 - [USB in a NutShell - # Endpoint Types](https://www.beyondlogic.org/usbnutshell/usb4.shtml#Interrupt) by [beyond logic](https://www.beyondlogic.org/)
 - [Universal Serial Bus HID Usage Tables](https://usb.org/sites/default/files/documents/hut1_12v2.pdf) (Page 53)
 - [Display Filter Reference: USB](https://www.wireshark.org/docs/dfref/u/usb.html) by [wireshark](https://wiki.wireshark.org/)
-- [List of USB ID's](http://www.linux-usb.org/usb.ids) by [Linux USB Project](http://www.linux-usb.org/)
+- [List of USB ID's](https://www.linux-usb.org/usb.ids) by [Linux USB Project](https://www.linux-usb.org/)
 
