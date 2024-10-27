@@ -5,23 +5,40 @@ date: 2024-10-27 01:09:33 +0300
 author: [oste, m4lw0r3, d3xt3r]
 description: This blog post explores USB packet capture (Pcap) traffic analysis, focusing on what occurs when a keyboard is plugged in. It covers packet dissection, traffic filtering, and decoding of keyboard keystrokes.
 image: /assets/img/Posts/usbpcap.png
-categories: [DFIR, CTF-TIME]
+categories: [DFIR]
 tags:
   [usb, pcap, wireshark, hid data, keycodes, urb]
 ---
+
+
+Dear reader, welcome back to this blog post where we dissect USB PCAP traffic. Ever wondered what happens under the hood when you plug your keyboard in your laptop? Or how keyboard keystrokes are translated by the computer? Have you found yourself playing a CTF and you've been given USB related traffic to retrieve a flag and you're like:
+
+
+
+![ohgodno](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm41Zjh4MzZ0czR5YjJ3NGJ4NmYwbjBwNDU0ZjY1MHlxbHJnZDh6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8vUEXZA2me7vnuUvrs/giphy.webp){: .left }
+
+![iunderstandnothing](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzlkZ2Vwa2tkNXA3dGNud2Z1YjhmcTQ0dGk4dHRhM2I1Z3pwMjR6cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SAAMcPRfQpgyI/giphy.webp){: .normal }
+
+
+
+Well, me and my friends ( [m4lw0r3](https://x.com/m4lw0r3) & [d3xt3r](https://x.com/alvin_kidwiz) ) embarked on a 2 week research on the same and thought we'd share our learnings with the rest of the world. Hopefully you will learn a thing or two 😎. 
+
+
+> I highly encourage you to first read and understand the theory explained first before diving into the PRACTICAL section. This way, you will understand better what is included in the screenshots attached.
+{: .prompt-tip }
+
+I highly encourage you to first read and understand the theory explained first before diving into the PRACTICAL section. This way, you will understand better what is included in the screenshots attached.
+
+With that said, lets get started.
 
 
 ## What is USBPcap?
 
 USBPcap is a Windows-based tool that allows you to capture USB traffic (data exchanged between USB devices and your computer). Wireshark can analyze this captured traffic, helping you to understand what data is being transferred over USB. 
 
-## Understanding USB Protocol Layers
+> Please note that in this study, we will be using Windows
+{: .prompt-info }
 
-USB is a layered protocol, and the captured data reflects those layers. The key layers include:
-
-- **Physical Layer**: Represents the actual USB connection and signaling.
-- **Protocol Layer**: Consists of the USB requests and responses.
-- **Application Layer**: This is the data payload, often tied to the specific function of the USB device (e.g., storage data for USB drives or HID commands for keyboards).
 
 ## URB (USB Request Block)
 
@@ -52,6 +69,8 @@ Key fields to pay attention to:
 
 ### Deep Dive
 
+![ohgodno](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW90ejloNHdrM280YjRtNWNrZTlndjZpdWw5dWg4cDM2cG5jNnI5bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WsNbxuFkLi3IuGI9NU/giphy.webp){: .normal }
+
 ----
 #### 1. Control Transfer
 
@@ -59,8 +78,8 @@ Control transfers are primarily used to send commands or configuration data to t
 
 ##### Characteristics:
 
-- **Direction**: Control transfers can be bi-directional, meaning they can both send and receive data.
-- **Data Size**: Control transfers are limited to small amounts of data, typically used for configuration or setup purposes.
+- **Direction**: Can be bi-directional, meaning they can both send and receive data.
+- **Data Size**: They are limited to small amounts of data, typically used for configuration or setup purposes.
 - **Guaranteed Delivery**: Control transfers ensure that data is successfully delivered. If there’s an error, the transfer is retried.
 
 ##### Control Transfer Stages:
@@ -75,7 +94,7 @@ A control transfer typically consists of three stages:
     - This stage could either be IN (device to host) or OUT (host to device).
 3. **Status Stage**: This stage signals the end of the transfer, indicating whether it was successful or there was an error. The host acknowledges that the control transfer is complete.
 
-##### Common Usage:
+##### Use cases:
 
 - **Device Enumeration**: When a USB device is plugged in, control transfers are used to read the device’s descriptors (such as the Vendor ID and Product ID).
 - **Configuration**: Control transfers are used to configure the device, such as setting the device’s operational parameters.
@@ -93,7 +112,7 @@ Interrupt transfers are designed for short, low-latency communications, often fo
 - **Polling Interval**: The host polls the device at regular intervals to check if any new data is available. The polling interval is specified by the device.
 - **Small Data Size**: Interrupt transfers typically transfer small packets of data (e.g., a few bytes).
 
-##### Common Usage:
+##### Use cases:
 
 - **Keyboards and Mice**: For example, when you press a key on a USB keyboard, an interrupt transfer sends a packet from the keyboard to the host containing the key press event.
 - **Game Controllers**: Similar to a keyboard, game controllers use interrupt transfers to report button presses or joystick movements.
@@ -110,7 +129,7 @@ Bulk transfers are designed for larger amounts of data that don’t need to be t
 - **No Guaranteed Timing**: Unlike interrupt and isochronous transfers, there’s no guarantee when bulk transfers will be completed. However, they are guaranteed to be delivered eventually. If the bus is busy, bulk transfers may be delayed.
 - **Error Handling**: Bulk transfers have built-in error detection and correction mechanisms. If an error occurs, the transfer is retried.
 
-##### Common Usage:
+##### Use cases:
 
 - **USB Flash Drives (Mass Storage Devices)**: When you copy files to or from a USB flash drive, bulk transfers are used to move the data. The drive reads or writes the data in large chunks, but the timing of these transfers is not critical.
 - **Printers**: Bulk transfers are also used to send large documents to a printer.
@@ -127,7 +146,7 @@ Isochronous transfers are designed for time-sensitive data, where maintaining a 
 - **No Error Retries**: Unlike the other transfer types, isochronous transfers do not include error correction. This is because real-time applications often prioritize timely delivery over perfect data integrity. For instance, in a video or audio stream, a small glitch is less noticeable than a significant delay.
 - **Time-Sensitive**: Isochronous transfers are used when maintaining a consistent flow of data is crucial. The host guarantees that the data will be transferred within a certain time frame.
 
-##### Common Usage:
+##### Use cases:
 
 - **Audio Devices**: USB microphones or audio interfaces often use isochronous transfers to ensure that audio is streamed in real-time without any delay.
 - **Webcams**: When streaming live video from a USB webcam, isochronous transfers are used to maintain smooth video playback.
@@ -136,7 +155,12 @@ Isochronous transfers are designed for time-sensitive data, where maintaining a 
 
 ## PRACTICAL
 
-In this section, we are going to look at what happens when you first plug in a keyboard for the first time:
+In this section, we are going to look at what happens when you first plug in a keyboard for the first time. Also, to better understand the USB Transfer types discussed above, we will focus of *Control Transfer* as well as *Interrupt Transfers*
+
+> I highly encourage you to try this excerice yourself after reading this section. Information about how to capture & analyze traffic can be found in later sections of this blog post.
+{: .prompt-tip }
+
+For now we will analyze traffic that has already been captured.
 
 ### 1st packet Frame
 
@@ -202,12 +226,24 @@ This section provides crucial information about the USB device. Let's go through
 1. **bLength**: `18` - *This indicates that the descriptor length is 18 bytes*
 2. **bDescriptorType**: `0x01` - *This confirms that the descriptor type is "DEVICE"*
 3. **bcdUSB**: `0x0110` - *This indicates the USB version supported by the device, which is **USB Version**: **1.1***
+
+Other **bcdUSB** Examples
+
+| bcdUSB Value | USB Version | Max Speed       | Release Year | Common Use Cases                                         |
+| ------------ | ----------- | --------------- | ------------ | -------------------------------------------------------- |
+| 0x0110       | USB 1.1     | 12 Mbps (Full)  | 1998         | Keyboards, mice, older devices                           |
+| 0x0200       | USB 2.0     | 480 Mbps (High) | 2000         | Flash drives, printers, most common devices              |
+| 0x0300       | USB 3.0     | 5 Gbps (Super)  | 2008         | External hard drives, SSDs, cameras, fast peripherals    |
+| 0x0310       | USB 3.1     | 10 Gbps         | 2013         | Modern external storage, USB-C, high-performance devices |
+| 0x0320       | USB 3.2     | 20 Gbps         | 2017         | Ultra-high-performance devices, external SSDs, graphics  |
+| 0x0400       | USB 4.0     | 40 Gbps         | 2019         | External GPUs, high-speed storage, Thunderbolt           |
+
 4. **bDeviceClass**: `0x00` - *Device class is unspecified at the device level. This means that class information will be provided in the interface descriptor*
 5. **bDeviceSubClass**: `0x00` - *The device does not specify a subclass at the device level*
 6. **bDeviceProtocol**: `0x00` - *The device does not specify a protocol at the device level*
 7. **bMaxPacketSize0**: `64` - *This indicates the maximum packet size for endpoint 0, which is used for control transfers. A size of 64 bytes is typical for high-speed devices*
 8. **idVendor**: `0x0f04` - *identifies the device’s manufacturer. Based on this Vendor ID, the manufacturer could be identified (in this case, it appears to be a generic or less common vendor, as it is unknown from the provided information).*
-9. **idProduct**: `0x2f05` - *This is the **Product ID**. It identifies the specific product model made by the vendor. Similar to the Vendor ID, this Product ID is unknown, possibly indicating a lesser-known device or a custom product.*
+9.  **idProduct**: `0x2f05` - *This is the **Product ID**. It identifies the specific product model made by the vendor. Similar to the Vendor ID, this Product ID is unknown, possibly indicating a lesser-known device or a custom product.*
 10. **bcdDevice**: `0x0110` - *This is the device's release number in binary-coded decimal. The device version is **1.10**, likely representing its hardware or firmware version.*
 11. **iManufacturer**: `0x01` - *This index refers to the **Manufacturer String Descriptor**, which the host can retrieve to get the name of the manufacturer. The value `1` points to the specific string descriptor that contains this information.*
 12. **iProduct**: `0x02` - *This index refers to the **Product String Descriptor**, which the host can request to retrieve the product’s name. The value `2` points to the descriptor that contains the product name.*
@@ -538,6 +574,12 @@ From **Frame 45**, we see an **interrupt transfer** from a USB HID device to the
 
 ## Filtering data
 
+![tldr](https://y.yarn.co/bd8cc9c5-f4cc-4951-a4db-5a925b50c7f1_text.gif){: .normal }
+
+Having learnt the theory part, its time for doing stuff practically.
+
+![letsgo](https://media1.tenor.com/m/AGOS7ooBUxwAAAAC/yes.gif){: .normal }
+
 For this test, I'm going to type: `flag : {W3ll_d0n3_s33_Y0u_m@d3_1t}` on a blank notepad.
 
 - Open Wireshark and locate the `USBPcap` interface and double click on it.
@@ -761,7 +803,7 @@ Considering manually decoding 89 keystrokes is a tedious process, I thought of w
 - [TeamRocketIST CTF Team - *# Hackit 2017 - USB ducker*](https://teamrocketist.github.io/2017/08/29/Forensics-Hackit-2017-USB-ducker/) by the Portuguese Computer Science Students
 - [# kaizen-ctf 2018 — Reverse Engineer usb keystrok from pcap file](https://abawazeeer.medium.com/kaizen-ctf-2018-reverse-engineer-usb-keystrok-from-pcap-file-2412351679f4) by [AliBawazeEer](https://abawazeeer.medium.com/?source=post_page-----2412351679f4--------------------------------)
 
-So I decided to slightly advance/modify the script a little with the help of my buddies: Dexter & [Malwore](https://x.com/m4lw0r3).
+So I decided to slightly advance/modify the script a little with the help of my buddies.
 
 
 ```python
@@ -915,7 +957,11 @@ print(output)
 {: .nolineno }
 
 
-When you execute the script, you get the keystrokes:
+> The script might not be 100% accurate as we have noticed an issue with repeated characters (*Line 131-135*). Its probably an issue with some keycode bindings but we're looking into it.  If you have any suggestions on improving/optimizing the script further upon testing, your welcome to share your version on this [Github gist](https://gist.github.com/05t3/2025e52a7b09de1230627a004a135b32).  
+{: .prompt-warning }
+
+
+When you run the script, you get the clear text keystrokes:
 
 
 ```bash
@@ -926,8 +972,17 @@ flag : {W3ll_d0n3_s33_Y0u_m@d3_1t}
 {: .nolineno }
 
 
+![thatwasntgettingeasy](https://y.yarn.co/5f3959c0-5d8a-4751-b66b-18c8c08fa421_text.gif){: .normal }
 
-Easy, right? 😅
+## Closing remarks
+
+I hope this blog post was insightful as we put in alot of research and efforts on it. 😊 For challenge creators, I hope you also learnt a thing or two. In the next blog post, we are going to dive into the remaining USB transfer types (Isochronous & Bulk Transfers). 
+
+For example, I'm just thinking to myself *"What happens when i plug in a headset using USB on my computer and maybe play music? Can i recreate the packets and maybe convert data into sound output?"* or, "*What happens when you drag your mouse in a certain motion? Perhaps drawing?*", or "*What happens when i plug in a flash drive in my computer and transfer a file to it? Can I reconstruct the file data and maybe read its content?*"
+
+![thinking](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjd3ZXZxNzdwNDRkdmRxc3I3cWhrM2N2cTZ2N3N1ZGY0dWNxbGh3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZBK7b4vHYyb0n70zJq/200.webp){: .normal }
+
+Perhaps if you are as curious as I am, stay tuned for a new blog post on the same. Do let us know what you think in the comment section. Feel free to share this post in your circles/pages.
 
 
 ## Resources
@@ -941,4 +996,5 @@ Easy, right? 😅
 - [Universal Serial Bus HID Usage Tables](https://usb.org/sites/default/files/documents/hut1_12v2.pdf) (Page 53)
 - [Display Filter Reference: USB](https://www.wireshark.org/docs/dfref/u/usb.html) by [wireshark](https://wiki.wireshark.org/)
 - [List of USB ID's](https://www.linux-usb.org/usb.ids) by [Linux USB Project](https://www.linux-usb.org/)
+- [ChatGPT](https://chatgpt.com/)
 
