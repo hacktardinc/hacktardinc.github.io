@@ -264,7 +264,7 @@ I tried the same with Logitech headphones:
 - **iProduct**: `0x02`  ***"H340 USB Headset"***
 
 
-### 3. 3rd Packet
+### 3rd Packet
 
 ![image](https://gist.github.com/user-attachments/assets/a588783c-0319-4e27-9c1d-f35176b5edf9)
 
@@ -313,7 +313,7 @@ This section describes the setup data, which provides details about the specific
     - *The host is requesting **9 bytes** of data. This is the length of the initial portion of the **Configuration Descriptor**. In many cases, the full configuration descriptor may be longer, but the host starts by requesting just the first part. Once it gets this initial part, it can issue additional requests to retrieve the full descriptor.*
 
 
-### 4. 4th Packet
+### 4th Packet
 
 ![image](https://gist.github.com/user-attachments/assets/077f5a64-3166-4fe5-96c2-b06bd9e50ce6)
 
@@ -355,7 +355,7 @@ This descriptor provides details about the device's configuration. Let's dissect
     - *This is a relatively low power consumption, which is typical for devices powered directly by the USB bus and not requiring much power.*
 
 
-### 5. 5th Packet
+### 5th Packet
 
 The **5th packet** in the capture represents a continuation of the USB enumeration process. The host is sending a **GET DESCRIPTOR Request** to the device, asking for the full **Configuration Descriptor**.
 
@@ -373,7 +373,7 @@ This part defines the specific request being made by the host:
 - **wLength**: `59`
     - This indicates the **total length** of the descriptor that the host is requesting, which is **59 bytes** in this case. The previous request in packet 3 only asked for 9 bytes (the header of the configuration descriptor), while this request is for the full descriptor, which includes the entire configuration (interfaces, endpoints, etc.).
 
-### 6. 6th packet
+### 6th packet
 
 The **6th packet** in this capture contains the response from the device to the **GET DESCRIPTOR Request (Configuration)** sent in the 5th packet. The host requested a full **Configuration Descriptor**, and in this packet, the device responds with the entire **59 bytes** of the requested descriptor.
 
@@ -468,7 +468,7 @@ The response includes both the **Configuration Descriptor** and related **Interf
 - **wMaxPacketSize**: `8` (Maximum packet size is 8 bytes)
 - **bInterval**: `10` (The device polls this endpoint every 10 ms)
 
-### 7. 7th packet frame
+### 7th packet frame
 
 ![image](https://gist.github.com/user-attachments/assets/64b5355f-032e-48fd-9bab-f64ee893bb23)
 
@@ -489,7 +489,7 @@ The response includes both the **Configuration Descriptor** and related **Interf
 - **bConfigurationValue**: `1`
     - The **Configuration Value** is set to **1**, meaning the host is selecting **Configuration 1** for the device. This value corresponds to the configuration descriptor retrieved in earlier packets (such as packet 6), which described how the device is structured (e.g., interfaces, endpoints, etc.).
 
-### 8. 8th Packet frame
+### 8th Packet frame
 
 The **8th packet** is the response from the USB device to the **SET CONFIGURATION Request** sent by the host in the **7th packet**. In this packet, the device acknowledges the configuration change. Let’s break it down:
 
