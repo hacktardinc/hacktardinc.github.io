@@ -84,7 +84,7 @@ site_author = "Stephen Kageche"
 docs_dir = "docs"
 site_dir = "site"
 dev_addr = "localhost:8000"
-site_url = "https://hacktardinc.github.io/"
+site_url = "https://docs.ostehomelab.site/"
 
 
 # ----------------------------------------------------------------------------
