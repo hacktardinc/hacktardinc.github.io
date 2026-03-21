@@ -1,0 +1,382 @@
+# ============================================================================
+
+[project]
+
+# ============================================================================
+# Section for configuring basic project navigation
+# ============================================================================
+# nav = [
+#   {"Home" = "index.md"},
+#   {"About" = "about.md"},
+#   {"Gitea" = [
+#      "blog/index.md",
+#      "blog/installation.md",
+#      "blog/drone.md",
+#      "blog/woodpecker.md",
+#      "blog/backup.md",
+#      "blog/update.md"
+#   ]},
+#   {"Docker" = [
+#      "docker/index.md",
+#      "docker/introduction.md",
+#      "docker/installation.md",
+#      "docker/portainer.md",
+#      "docker/dockge.md",
+#      "docker/komodo.md",
+#      "docker/arcane.md",
+#      "docker/cheatsheet.md"
+#   ]},
+#   {"Gitea" = [
+#      "gitea/index.md",
+#      "gitea/installation.md",
+#      "gitea/drone.md",
+#      "gitea/woodpecker.md",
+#      "gitea/backup.md",
+#      "gitea/update.md"
+#   ]},
+#   {"Homelab" = [
+#      "homelab/index.md",
+#      "homelab/documentation.md",
+#      "homelab/linux.md",
+#      "homelab/linuxserver.md",
+#      "homelab/cloudflaretunnel.md"
+#   ]},
+#   {"Wazuh" = [
+#      "wazuh/index.md",
+#      "wazuh/assistant.md",
+#      "wazuh/stepbystep.md",
+#      "wazuh/vm.md"
+#   ]},
+#   {"SocOps" = [
+#      "socops/index.md",
+#      "socops/thehive.md",
+#      "socops/cortex.md",
+#      "socops/misp.md",
+#      "socops/shuffle.md",
+#   ]},
+#   {"Labs" = [
+#      "labs/index.md",
+#      "labs/flarevm.md"
+#   ]},
+#   {"Windows" = [
+#      "windows/index.md",
+#      "windows/defender.md",
+#      "windows/update.md"
+#   ]},
+#   {"Cloud Pentest" = [
+#      "cloud/index.md",
+#      "cloud/introduction.md",
+#      "cloud/aws.md",
+#      "cloud/azure.md",
+#      "cloud/gcp.md",
+#      "cloud/tools.md"
+#   ]},
+#   {"Research" = [
+#      "research/index.md",
+#      "research/CVE-2025-68613.md"
+#   ]},
+#   {"Forensics" = [
+#      "forensics/index.md",
+#      "forensics/linux-forensics.md",
+#      "forensics/threat-hunting-with-yara.md",
+#      "forensics/malware-classification.md"
+#   ]},
+#   {"Web Security" = [
+#      "web/index.md",
+#      "web/wapiti.md",
+#      "web/nuclei.md",
+#      "web/ffuf.md"
+#   ]},
+#   {"GOAD" = [
+#      "goad/index.md",
+#      "goad/installlog.md",
+#      "goad/goadintro.md",
+#      "goad/installationgoad.md",
+#      "goad/usage.md"
+#   ]},
+#   {"OSINT" = [
+#      "osint/index.md",
+#      "osint/google-dorking-cheatsheet.md",
+#      "osint/shodan-queries-cheatsheet.md"
+#   ]},
+#   {"Pentesting Containers" = [
+#      "pentesting-containers/index.md",
+#      "pentesting-containers/docker-pentesting-cheatsheet.md",
+#      "pentesting-containers/kubernetes-pentesting-cheatsheet.md"
+#   ]},
+#   {"Pentesting Databases" = [
+#      "pentesting-databases/index.md",
+#      "pentesting-databases/mongodb-pentesting-cheatsheet.md",
+#      "pentesting-databases/mysql-mariadb-pentesting-cheatsheet.md",
+#      "pentesting-databases/postgres-pentesting-cheatsheet.md",
+#      "pentesting-databases/redis-pentesting-cheatsheet.md",
+#      "pentesting-databases/couchdb-pentesting-cheatsheet.md",
+#   ]},
+#   {"How To" = [
+#      "howto/index.md",
+#      "howto/dns-records-guide.md",
+#      "howto/file-transfer-cheatsheet.md",
+#      "howto/pentesting-aws.md",
+#      "howto/pentesting-azure.md",
+#      "howto/pentesting-gcp.md",
+#      "howto/pentesting-dns.md",
+#      "howto/pentesting-tunneling.md",
+#   ]}
+# ]
+
+
+# ============================================================================
+# Basic project information
+# ============================================================================
+site_name = "Oste's Homelab"
+repo_url = "https://github.com/zensical/zensical"
+repo_name = "zensical/zensical"
+site_description = "Oste's Homelab Documentation for various projects and setups."
+site_author = "Stephen Kageche"
+docs_dir = "docs"
+site_dir = "site"
+dev_addr = "localhost:8000"
+site_url = "https://hacktardinc.github.io/"
+
+
+# ----------------------------------------------------------------------------
+# Section for configuring theme options
+# ----------------------------------------------------------------------------
+[project.theme]
+variant = "modern"
+favicon = "images/favicon.ico"
+language = "en"
+
+
+# ============================================================================
+# Section for adding extra CSS or JavaScript files
+# ============================================================================
+
+extra_javascript = [
+    "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
+    "javascripts/tablesort.js"
+]
+
+
+# ----------------------------------------------------------------------------
+# Features
+# ----------------------------------------------------------------------------
+
+features = [
+    "announce.dismiss",
+    # "content.action.edit",
+    # "content.action.view",
+    "content.code.annotate",
+    "content.code.copy",
+    "content.code.select",
+    "content.footnote.tooltips",
+    "content.tabs.link",
+    "content.tooltips",
+    # "header.autohide",
+    # "navigation.expand",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.instant.prefetch",
+    "navigation.instant.progress",
+    "navigation.path",
+    # "navigation.prune",
+    # "navigation.sections",
+    # "navigation.tabs",
+    # "navigation.tabs.sticky",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+    # "toc.follow",
+    # "toc.integrate",
+]
+
+
+# ----------------------------------------------------------------------------
+# Theme Palette Settings
+# ----------------------------------------------------------------------------
+
+# Theme Toggle Settings
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+primary = "blue"
+accent = "red"
+
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+primary = "blue"
+accent = "red"
+
+
+
+# ----------------------------------------------------------------------------
+# Font Settings
+# ----------------------------------------------------------------------------
+
+#[project.theme.font]
+#text = "Inter"
+#code = "Jetbrains Mono"
+
+
+# ----------------------------------------------------------------------------
+# Icon Settings
+# ----------------------------------------------------------------------------
+
+[project.theme.icon]
+logo = "lucide/brick-wall-shield"
+# repo = "lucide/smile"
+
+
+# ============================================================================
+# Section for configuring social links
+# ============================================================================
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/05t3"
+name= "05t3"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/stephen-kageche/"
+name= "Stephen Kageche"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://twitter.com/oste_ke"
+name= "oste_ke"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/zensical"
+name= "05t3" 
+
+
+# ============================================================================
+# Section for configuring cookie consent
+# ============================================================================   
+
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+    We use cookies to recognize your repeated visits and preferences, as well
+    as to measure the effectiveness of our documentation and whether users
+    find what they're searching for. With your consent, you're helping us to
+    make our documentation better.
+"""
+
+
+# ============================================================================
+# Copyright notice.
+# ============================================================================
+copyright = """
+Copyright &copy; 2025 Stephen Kageche
+"""
+
+generator = false
+
+
+# ============================================================================
+# Section for configuring Markdown extensions
+# ============================================================================
+
+# Abbreviations
+[project.markdown_extensions.abbr]
+
+# Admonition
+[project.markdown_extensions.admonition]
+
+# Attribute Lists
+[project.markdown_extensions.attr_list]
+
+# Definition Lists
+[project.markdown_extensions.def_list]
+
+# Footnotes
+[project.markdown_extensions.footnotes]
+
+# Markdown in HTML
+[project.markdown_extensions.md_in_html]
+
+# Table of Contents
+[project.markdown_extensions.toc]
+permalink =  true
+
+# Tables
+[project.markdown_extensions.tables]
+
+
+# ============================================================================
+# Python Markdown Extensions configuration.
+# ============================================================================
+
+# Caption
+[project.markdown_extensions.pymdownx.blocks.caption]
+
+# Caret, Mark & Tilde
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.tilde]
+
+# Details
+[project.markdown_extensions.pymdownx.details]
+
+# Emoji
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji" 
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+# Highlight
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+pygments_lang_class = true
+line_spans = "__span"
+
+# InlineHilite
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+# Keys
+[project.markdown_extensions.pymdownx.keys]
+
+# SmartSymbols
+[project.markdown_extensions.pymdownx.smartsymbols]
+
+# Snippets
+[project.markdown_extensions.pymdownx.snippets]
+
+# SuperFences
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
+# Tabbed
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tabbed.slugify]
+object = "pymdownx.slugs.slugify"
+kwds = { case = "lower" }
+
+# Tasklist
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+# -----------------
+
+# Project Status
+[project.extra.status]
+new = "Recently added"
+deprecated = "Outdated content"

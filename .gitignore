@@ -1,0 +1,167 @@
+# ========================
+# User-Specified Ignores
+# ========================
+.cache/
+.venv/
+.vscode/
+zeniscal copy.toml
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.so
+.Python
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+pytestdebug.log
+
+# ========================
+# Virtual Environments
+# ========================
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv/
+
+# ========================
+# IDEs & Editors
+# ========================
+# JetBrains (PyCharm, IntelliJ, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+*#
+.#*
+\#*#
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# ========================
+# OS-Generated Files
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.p12
+secrets/
+credentials/
+
+# ========================
+# Logs & Databases
+# ========================
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+logs/
+log/
+
+# ========================
+# Dependency Directories
+# ========================
+node_modules/
+jspm_packages/
+bower_components/
+
+# ========================
+# Build & Distribution
+# ========================
+out/
+target/
+*.tar.gz
+*.zip
+*.rar
+
+# ========================
+# Jupyter Notebooks
+# ========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ========================
+# Docker
+# ========================
+.dockerignore
+docker-compose.override.yml
+
+# ========================
+# Temporary Files
+# ========================
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
