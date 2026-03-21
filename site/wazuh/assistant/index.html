@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Wazuh installation assistant">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/wazuh/assistant/">
       
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../stepbystep/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>Wazuh installation assistant - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Wazuh installation assistant
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1480,7 +1487,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../../socops/" class="md-nav__link ">
               
   
   
@@ -1524,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="../../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="../../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../../socops/misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -1740,6 +1747,8 @@
       
   
   
+    
+  
   
   
     
@@ -1759,15 +1768,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1793,7 +1802,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1810,10 +1819,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-cog" viewBox="0 0 24 24"><path d="M11 10.27 7 3.34M11 13.73l-4 6.93M12 22v-2M12 2v2M14 12h8M17 20.66l-1-1.73M17 3.34l-1 1.73M2 12h2M20.66 17l-1.73-1M20.66 7l-1.73 1M3.34 17l1.73-1M3.34 7l1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Wazuh installation assistant
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1831,6 +1867,97 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating system
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wazuh-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Wazuh Updates.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uninstall
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1843,7 +1970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +2000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="../vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +2059,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2057,6 +2184,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating system
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wazuh-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Wazuh Updates.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Uninstall
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2073,11 +2280,378 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Wazuh
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+  <h1 id="__skip">Wazuh installation assistant</h1>
+
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
+<p>Following this quickstart implies deploying the Wazuh server, the Wazuh indexer, and the Wazuh dashboard on the same host. This is usually enough for monitoring up to 100 endpoints and for 90 days of queryable/indexed alert data. The table below shows the recommended hardware for a quickstart deployment:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Agents</strong></th>
+<th><strong>CPU</strong></th>
+<th><strong>RAM</strong></th>
+<th><strong>Storage (90 days)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1–25</strong></td>
+<td>4 vCPU</td>
+<td>8 GiB</td>
+<td>50 GB</td>
+</tr>
+<tr>
+<td><strong>25–50</strong></td>
+<td>8 vCPU</td>
+<td>8 GiB</td>
+<td>100 GB</td>
+</tr>
+<tr>
+<td><strong>50–100</strong></td>
+<td>8 vCPU</td>
+<td>8 GiB</td>
+<td>200 GB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operating-system">Operating system<a class="headerlink" href="#operating-system" title="Permanent link">&para;</a></h3>
+<p>The Wazuh central components require a 64-bit Intel, AMD, or ARM Linux processor (x86_64/AMD64 or AARCH64/ARM64 architecture) to run. Wazuh recommends any of the following operating system versions:</p>
+<ul>
+<li>Amazon Linux 2, Amazon Linux 2023</li>
+<li>CentOS Stream 10</li>
+<li>Red Hat Enterprise Linux 7, 8, 9, 10</li>
+<li>Ubuntu 16.04, 18.04, 20.04, 22.04, 24.04</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p><a href="https://documentation.wazuh.com/current/quickstart.html">Documentation</a></p>
+<p>Download and run the Wazuh installation assistant.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-sO<span class="w"> </span>https://packages.wazuh.com/4.14/wazuh-install.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>bash<span class="w"> </span>./wazuh-install.sh<span class="w"> </span>-a
+</span></code></pre></div>
+<p>Once the assistant finishes the installation, the output shows the access credentials and a message that confirms that the installation was successful.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>web<span class="w"> </span>application<span class="w"> </span>initialized.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Summary<span class="w"> </span>---
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>access<span class="w"> </span>the<span class="w"> </span>web<span class="w"> </span>interface<span class="w"> </span>https://&lt;wazuh-dashboard-ip&gt;:443
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="hll"><span class="w">    </span>User:<span class="w"> </span>admin
+</span></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll"><span class="w">    </span>Password:<span class="w"> </span>ItUH27LJ+tk2b5.5P35Q*Hh3XUl99j63
+</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>Installation<span class="w"> </span>finished.
+</span></code></pre></div>
+<details class="example">
+<summary>Sample installation log</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>root@siem:/home/analyst/Wazuh#<span class="w"> </span>curl<span class="w"> </span>-sO<span class="w"> </span>https://packages.wazuh.com/4.14/wazuh-install.sh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>bash<span class="w"> </span>./wazuh-install.sh<span class="w"> </span>-a
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:37:52<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>Wazuh<span class="w"> </span>installation<span class="w"> </span>assistant.<span class="w"> </span>Wazuh<span class="w"> </span>version:<span class="w"> </span><span class="m">4</span>.14.1
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:37:52<span class="w"> </span>INFO:<span class="w"> </span>Verbose<span class="w"> </span>logging<span class="w"> </span>redirected<span class="w"> </span>to<span class="w"> </span>/var/log/wazuh-install.log
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:38:04<span class="w"> </span>INFO:<span class="w"> </span>Verifying<span class="w"> </span>that<span class="w"> </span>your<span class="w"> </span>system<span class="w"> </span>meets<span class="w"> </span>the<span class="w"> </span>recommended<span class="w"> </span>minimum<span class="w"> </span>hardware<span class="w"> </span>requirements.
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:38:04<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>web<span class="w"> </span>interface<span class="w"> </span>port<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span><span class="m">443</span>.
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:38:10<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Dependencies<span class="w"> </span>----
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:38:10<span class="w"> </span>INFO:<span class="w"> </span>Installing<span class="w"> </span>apt-transport-https.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:38:14<span class="w"> </span>INFO:<span class="w"> </span>Installing<span class="w"> </span>debhelper.
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:14<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>repository<span class="w"> </span>added.
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:14<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Configuration<span class="w"> </span>files<span class="w"> </span>---
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:14<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>configuration<span class="w"> </span>files.
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:15<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>the<span class="w"> </span>root<span class="w"> </span>certificate.
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:15<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>Admin<span class="w"> </span>certificates.
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:15<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>certificates.
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:16<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>Filebeat<span class="w"> </span>certificates.
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:17<span class="w"> </span>INFO:<span class="w"> </span>Generating<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>certificates.
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:17<span class="w"> </span>INFO:<span class="w"> </span>Created<span class="w"> </span>wazuh-install-files.tar.<span class="w"> </span>It<span class="w"> </span>contains<span class="w"> </span>the<span class="w"> </span>Wazuh<span class="w"> </span>cluster<span class="w"> </span>key,<span class="w"> </span>certificates,<span class="w"> </span>and<span class="w"> </span>passwords<span class="w"> </span>necessary<span class="w"> </span><span class="k">for</span><span class="w"> </span>installation.
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:17<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>---
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:39:17<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>installation.
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:20<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>installation<span class="w"> </span>finished.
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:20<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>post-install<span class="w"> </span>configuration<span class="w"> </span>finished.
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:20<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>service<span class="w"> </span>wazuh-indexer.
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:38<span class="w"> </span>INFO:<span class="w"> </span>wazuh-indexer<span class="w"> </span>service<span class="w"> </span>started.
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:38<span class="w"> </span>INFO:<span class="w"> </span>Initializing<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>cluster<span class="w"> </span>security<span class="w"> </span>settings.
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:42<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>cluster<span class="w"> </span>security<span class="w"> </span>configuration<span class="w"> </span>initialized.
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:42<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>cluster<span class="w"> </span>initialized.
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:42<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Wazuh<span class="w"> </span>server<span class="w"> </span>---
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:44:42<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>the<span class="w"> </span>Wazuh<span class="w"> </span>manager<span class="w"> </span>installation.
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:48:29<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>manager<span class="w"> </span>installation<span class="w"> </span>finished.
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:48:29<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>manager<span class="w"> </span>vulnerability<span class="w"> </span>detection<span class="w"> </span>configuration<span class="w"> </span>finished.
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:48:29<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>service<span class="w"> </span>wazuh-manager.
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:48:45<span class="w"> </span>INFO:<span class="w"> </span>wazuh-manager<span class="w"> </span>service<span class="w"> </span>started.
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:48:45<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>Filebeat<span class="w"> </span>installation.
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:06<span class="w"> </span>INFO:<span class="w"> </span>Filebeat<span class="w"> </span>installation<span class="w"> </span>finished.
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:07<span class="w"> </span>INFO:<span class="w"> </span>Filebeat<span class="w"> </span>post-install<span class="w"> </span>configuration<span class="w"> </span>finished.
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:07<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>service<span class="w"> </span>filebeat.
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:08<span class="w"> </span>INFO:<span class="w"> </span>filebeat<span class="w"> </span>service<span class="w"> </span>started.
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:08<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>---
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:49:08<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>installation.
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:01<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>installation<span class="w"> </span>finished.
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:01<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>post-install<span class="w"> </span>configuration<span class="w"> </span>finished.
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:01<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>service<span class="w"> </span>wazuh-dashboard.
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:02<span class="w"> </span>INFO:<span class="w"> </span>wazuh-dashboard<span class="w"> </span>service<span class="w"> </span>started.
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:03<span class="w"> </span>INFO:<span class="w"> </span>Updating<span class="w"> </span>the<span class="w"> </span>internal<span class="w"> </span>users.
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:06<span class="w"> </span>INFO:<span class="w"> </span>A<span class="w"> </span>backup<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>internal<span class="w"> </span>users<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>saved<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>/etc/wazuh-indexer/internalusers-backup<span class="w"> </span>folder.
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:17<span class="w"> </span>INFO:<span class="w"> </span>The<span class="w"> </span>filebeat.yml<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>been<span class="w"> </span>updated<span class="w"> </span>to<span class="w"> </span>use<span class="w"> </span>the<span class="w"> </span>Filebeat<span class="w"> </span>Keystore<span class="w"> </span>username<span class="w"> </span>and<span class="w"> </span>password.
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:50<span class="w"> </span>INFO:<span class="w"> </span>Initializing<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>web<span class="w"> </span>application.
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>web<span class="w"> </span>application<span class="w"> </span>initialized.
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>---<span class="w"> </span>Summary<span class="w"> </span>---
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>access<span class="w"> </span>the<span class="w"> </span>web<span class="w"> </span>interface<span class="w"> </span>https://&lt;wazuh-dashboard-ip&gt;:443
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="w">    </span>User:<span class="w"> </span>admin
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="w">    </span>Password:<span class="w"> </span>ItUH27LJ+tk2b5.5P35Q*Hh3XUl99j63
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">11</span>:51:51<span class="w"> </span>INFO:<span class="w"> </span>Installation<span class="w"> </span>finished.
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>root@siem:/home/analyst/Wazuh#
+</span></code></pre></div>
+</details>
+<details class="tip">
+<summary>Tip</summary>
+<p>Verbose logging redirected to <code>/var/log/wazuh-install.log</code></p>
+</details>
+<p>Access the Wazuh web interface with https://<WAZUH_DASHBOARD_IP_ADDRESS> and your credentials:</p>
+<ul>
+<li><code>Username</code>: admin</li>
+<li><code>Password</code>: &lt; ADMIN_PASSWORD &gt;</li>
+</ul>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/6fd9b6ba-15fc-4c36-a613-18a62c1e7d4c" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/ff5733b9-8fce-4dd5-95fc-59ef3b9c7c78" /></p>
+<details class="info">
+<summary>Info</summary>
+<p>You can find the passwords for all the Wazuh indexer and Wazuh API users in the <code>wazuh-passwords.txt file inside</code>wazuh-install-files.tar`. To print them, run the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>tar<span class="w"> </span>-O<span class="w"> </span>-xvf<span class="w"> </span>wazuh-install-files.tar<span class="w"> </span>wazuh-install-files/wazuh-passwords.txt
+</span></code></pre></div>
+<details class="example">
+<summary>Sample Output</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>root@siem:/home/analyst/Wazuh#<span class="w"> </span>sudo<span class="w"> </span>tar<span class="w"> </span>-O<span class="w"> </span>-xvf<span class="w"> </span>wazuh-install-files.tar<span class="w"> </span>wazuh-install-files/wazuh-passwords.txt
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>wazuh-install-files/wazuh-passwords.txt
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1"># Admin user for the web user interface and Wazuh indexer. Use this user to log in to Wazuh dashboard</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;admin&#39;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;ItUH27LJ+tk2b5.5P35Q*Hh3XUl99j63&#39;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Anomaly detection user for the web user interface</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;anomalyadmin&#39;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;8pW49SUHT*b9*Trap4bBwG902BUyVKb0&#39;</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># Wazuh dashboard user for establishing the connection with Wazuh indexer</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;kibanaserver&#39;</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;NFm0S6EMsk1*H16IVvTerX5iMlqEfFtQ&#39;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="c1"># Regular Dashboard user, only has read permissions to all indices and all permissions on the .kibana index</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;kibanaro&#39;</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;lg0zDBT3*tctsK6UynvyInj5*?6x0gwe&#39;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="c1"># Filebeat user for CRUD operations on Wazuh indices</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;logstash&#39;</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;?.HWM1JuKT?iROubcIbh9aADVEMBg.3D&#39;</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="c1"># User with READ access to all indices</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;readall&#39;</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;ntcQgU4PV4kHwE5I+lCdEmhzJzy+0r?6&#39;</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="c1"># User with permissions to perform snapshot and restore operations</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>indexer_username:<span class="w"> </span><span class="s1">&#39;snapshotrestore&#39;</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>indexer_password:<span class="w"> </span><span class="s1">&#39;PMUTampqE+B0ab?rFssgVvZbOGVj5I58&#39;</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="c1"># Password for wazuh API user</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>api_username:<span class="w"> </span><span class="s1">&#39;wazuh&#39;</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>api_password:<span class="w"> </span><span class="s1">&#39;vwBC4f?CPQ0Hv*g9*iiR6FUu+Xay*nWA&#39;</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="c1"># Password for wazuh-wui API user</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>api_username:<span class="w"> </span><span class="s1">&#39;wazuh-wui&#39;</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>api_password:<span class="w"> </span><span class="s1">&#39;MT3jVX8kok.UY2LMqF6*X3HHy*ICMaws&#39;</span>
+</span></code></pre></div>
+</details>
+</details>
+<h2 id="disable-wazuh-updates">Disable Wazuh Updates.<a class="headerlink" href="#disable-wazuh-updates" title="Permanent link">&para;</a></h2>
+<p>It is recommended to disable the Wazuh package repositories after installation to prevent accidental upgrades that could break the environment.</p>
+<p>Execute the following command to disable the Wazuh repository:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s/^deb /#deb /&quot;</span><span class="w"> </span>/etc/apt/sources.list.d/wazuh.list
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>apt<span class="w"> </span>update
+</span></code></pre></div>
+<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h2>
+<p>If you want to uninstall the Wazuh central components, run the Wazuh installation assistant using the option -u or –-uninstall.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>bash<span class="w"> </span>./wazuh-install.sh<span class="w"> </span>-u
+</span></code></pre></div>
+<details class="example">
+<summary>Sample output</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>root@siem:/home/analyst/Wazuh#<span class="w"> </span>bash<span class="w"> </span>./wazuh-install.sh<span class="w"> </span>-u
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:12<span class="w"> </span>INFO:<span class="w"> </span>Starting<span class="w"> </span>Wazuh<span class="w"> </span>installation<span class="w"> </span>assistant.<span class="w"> </span>Wazuh<span class="w"> </span>version:<span class="w"> </span><span class="m">4</span>.14.1
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:12<span class="w"> </span>INFO:<span class="w"> </span>Verbose<span class="w"> </span>logging<span class="w"> </span>redirected<span class="w"> </span>to<span class="w"> </span>/var/log/wazuh-install.log
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:14<span class="w"> </span>INFO:<span class="w"> </span>Removing<span class="w"> </span>Wazuh<span class="w"> </span>manager.
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:21<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>manager<span class="w"> </span>removed.
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:21<span class="w"> </span>INFO:<span class="w"> </span>Removing<span class="w"> </span>Wazuh<span class="w"> </span>indexer.
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:25<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>removed.
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:25<span class="w"> </span>INFO:<span class="w"> </span>Removing<span class="w"> </span>Filebeat.
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:28<span class="w"> </span>INFO:<span class="w"> </span>Filebeat<span class="w"> </span>removed.
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:28<span class="w"> </span>INFO:<span class="w"> </span>Removing<span class="w"> </span>Wazuh<span class="w"> </span>dashboard.
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="m">23</span>/11/2025<span class="w"> </span><span class="m">12</span>:06:36<span class="w"> </span>INFO:<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>removed.
+</span></code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2671,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Wazuh SIEM Documentation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Wazuh SIEM Documentation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../stepbystep/" class="md-footer__link md-footer__link--next" aria-label="Next: Step by step">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Step by step
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +2854,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

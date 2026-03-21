@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="This page documents everything there is to know about my homelab">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/socops/flarevm/">
       
+      
+        <link rel="prev" href="../velociraptor/">
+      
+      
+        <link rel="next" href="../">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>Flare-VM - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Flare-VM
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1445,6 +1452,8 @@
       
   
   
+    
+  
   
   
     
@@ -1472,15 +1481,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1506,7 +1515,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1524,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../velociraptor/" class="md-nav__link">
         
   
   
@@ -1581,10 +1590,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 1.758 5.182 20c.129.455.25.691.421.945q.094.137.202.264.26.305.59.525c.243.163.49.286.763.371.324.1.61.137.99.137h4.327l1.918-6.615h6.798v3.699a.11.11 0 0 1-.109.11h-4.88l-.813 2.806h5.654a2.92 2.92 0 0 0 1.95-.725A2.9 2.9 0 0 0 24 19.285v-6.47H12.28l-1.919 6.614H7.937L3.715 4.564h2.922l1.546 5.444H11.1l-2.343-8.25zm15.496 0-2.4 8.25H24v-5.29a2.96 2.96 0 0 0-1.825-2.741 3 3 0 0 0-1.129-.22zm2.11 2.806h3.476a.11.11 0 0 1 .11.112V7.2h-4.354z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Flare-VM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1602,6 +1638,209 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable automatic updates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disable automatic updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-tamper-protection-and-any-anti-malware-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Tamper Protection and any Anti-Malware solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disable Tamper Protection and any Anti-Malware solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flare-vm-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FLARE-VM installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FLARE-VM installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer GUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1616,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="../cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../shuffle/" class="md-nav__link">
         
   
   
@@ -1767,7 +2006,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../../wazuh/" class="md-nav__link ">
               
   
   
@@ -1813,7 +2052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="../../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +2082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +2112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="../../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +2171,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +2217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2057,6 +2296,198 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-automatic-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable automatic updates
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disable automatic updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-tamper-protection-and-any-anti-malware-solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Tamper Protection and any Anti-Malware solution
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disable Tamper Protection and any Anti-Malware solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-group-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Local Group Policy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flare-vm-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FLARE-VM installation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FLARE-VM installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer GUI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2073,11 +2504,479 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../arkime/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    SocOps
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+  <h1 id="__skip">Flare-VM</h1>
+
+<p>FLARE-VM is a Windows-based security distribution specifically designed for malware analysis, incident response, and digital forensics. Developed by the FireEye Labs Advanced Reverse Engineering (FLARE) team, this customizable environment provides a comprehensive collection of open-source and freeware tools pre-configured for security professionals. Unlike traditional Linux security distributions, FLARE-VM runs directly on Windows, offering native analysis capabilities for Windows malware and artifacts while integrating seamlessly with the Windows operating system through a package management system built on Chocolatey.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>FLARE-VM should ONLY be installed on a virtual machine. The VM should satisfy the following requirements:</p>
+<ul>
+<li>Windows ≥ 10</li>
+<li>PowerShell ≥ 5</li>
+<li>Disk capacity of at least 60 GB and memory of at least 2GB</li>
+<li>Usernames without spaces or other special characters</li>
+<li>Internet connection</li>
+<li>Tamper Protection and any Anti-Malware solution (e.g., Windows Defender) disabled, preferably via Group Policy</li>
+<li>Windows Updates Disabled</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="pre-installation">Pre-installation<a class="headerlink" href="#pre-installation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Prepare a Windows 10+ virtual machine<ul>
+<li>Install Windows in the virtual machine, for example using the raw Windows 10 ISO from <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">https://www.microsoft.com/en-us/software-download/windows10ISO</a></li>
+<li>Ensure the <a href="https://github.com/mandiant/flare-vm#requirements">requirements above</a> are satisfied, including:<ul>
+<li>Disable Windows Updates (at least until installation is finished)<ul>
+<li><a href="https://www.windowscentral.com/how-stop-updates-installing-automatically-windows-10">https://www.windowscentral.com/how-stop-updates-installing-automatically-windows-10</a></li>
+</ul>
+</li>
+<li>Disable Tamper Protection and any Anti-Malware solution (e.g., Windows Defender), preferably via Group Policy.<ul>
+<li>GPO: <a href="https://superuser.com/a/1757341">https://stackoverflow.com/questions/62174426/how-to-permanently-disable-windows-defender-real-time-protection-with-gpo</a></li>
+<li>Non-GPO - Manual: <a href="https://www.maketecheasier.com/permanently-disable-windows-defender-windows-10">https://www.maketecheasier.com/permanently-disable-windows-defender-windows-10/</a></li>
+<li>Non-GPO - Automated: <a href="https://github.com/ionuttbara/windows-defender-remover">https://github.com/ionuttbara/windows-defender-remover</a></li>
+<li>Non-GPO - Semi-Automated (User needs to toggle off Tamper Protection): <a href="https://github.com/AveYo/LeanAndMean/blob/main/ToggleDefender.ps1">https://github.com/AveYo/LeanAndMean/blob/main/ToggleDefender.ps1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Take a VM snapshot so you can always revert to a state before the FLARE-VM installation</li>
+<li>NOTE for IDA Pro: If you are installing IDA Pro via <code>idapro.vm</code>, you must place your IDA Pro installer (and optionally, your license file) on the Desktop before running the FLARE-VM installer.</li>
+</ul>
+<h4 id="disable-automatic-updates">Disable automatic updates<a class="headerlink" href="#disable-automatic-updates" title="Permanent link">&para;</a></h4>
+<h5 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h5>
+<p>If you want to prevent the system from downloading a specific update for a short period of time, you do not need to disable Windows Update permanently. Instead, you could pause updates for up to seven days.</p>
+<p>To disable automatic updates temporarily, use these steps:</p>
+<ol>
+<li>Open <strong>Settings</strong>.</li>
+<li>Click on <strong>Windows Update</strong>.</li>
+<li>
+<p>Click the <strong>"Pause updates for 5 Weeks"</strong> option.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/a65c4d14-a561-4a88-9290-29de5a441a78" />
+<img alt="image" src="https://gist.github.com/user-attachments/assets/191e191e-8e42-47a9-8e11-51fb0b51ba65" /></p>
+</li>
+</ol>
+<p>Once you complete the steps, the system won't download for one week. </p>
+<details class="note">
+<summary>Note</summary>
+<p>When it reaches the pause limit, you will need to install the latest patch to make the option available again.</p>
+</details>
+<h5 id="group-policy">Group Policy<a class="headerlink" href="#group-policy" title="Permanent link">&para;</a></h5>
+<p>On Windows 11, the Local Group Policy Editor includes policies to permanently disable automatic updates or change the update settings to choose when patches should be installed on the device.</p>
+<p>To disable automatic updates on Windows 10 permanently, use these steps:</p>
+<ol>
+<li>Open <strong>Start</strong>.</li>
+<li>Search for <strong>gpedit.msc</strong> and click the top result to launch the <strong>Local Group Policy Editor</strong>.</li>
+<li>Navigate to the following path: <em><strong>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Windows Update &gt; Manage end user experience</strong></em></li>
+<li>
+<p>Double-click the <strong>"Configure Automatic Updates"</strong> policy on the right side.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/4ee01204-6fc7-4739-96db-2916858a8338" /></p>
+</li>
+<li>
+<p>Check the <strong>Disabled</strong> option to turn off automatic Windows 11 updates permanently.</p>
+</li>
+<li>Click the Apply button.</li>
+<li>
+<p>Click the OK button.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/0c7dc3e5-46a6-4e76-8e9f-8a5b42c6f84c" /></p>
+</li>
+</ol>
+<p>After you complete the steps, Windows 11 will stop downloading updates automatically. </p>
+<details class="tip">
+<summary>Tip</summary>
+<p>However, the ability to check for updates manually will continue on <strong>Settings &gt; Windows Update</strong>, and clicking the "<strong>Check for updates</strong>" button to download the most recent patches as needed.</p>
+</details>
+<details class="note">
+<summary>Note</summary>
+<p>If you want to enable automatic updates on the computer again, you can use the same instructions outlined above, but in step 5, make sure to select the "Not Configured" option.</p>
+</details>
+<h5 id="registry">Registry<a class="headerlink" href="#registry" title="Permanent link">&para;</a></h5>
+<p>You can also use the Registry in two different ways to disable automatic updates on Windows 10.</p>
+<details class="danger">
+<summary>Danger</summary>
+<p>This is a friendly reminder that editing the Registry is risky and can cause irreversible damage to your installation if you don't do it correctly. Before proceeding, it's recommended to make a <a href="https://www.windowscentral.com/tag/backup">backup</a> of your PC.</p>
+</details>
+<p>To disable Windows 11 updates permanently by changing the Registry settings, use these steps:</p>
+<ol>
+<li>Open <strong>Start</strong>.</li>
+<li>Search for <strong>regedit</strong> and click the top result to launch the Registry Editor.</li>
+<li>Navigate to the following path: <em><strong>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows</strong></em></li>
+<li>Right-click the <strong>Windows</strong> (folder) key, select the <strong>New</strong> submenu, and choose the <strong>Key</strong> option.</li>
+<li>Name the new key <strong>WindowsUpdate</strong> and press <strong>Enter</strong>.</li>
+<li>Right-click the newly created key, select the <strong>New</strong> submenu, and choose the <strong>Key</strong> option.</li>
+<li>Name the new key <strong>AU</strong> and press <strong>Enter</strong>.</li>
+<li>Right-click the <strong>AU</strong> key, select the <strong>New</strong> submenu, and choose the <strong>DWORD (32-bit) Value</strong> option.</li>
+<li>Name the new key <strong>NoAutoUpdate</strong> and press <strong>Enter</strong>.</li>
+<li>
+<p>Double-click the newly created key and change its value from <strong>0</strong> to <strong>1</strong>.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/e9302198-c855-4b97-b0d6-2a86acc77ae1" /></p>
+</li>
+<li>
+<p>Click the <strong>OK</strong> button.</p>
+</li>
+<li>Restart the computer.</li>
+</ol>
+<p>After you complete the steps, automatic updates will be permanently disabled on the device. However, you can still download updates by clicking the <strong>"Check for updates"</strong> button on the Windows Update settings page.</p>
+<p>If you want to undo the changes, you can use the same instructions outlined above, but on <strong>step 4</strong>, right-click the WindowsUpdate key, select the <strong>"Delete"</strong> option, then reboot the computer to apply the settings.</p>
+<p>Resources</p>
+<ul>
+<li><a href="https://www.windowscentral.com/how-stop-updates-installing-automatically-windows-10">How to stop automatic updates on Windows 10</a></li>
+</ul>
+<h4 id="disable-tamper-protection-and-any-anti-malware-solution">Disable Tamper Protection and any Anti-Malware solution<a class="headerlink" href="#disable-tamper-protection-and-any-anti-malware-solution" title="Permanent link">&para;</a></h4>
+<h5 id="settings_1">Settings<a class="headerlink" href="#settings_1" title="Permanent link">&para;</a></h5>
+<p>Windows gives you an option to turn Microsoft Defender off. But, it’s only temporary. Once it’s been off for a while, or you restart your PC, it’ll come back on. If you just need a temporary solution, this is it.</p>
+<ol>
+<li>Access it by going to <strong>Start -&gt; Settings -&gt; Privacy &amp; security.</strong></li>
+<li>Select <strong>Windows Security</strong> and scroll until you see <strong>Virus &amp; threat protection settings</strong>. Click the <strong>Manage Settings</strong> link.
+    <img alt="image" src="https://gist.github.com/user-attachments/assets/0b911dc4-f125-4415-bb10-e64511d3183e" />
+    <img alt="image" src="https://gist.github.com/user-attachments/assets/16f3f82f-550b-4819-92de-42869ca7ab8d" />
+    <img alt="image" src="https://gist.github.com/user-attachments/assets/4708dea5-00cf-4ff8-bb29-a90e32057e71" /></li>
+<li>
+<p>Toggle the various options to <strong>Off</strong>. </p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/1b49c0c7-4da9-4660-9eb4-5f58c9e096ec" />
+<img alt="image" src="https://gist.github.com/user-attachments/assets/c5eff79f-16c2-460b-94bd-40e306e8124b" /></p>
+</li>
+</ol>
+<details class="note">
+<summary>Note</summary>
+<p>Turning everything off is just temporary. This is great if you just need to disable Microsoft Defender for a short while, but doesn’t solve the ultimate goal of turning off Windows Defender permanently.</p>
+</details>
+<details class="tip">
+<summary>Tip</summary>
+<p>Note: if you’re already using another antivirus instead of Microsoft Defender, you may not see these settings at all – which is a fix in itself and will be detailed below.</p>
+</details>
+<h5 id="local-group-policy">Local Group Policy<a class="headerlink" href="#local-group-policy" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Press <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> to load the Run box, type <code>gpedit.msc</code> into the box, and press <strong>OK</strong>.</li>
+<li>When the Local Group Policy window loads, select <strong>Computer Configuration -&gt; Administrative Templates</strong> on the right.</li>
+<li>
+<p>Go to <strong>Windows Components -&gt; Microsoft Defender (Antivirus)</strong>. If you don’t see Microsoft Defender, look for <strong>Windows Defender (Antivirus)</strong>. Scroll down until you see the <strong>Turn off Microsoft Defender</strong> file. For older versions of Windows 10, look for <strong>Turn off Windows Defender</strong>.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/85564123-e7aa-419f-ba8a-2089f2ae4cb4" /></p>
+</li>
+<li>
+<p>Double-click it, and click <strong>Enabled</strong> on the left to turn on the <strong>Turn off Microsoft Defender</strong> policy, which disables Microsoft Defender. If you later change your mind, select <strong>Disabled</strong> instead.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/2b9e460e-9263-4c5f-a802-eadde98d1716" /></p>
+</li>
+</ol>
+<h5 id="registry_1">Registry<a class="headerlink" href="#registry_1" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Open the Run command by pressing <span class="keys"><kbd class="key-windows">Win</kbd><span>+</span><kbd class="key-r">R</kbd></span> . Type <code>regedit</code>, and click <strong>OK</strong>.</li>
+<li>On the left pane of the Registry Editor, navigate to the following folder:
+    <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+</span></code></pre></div></li>
+<li>Select the <strong>Windows Defender</strong> folder as shown and right-click on the empty space on the right side of the window, and go to <strong>New -&gt; DWORD (32-bit) Value</strong>.
+    <img alt="image" src="https://gist.github.com/user-attachments/assets/331cc2b1-e406-441e-a9b9-8b238d81a72b" />
+    Windows will create an untitled DWORD file. Right-click the file, and click <strong>Rename</strong>, then call it <strong>DisableAntiSpyware</strong>. Make sure you enter the name perfectly!</li>
+<li>
+<p>Right-click the <strong>DisableAntiSpyware</strong> file, and click <strong>Modify</strong>. To enable the policy that disables Microsoft Defender, set the value data to <strong>1</strong>, and click <strong>OK</strong>. This tells the computer that the policy that was just created should be enabled, and Windows will disable Defender for you. If you want to bring Microsoft Defender back, return to this file, and change the value to <strong>0</strong> to disable the policy and allow Defender to work again.</p>
+<p><img alt="image" src="https://www.maketecheasier.com/assets/uploads/2017/03/Defender-Permanent-Disable-Set.jpg" />
+<img alt="image" src="https://gist.github.com/user-attachments/assets/2b8b33b9-c1fc-46c5-a989-21b2c8b56cc9" /></p>
+</li>
+<li>
+<p>If anything related to Defender is still running, add the following DWORD values in the following folder locations using the same process as above:</p>
+<ul>
+<li>DisableRealtimeMonitoring – set the value to 1.</li>
+<li>DisableRoutinelyTakingAction – set the value to 1.</li>
+<li>DisableAntiVirus – set the value to 1.</li>
+<li>DisableSpecialRunningModes – set the value to 1.</li>
+<li>ServiceKeepAlive – set value to 0.</li>
+</ul>
+</li>
+<li>You may also need to create three new folders under Windows Defender. Right-click the <strong>Windows Defender</strong> folder, and select <strong>New -&gt; Key</strong>. Add three new Keys: <strong>Signature Updates</strong>, <strong>Real-Time Protection</strong>, and <strong>Spynet</strong>.</li>
+<li>
+<p>Add the following DWORD values to the corresponding folders:</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/2b8b33b9-c1fc-46c5-a989-21b2c8b56cc9" /></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Signature Updates
+</span></code></pre></div>
+<ul>
+<li>
+<p>ForceUpdateFromMU – set value to 0.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/bc645f14-edb0-4a54-8f01-2831315bcc96" /></p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection
+</span></code></pre></div>
+<ul>
+<li>DisableRealtimeMonitoring – set value to 1.</li>
+<li>DisableOnAccessProtection – set value to 1.</li>
+<li>DisableBehaviorMonitoring – set value to 1.</li>
+<li>
+<p>DisableScanOnRealtimeEnable – set value to 1.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/e68f0d30-9452-49ed-af72-8d676f0a6509" /></p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet
+</span></code></pre></div>
+<ul>
+<li>
+<p>DisableBlockAtFirstSeen – set value to 1.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/efbb8925-c4f4-4f4c-84fa-e4500c00e31d" /></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.maketecheasier.com/permanently-disable-windows-defender-windows-10/">How to Permanently Disable Microsoft Defender</a></li>
+<li><a href="https://superuser.com/questions/1757339/how-to-permanently-disable-windows-defender-real-time-protection-with-gpo/1757341#1757341">How to permanently disable Windows Defender Real Time Protection with GPO?</a></li>
+</ul>
+<h3 id="flare-vm-installation">FLARE-VM installation<a class="headerlink" href="#flare-vm-installation" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/mandiant/flare-vm#flare-vm-installation">Documentation</a></p>
+<ol>
+<li>Open a <code>PowerShell</code> prompt as administrator</li>
+<li>Download the installation script <a href="https://raw.githubusercontent.com/mandiant/flare-vm/main/install.ps1"><code>installer.ps1</code></a> to your Desktop:
+    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">(</span><span class="nb">New-Object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="n">DownloadFile</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/mandiant/flare-vm/main/install.ps1&#39;</span><span class="p">,</span><span class="s2">&quot;</span><span class="p">$(</span><span class="no">[Environment]</span><span class="p">::</span><span class="n">GetFolderPath</span><span class="p">(</span><span class="s2">&quot;Desktop&quot;</span><span class="p">))</span><span class="s2">\install.ps1&quot;</span><span class="p">)</span>
+</span></code></pre></div></li>
+<li>Unblock the installation script:
+    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">Unblock-File</span> <span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span>
+</span></code></pre></div></li>
+<li>
+<p>Enable script execution:
+    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">Set-ExecutionPolicy</span> <span class="n">Unrestricted</span> <span class="n">-Force</span>
+</span></code></pre></div></p>
+<details class="tip">
+<summary>Tip</summary>
+<p>If you receive an error saying the execution policy is overridden by a policy defined at a more specific scope, you may need to pass a scope in via <code>Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force</code>. To view execution policies for all scopes, execute <code>Get-ExecutionPolicy -List</code></p>
+</details>
+</li>
+<li>
+<p>Finally, execute the installer script as follow:
+    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c"># To pass your password as an argument</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-password</span> <span class="p">&lt;</span><span class="n">password</span><span class="p">&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c"># To use the CLI-only mode with minimal user interaction</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-password</span> <span class="p">&lt;</span><span class="n">password</span><span class="p">&gt;</span> <span class="n">-noWait</span> <span class="n">-noGui</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c"># To use the CLI-only mode with minimal user interaction and a custom config file</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-customConfig</span> <span class="p">&lt;</span><span class="n">config</span><span class="p">.</span><span class="n">xml</span><span class="p">&gt;</span> <span class="n">-password</span> <span class="p">&lt;</span><span class="n">password</span><span class="p">&gt;</span> <span class="n">-noWait</span> <span class="n">-noGui</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<details class="note">
+<summary>Note</summary>
+<p>After installation it is recommended to switch to <code>host-only</code> networking mode and take a VM snapshot</p>
+</details>
+<h4 id="installer-gui">Installer GUI<a class="headerlink" href="#installer-gui" title="Permanent link">&para;</a></h4>
+<p>The Installer GUI is display after executing the validation checks and installing Boxstarter and Chocolatey (if they are not installed already). Using the installer GUI you may customize:</p>
+<ul>
+<li>Package selection from FLARE-VM and Chocolatey community</li>
+<li>Environment variable paths</li>
+</ul>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/c9e7784a-8e4b-4e3a-9cc6-fb04bde6a973" />
+<img alt="image" src="https://gist.github.com/user-attachments/assets/5d99088c-0a60-4a19-a3b8-a67bc41fa424" />
+<img alt="image" src="https://gist.github.com/user-attachments/assets/846f7005-9788-48a6-87f8-cbb2a896b007" /></p>
+<hr />
+<p>In newer versions of Windows, Group Policy settings for Microsoft Defender are reverted back.<br />
+To prevent this, <em>before</em> changing them:</p>
+<ol>
+<li>Open Resource Monitor (type <code>resmon.exe</code> in the search box)</li>
+<li>Overview</li>
+<li>Find <code>MsMpEng.exe</code> in the list</li>
+<li>Right-click &gt; Suspend Process</li>
+</ol>
+<p>In Windows 10 1903, Tamper Protection was added.<br />
+Tamper Protection must be disabled <em>before</em> changing Group Policy settings, otherwise these are ignored.</p>
+<ol>
+<li>Open Windows Security (type <code>Windows Security</code> in the search box)</li>
+<li>Virus &amp; threat protection &gt; Virus &amp; threat protection settings &gt; Manage settings</li>
+<li>Switch <code>Tamper Protection</code> to <code>Off</code></li>
+</ol>
+<p>To permanently disable real-time protection:</p>
+<ol>
+<li>Open Local Group Policy Editor (type <code>gpedit.msc</code> in the search box)</li>
+<li>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Defender Antivirus &gt; Real-time Protection</li>
+<li>Enable <code>Turn off real-time protection</code></li>
+<li>Restart the computer</li>
+</ol>
+<p>To permanently disable Microsoft Defender:</p>
+<ol>
+<li>Open Local Group Policy Editor (type <code>gpedit.msc</code> in the search box)</li>
+<li>Computer Configuration &gt; Administrative Templates &gt; Windows Components &gt; Microsoft Defender Antivirus</li>
+<li>Enable <code>Turn off Microsoft Defender Antivirus</code></li>
+<li>Restart the computer</li>
+</ol>
+<hr />
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/85564123-e7aa-419f-ba8a-2089f2ae4cb4" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/2b9e460e-9263-4c5f-a802-eadde98d1716" /></p>
+<details class="example">
+<summary>Installation Log</summary>
+</details>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2996,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../velociraptor/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Velociraptor">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Velociraptor
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--next" aria-label="Next: SOC Operations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                SOC Operations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +3179,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

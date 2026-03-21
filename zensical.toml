@@ -5,124 +5,72 @@
 # ============================================================================
 # Section for configuring basic project navigation
 # ============================================================================
-# nav = [
-#   {"Home" = "index.md"},
-#   {"About" = "about.md"},
-#   {"Gitea" = [
-#      "blog/index.md",
-#      "blog/installation.md",
-#      "blog/drone.md",
-#      "blog/woodpecker.md",
-#      "blog/backup.md",
-#      "blog/update.md"
-#   ]},
-#   {"Docker" = [
-#      "docker/index.md",
-#      "docker/introduction.md",
-#      "docker/installation.md",
-#      "docker/portainer.md",
-#      "docker/dockge.md",
-#      "docker/komodo.md",
-#      "docker/arcane.md",
-#      "docker/cheatsheet.md"
-#   ]},
-#   {"Gitea" = [
-#      "gitea/index.md",
-#      "gitea/installation.md",
-#      "gitea/drone.md",
-#      "gitea/woodpecker.md",
-#      "gitea/backup.md",
-#      "gitea/update.md"
-#   ]},
-#   {"Homelab" = [
-#      "homelab/index.md",
-#      "homelab/documentation.md",
-#      "homelab/linux.md",
-#      "homelab/linuxserver.md",
-#      "homelab/cloudflaretunnel.md"
-#   ]},
-#   {"Wazuh" = [
-#      "wazuh/index.md",
-#      "wazuh/assistant.md",
-#      "wazuh/stepbystep.md",
-#      "wazuh/vm.md"
-#   ]},
-#   {"SocOps" = [
-#      "socops/index.md",
-#      "socops/thehive.md",
-#      "socops/cortex.md",
-#      "socops/misp.md",
-#      "socops/shuffle.md",
-#   ]},
-#   {"Labs" = [
-#      "labs/index.md",
-#      "labs/flarevm.md"
-#   ]},
-#   {"Windows" = [
-#      "windows/index.md",
-#      "windows/defender.md",
-#      "windows/update.md"
-#   ]},
-#   {"Cloud Pentest" = [
-#      "cloud/index.md",
-#      "cloud/introduction.md",
-#      "cloud/aws.md",
-#      "cloud/azure.md",
-#      "cloud/gcp.md",
-#      "cloud/tools.md"
-#   ]},
-#   {"Research" = [
-#      "research/index.md",
-#      "research/CVE-2025-68613.md"
-#   ]},
-#   {"Forensics" = [
-#      "forensics/index.md",
-#      "forensics/linux-forensics.md",
-#      "forensics/threat-hunting-with-yara.md",
-#      "forensics/malware-classification.md"
-#   ]},
-#   {"Web Security" = [
-#      "web/index.md",
-#      "web/wapiti.md",
-#      "web/nuclei.md",
-#      "web/ffuf.md"
-#   ]},
-#   {"GOAD" = [
-#      "goad/index.md",
-#      "goad/installlog.md",
-#      "goad/goadintro.md",
-#      "goad/installationgoad.md",
-#      "goad/usage.md"
-#   ]},
-#   {"OSINT" = [
-#      "osint/index.md",
-#      "osint/google-dorking-cheatsheet.md",
-#      "osint/shodan-queries-cheatsheet.md"
-#   ]},
-#   {"Pentesting Containers" = [
-#      "pentesting-containers/index.md",
-#      "pentesting-containers/docker-pentesting-cheatsheet.md",
-#      "pentesting-containers/kubernetes-pentesting-cheatsheet.md"
-#   ]},
-#   {"Pentesting Databases" = [
-#      "pentesting-databases/index.md",
-#      "pentesting-databases/mongodb-pentesting-cheatsheet.md",
-#      "pentesting-databases/mysql-mariadb-pentesting-cheatsheet.md",
-#      "pentesting-databases/postgres-pentesting-cheatsheet.md",
-#      "pentesting-databases/redis-pentesting-cheatsheet.md",
-#      "pentesting-databases/couchdb-pentesting-cheatsheet.md",
-#   ]},
-#   {"How To" = [
-#      "howto/index.md",
-#      "howto/dns-records-guide.md",
-#      "howto/file-transfer-cheatsheet.md",
-#      "howto/pentesting-aws.md",
-#      "howto/pentesting-azure.md",
-#      "howto/pentesting-gcp.md",
-#      "howto/pentesting-dns.md",
-#      "howto/pentesting-tunneling.md",
-#   ]}
-# ]
+nav = [
+  {"Home" = "index.md"},
+  {"About" = "markdown.md"},
+  {"Docker" = [
+     "docker/index.md",
+     "docker/cheatsheet.md"
+  ]},
+  {"Research" = [
+     "research/index.md",
+     "research/CVE-2025-68613.md"
+  ]},
+  {"How To" = [
+     "howto/index.md",
+     "howto/dns-records-guide.md",
+     "howto/pentesting-dns.md",
+     "howto/file-transfer-cheatsheet.md",
+     "howto/pentesting-tunneling.md",
+  ]},
+  {"OSINT" = [
+     "osint/index.md",
+     "osint/google-dorking-cheatsheet.md",
+     "osint/shodan-queries-cheatsheet.md"
+  ]},
+  {"Cloud Pentest" = [
+     "cloud/index.md",
+     "cloud/introduction.md",
+     "cloud/aws.md",
+     "cloud/azure.md",
+     "cloud/gcp.md",
+     "cloud/tools.md"
+  ]},
+  {"Pentesting Containers" = [
+     "pentesting-containers/index.md",
+     "pentesting-containers/docker-pentesting-cheatsheet.md",
+     "pentesting-containers/kubernetes-pentesting-cheatsheet.md"
+  ]},
+  {"Pentesting Databases" = [
+     "pentesting-databases/index.md",
+     "pentesting-databases/mongodb-pentesting-cheatsheet.md",
+     "pentesting-databases/mysql-mariadb-pentesting-cheatsheet.md",
+     "pentesting-databases/postgres-pentesting-cheatsheet.md",
+     "pentesting-databases/redis-pentesting-cheatsheet.md",
+     "pentesting-databases/couchdb-pentesting-cheatsheet.md",
+  ]},
+  {"SocOps" = [
+     "socops/arkime.md",
+     "socops/velociraptor.md",
+     "socops/flarevm.md",
+     "socops/index.md",
+     "socops/thehive.md",
+     "socops/cortex.md",
+     "socops/misp.md",
+     "socops/shuffle.md",
+  ]},
+  {"Wazuh" = [
+     "wazuh/index.md",
+     "wazuh/assistant.md",
+     "wazuh/stepbystep.md",
+     "wazuh/vm.md"
+  ]},
+  {"Windows" = [
+     "windows/index.md",
+     "windows/defender.md",
+     "windows/update.md"
+  ]},
+]
 
 
 # ============================================================================
@@ -387,3 +335,22 @@ deprecated = "Outdated content"
 [project.extra.analytics]
 provider = "google"
 property = "G-4VCD4P0EJ3"
+
+
+[project.extra.analytics.feedback]
+title = "Was this page helpful?"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-up-outline"
+name = "This page was helpful"
+data = 1
+note = "Thanks for your feedback!"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-down-outline"
+name = "This page could be improved"
+data = 0
+note = """
+  Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+"""

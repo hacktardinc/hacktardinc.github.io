@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Wazuh is a free, open-source security platform that provides unified XDR and SIEM protection across endpoints, cloud services, and containers. It offers comprehensive security monitoring, intrusion detection, log analysis, and compliance management capabilities.">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/wazuh/">
       
+      
+        <link rel="prev" href="../socops/shuffle/">
+      
+      
+        <link rel="next" href="./assistant/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>Wazuh SIEM Documentation - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#introduction-to-wazuh" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="./.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Wazuh SIEM Documentation
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="./.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="./.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1480,7 +1487,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../socops/" class="md-nav__link ">
               
   
   
@@ -1524,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../socops/misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -1740,6 +1747,8 @@
       
   
   
+    
+  
   
   
     
@@ -1759,15 +1768,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="././" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1787,13 +1796,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_11" id="__nav_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1813,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="./assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="./stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="./vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +1941,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../windows/update/" class="md-nav__link">
         
   
   
@@ -2057,6 +2066,236 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-wazuh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction to Wazuh
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction to Wazuh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-wazuh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Wazuh?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-log-data-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Log Data Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-intrusion-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Intrusion Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vulnerability-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Vulnerability Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-incident-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Incident Response
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-regulatory-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Regulatory Compliance
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wazuh-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wazuh Server
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wazuh-indexer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wazuh Indexer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wazuh-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wazuh Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wazuh-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wazuh Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supported Platforms
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operating Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-container-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud &amp; Container Platforms
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benefits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2073,11 +2312,288 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="././" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Wazuh
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+  <h1 id="__skip">Wazuh SIEM Documentation</h1>
+
+<h2 id="introduction-to-wazuh">Introduction to Wazuh<a class="headerlink" href="#introduction-to-wazuh" title="Permanent link">&para;</a></h2>
+<p>Wazuh is a free, open-source security platform that provides unified XDR and SIEM protection across endpoints, cloud services, and containers. It offers comprehensive security monitoring, intrusion detection, log analysis, and compliance management capabilities.</p>
+<h3 id="what-is-wazuh">What is Wazuh?<a class="headerlink" href="#what-is-wazuh" title="Permanent link">&para;</a></h3>
+<p>Wazuh (pronounced "waz-uh") is a robust security monitoring solution that combines the capabilities of:</p>
+<ul>
+<li><strong>Security Information and Event Management (SIEM)</strong>   </li>
+<li><strong>Extended Detection and Response (XDR)</strong></li>
+<li><strong>Intrusion Detection System (IDS)</strong></li>
+<li><strong>Security Compliance</strong></li>
+</ul>
+<h3 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
+<h4 id="1-log-data-analysis">1. <strong>Log Data Analysis</strong><a class="headerlink" href="#1-log-data-analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Collects and analyzes log data from various sources</li>
+<li>Supports syslog, Windows event logs, and application logs</li>
+<li>Real-time log parsing and correlation</li>
+</ul>
+<h4 id="2-intrusion-detection">2. <strong>Intrusion Detection</strong><a class="headerlink" href="#2-intrusion-detection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>File integrity monitoring </li>
+<li>Rootkit and malware detection</li>
+<li>System call monitoring</li>
+<li>Policy and compliance monitoring</li>
+</ul>
+<h4 id="3-vulnerability-detection">3. <strong>Vulnerability Detection</strong><a class="headerlink" href="#3-vulnerability-detection" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Automated vulnerability assessment</li>
+<li>CVE database integration</li>
+<li>Application inventory scanning</li>
+<li>Security configuration assessment</li>
+</ul>
+<h4 id="4-incident-response">4. <strong>Incident Response</strong><a class="headerlink" href="#4-incident-response" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Automated response to security events</li>
+<li>Active response capabilities</li>
+<li>Integration with external tools</li>
+<li>Forensic data collection</li>
+</ul>
+<h4 id="5-regulatory-compliance">5. <strong>Regulatory Compliance</strong><a class="headerlink" href="#5-regulatory-compliance" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pre-built compliance templates (PCI DSS, GDPR, HIPAA, NIST)</li>
+<li>Custom compliance checks</li>
+<li>Comprehensive reporting capabilities</li>
+</ul>
+<h3 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h3>
+<p>Wazuh follows a client-server architecture with three main components:</p>
+<h4 id="wazuh-server"><strong>Wazuh Server</strong><a class="headerlink" href="#wazuh-server" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Central component for data analysis and storage</li>
+<li>Includes indexer, dashboard, and server components</li>
+<li>Stores alerts and events</li>
+<li>Handles rule and policy management</li>
+</ul>
+<h4 id="wazuh-indexer"><strong>Wazuh Indexer</strong><a class="headerlink" href="#wazuh-indexer" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Scalable indexing and storage engine</li>
+<li>Based on OpenSearch/Elasticsearch</li>
+<li>Provides fast search and data retrieval capabilities</li>
+</ul>
+<h4 id="wazuh-dashboard"><strong>Wazuh Dashboard</strong><a class="headerlink" href="#wazuh-dashboard" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Web-based user interface for data visualization</li>
+<li>Real-time security monitoring</li>
+<li>Customizable dashboards and reports</li>
+</ul>
+<h4 id="wazuh-agents"><strong>Wazuh Agents</strong><a class="headerlink" href="#wazuh-agents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lightweight agents deployed on monitored systems</li>
+<li>Collect security data and forward to server</li>
+<li>Support for Windows, Linux, macOS, and Solaris</li>
+</ul>
+<h3 id="supported-platforms">Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h3>
+<h4 id="operating-systems"><strong>Operating Systems</strong><a class="headerlink" href="#operating-systems" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Amazon Linux 2, Amazon Linux 2023</li>
+<li>CentOS Stream 10</li>
+<li>Red Hat Enterprise Linux 7, 8, 9, 10</li>
+<li>Ubuntu 16.04, 18.04, 20.04, 22.04, 24.04</li>
+</ul>
+<h4 id="cloud-container-platforms"><strong>Cloud &amp; Container Platforms</strong><a class="headerlink" href="#cloud-container-platforms" title="Permanent link">&para;</a></h4>
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>Google Cloud</li>
+<li>Docker containers</li>
+<li>Kubernetes</li>
+</ul>
+<h3 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Security Monitoring</strong> - Real-time threat detection and alerting</li>
+<li><strong>Compliance Management</strong> - Automated compliance auditing and reporting</li>
+<li><strong>Incident Investigation</strong> - Forensic analysis and threat hunting</li>
+<li><strong>Vulnerability Management</strong> - Continuous vulnerability assessment</li>
+<li><strong>Cloud Security</strong> - Security monitoring for cloud environments</li>
+</ol>
+<h3 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Open Source</strong> - Free to use with active community support</li>
+<li><strong>Scalable</strong> - Can monitor from small to very large environments</li>
+<li><strong>Comprehensive</strong> - All-in-one security monitoring solution</li>
+<li><strong>Flexible</strong> - Supports hybrid and multi-cloud environments</li>
+<li><strong>Extensible</strong> - Custom rules, decoders, and integrations</li>
+</ul>
+<hr />
+<p><em>This documentation will cover various installation methods, configuration approaches, and best practices for deploying Wazuh in different environments.</em></p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2613,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../socops/shuffle/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shuffle">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Shuffle
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="./assistant/" class="md-footer__link md-footer__link--next" aria-label="Next: Wazuh installation assistant">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Wazuh installation assistant
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +2796,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

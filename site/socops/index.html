@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Wazuh is a free, open-source security platform that provides unified XDR and SIEM protection across endpoints, cloud services, and containers. It offers comprehensive security monitoring, intrusion detection, log analysis, and compliance management capabilities.">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/socops/">
       
+      
+        <link rel="prev" href="./flarevm/">
+      
+      
+        <link rel="next" href="./thehive/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>SOC Operations - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -104,7 +110,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="./.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              SOC Operations
             
           </span>
         </div>
@@ -223,7 +229,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="./.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="./.." class="md-nav__link">
         
   
   
@@ -282,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +337,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +440,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +549,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +744,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +885,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1110,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1251,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1445,6 +1451,8 @@
       
   
   
+    
+  
   
   
     
@@ -1472,15 +1480,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="././" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1500,13 +1508,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_10" id="__nav_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1524,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="./arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="./velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="./flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="./thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="./cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="./misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="./shuffle/" class="md-nav__link">
         
   
   
@@ -1767,7 +1775,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../wazuh/" class="md-nav__link ">
               
   
   
@@ -1813,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +1851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +1940,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +1986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../windows/update/" class="md-nav__link">
         
   
   
@@ -2073,11 +2081,184 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="./.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./arkime/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    SocOps
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+  <h1 id="__skip">SOC Operations</h1>
+
+<p>hey there</p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2278,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="./flarevm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flare-VM">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Flare-VM
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="./thehive/" class="md-footer__link md-footer__link--next" aria-label="Next: TheHive">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                TheHive
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +2461,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

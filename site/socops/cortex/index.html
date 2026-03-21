@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Cortex is an open-source analysis and response engine designed for SOCs, CSIRTs, and security researchers to automate threat intelligence gathering and incident response.">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/socops/cortex/">
       
+      
+        <link rel="prev" href="../thehive/">
+      
+      
+        <link rel="next" href="../misp/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>Cortex - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#cortex" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Cortex
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1445,6 +1452,8 @@
       
   
   
+    
+  
   
   
     
@@ -1472,15 +1481,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1506,7 +1515,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1524,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="../flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../thehive/" class="md-nav__link">
         
   
   
@@ -1643,10 +1652,39 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><path d="M6 6h.01M6 18h.01"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Cortex
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1664,6 +1702,171 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-downloading-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Downloading the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verifying-file-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Verifying File Integrity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Verifying File Integrity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sha256-checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SHA256 Checksum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpg-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPG Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-installing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Installing the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-first-time-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. First-Time Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-create-an-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Create an organization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-create-a-organization-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Create a organization Administrator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Create a organization Administrator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cortex-user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cortex User Roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-enable-and-configure-analyzers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Enable and configure Analyzers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-create-an-account-for-thehive-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Create an account for TheHive integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1676,7 +1879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../shuffle/" class="md-nav__link">
         
   
   
@@ -1767,7 +1970,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../../wazuh/" class="md-nav__link ">
               
   
   
@@ -1813,7 +2016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="../../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +2046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -1873,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+      <a href="../../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -1932,7 +2135,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +2181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2056,6 +2259,160 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-downloading-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Downloading the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-verifying-file-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Verifying File Integrity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Verifying File Integrity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sha256-checksum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SHA256 Checksum
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpg-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPG Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-installing-the-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Installing the Package
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-first-time-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. First-Time Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-create-an-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Create an organization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-create-a-organization-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Create a organization Administrator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Create a organization Administrator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cortex-user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cortex User Roles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-enable-and-configure-analyzers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Enable and configure Analyzers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-create-an-account-for-thehive-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Create an account for TheHive integration
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2073,11 +2430,442 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../arkime/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    SocOps
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+<h1 id="cortex">Cortex<a class="headerlink" href="#cortex" title="Permanent link">&para;</a></h1>
+<h2 id="1-downloading-the-package">1. Downloading the Package<a class="headerlink" href="#1-downloading-the-package" title="Permanent link">&para;</a></h2>
+<p>Start by downloading the installation package, its SHA256 checksum file, and its signature file using Wget:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb<span class="w"> </span>https://cortex.download.strangebee.com/4.0/deb/cortex_4.0.0-1_all.deb
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>-O<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb.sha256<span class="w"> </span>https://cortex.download.strangebee.com/4.0/sha256/cortex_4.0.0-1_all.deb.sha256
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>wget<span class="w"> </span>-O<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb.asc<span class="w"> </span>https://cortex.download.strangebee.com/4.0/asc/cortex_4.0.0-1_all.deb.asc
+</span></code></pre></div>
+<h2 id="2-verifying-file-integrity">2. Verifying File Integrity<a class="headerlink" href="#2-verifying-file-integrity" title="Permanent link">&para;</a></h2>
+<p>Before installing, confirm the package hasn't been corrupted or tampered with.</p>
+<h3 id="sha256-checksum">SHA256 Checksum<a class="headerlink" href="#sha256-checksum" title="Permanent link">&para;</a></h3>
+<p>Generate the checksum of your downloaded file and compare it against the official value:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sha256sum<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cat<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb.sha256
+</span></code></pre></div>
+<p>Both outputs should match exactly. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If they don't, do not proceed with installation — reach out to the <a href="../security@strangebee.com">StrangeBee Security Team</a> instead.</p>
+</div>
+<h3 id="gpg-signature">GPG Signature<a class="headerlink" href="#gpg-signature" title="Permanent link">&para;</a></h3>
+<p>Download and import StrangeBee's public key, then use it to verify the package signature:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>/tmp/strangebee.gpg<span class="w"> </span>https://keys.download.strangebee.com/latest/gpg/strangebee.gpg
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>gpg<span class="w"> </span>--import<span class="w"> </span>/tmp/strangebee.gpg
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>gpg<span class="w"> </span>--verify<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb.asc<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb
+</span></code></pre></div>
+<p>A successful verification will display:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gpg:<span class="w"> </span>Good<span class="w"> </span>signature<span class="w"> </span>from<span class="w"> </span><span class="s2">&quot;TheHive Project (TheHive release key) &lt;support@thehive-project.org&gt;&quot;</span>
+</span></code></pre></div>
+<p>Make sure the key fingerprint matches: <code>0CD5 AC59 DE5C 5A8E 0EE1 3849 3D99 BB18 562C BC1C</code></p>
+<h2 id="3-installing-the-package">3. Installing the Package<a class="headerlink" href="#3-installing-the-package" title="Permanent link">&para;</a></h2>
+<p>You can install using either <code>apt-get</code> (recommended, as it handles dependencies automatically) or <code>dpkg</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># or</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>/tmp/cortex_4.0.0-1_all.deb
+</span></code></pre></div>
+<h2 id="4-configuration">4. Configuration<a class="headerlink" href="#4-configuration" title="Permanent link">&para;</a></h2>
+<p>The following settings are required to start Cortex successfully:</p>
+<ul>
+<li><a href="https://docs.strangebee.com/cortex/installation-and-configuration/secret/">Secret key</a> configuration</li>
+<li><a href="https://docs.strangebee.com/cortex/installation-and-configuration/database/">Database configuration</a></li>
+<li><a href="https://docs.strangebee.com/cortex/installation-and-configuration/authentication/">Authentication</a></li>
+<li><a href="https://docs.strangebee.com/cortex/installation-and-configuration/analyzers-responders/">Analyzers &amp; Responders configuration</a></li>
+</ul>
+<details>
+<summary>Secret key configuration</summary>
+<p>Setup a secret key for this instance:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>/etc/cortex/secret.conf<span class="w"> </span><span class="s">&lt;&lt; _EOF_</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="s">play.http.secret.key=&quot;$(cat /dev/urandom | tr -dc &#39;a-zA-Z0-9&#39; | fold -w 64 | head -n 1)&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="s">_EOF_</span>
+</span></code></pre></div>
+<p>Then, in the file <code>/etc/cortex/application.conf</code>, replace the line including <code>play.http.secret.key=</code> by:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>[..]
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>include &quot;/etc/cortex/secret.conf&quot;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>[..]
+</span></code></pre></div>
+</details>
+<details>
+<summary>Database configuration</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">## ElasticSearch</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>search<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># Name of the index</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nv">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>cortex
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1"># ElasticSearch instance address.</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># For cluster, join address:port with &#39;,&#39;: &quot;http://ip1:9200,ip2:9200,ip3:9200&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nv">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://localhost:9200&quot;</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1">## Advanced configuration</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># Scroll keepalive.</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1">#keepalive = 1m</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="c1"># Scroll page size.</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1">#pagesize = 50</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># Number of shards</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1">#nbshards = 5</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># Number of replicas</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="c1">#nbreplicas = 1</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1"># Arbitrary settings</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="c1">#settings {</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="c1">#  # Maximum number of nested fields</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1">#  mapping.nested_fields.limit = 100</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1">#}</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="c1">## Authentication configuration</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="c1">#user = &quot;&quot;</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="c1">#password = &quot;&quot;</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="c1">## SSL configuration</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="c1">#keyStore {</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="c1">#  path = &quot;/path/to/keystore&quot;</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="c1">#  type = &quot;JKS&quot; # or PKCS12</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="c1">#  password = &quot;keystore-password&quot;</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="c1">#}</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="c1">#trustStore {</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="c1">#  path = &quot;/path/to/trustStore&quot;</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="c1">#  type = &quot;JKS&quot; # or PKCS12</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="c1">#  password = &quot;trustStore-password&quot;</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="c1">#}</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="o">}</span>
+</span></code></pre></div>
+</details>
+<details>
+<summary>Analyzers &amp; Responders</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">## ANALYZERS</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>analyzer<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># analyzer location</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1"># url can be point to:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1"># - directory where analyzers are installed</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># - json file containing the list of analyzer descriptions</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="nv">urls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="s2">&quot;https://catalogs.download.strangebee.com/latest/json/analyzers.json&quot;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="c1">#&quot;/absolute/path/of/analyzers&quot;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="o">]</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1"># Sane defaults. Do not change unless you know what you are doing.</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>fork-join-executor<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="c1"># Min number of threads available for analysis.</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">    </span>parallelism-min<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="c1"># Parallelism (threads) ... ceil(available processors * factor).</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span>parallelism-factor<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.0
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">    </span><span class="c1"># Max number of threads available for analysis.</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">    </span>parallelism-max<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="o">}</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="o">}</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="c1"># RESPONDERS</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="c1">#</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>responder<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="c1"># responder location (same format as analyzer.urls)</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="nv">urls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">    </span><span class="s2">&quot;https://catalogs.download.strangebee.com/latest/json/responders.json&quot;</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="c1">#&quot;/absolute/path/of/responders&quot;</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="o">]</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="c1"># Sane defaults. Do not change unless you know what you are doing.</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>fork-join-executor<span class="w"> </span><span class="o">{</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">    </span><span class="c1"># Min number of threads available for analysis.</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span>parallelism-min<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span><span class="c1"># Parallelism (threads) ... ceil(available processors * factor).</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">    </span>parallelism-factor<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>.0
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">    </span><span class="c1"># Max number of threads available for analysis.</span>
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">    </span>parallelism-max<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="o">}</span>
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="o">}</span>
+</span></code></pre></div>
+</details>
+<p>Once done, save the configuration file and start the service:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>cortex
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The service may take a moment to come online. Once it's running, open your browser and navigate to http://YOUR_SERVER_ADDRESS:9001/</p>
+</div>
+<h2 id="5-first-time-setup">5. First-Time Setup<a class="headerlink" href="#5-first-time-setup" title="Permanent link">&para;</a></h2>
+<p>Cortex relies on ElasticSearch to store users, organizations, and analyzer configurations. On your first visit to the web UI, click Update Database to initialize it.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/b7728a14-ca9e-4cec-af6c-43078079a6ef" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/2dcc95e9-392c-4624-a498-7482c1c699a0" /></p>
+<p>You are then invited to create the first user. This is a Cortex global administration user or <code>superAdmin</code>. This user account will be able to create Cortex organizations and users.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/1a8e86da-6b7c-4bc0-a568-1ea0ad10d3a5" /></p>
+<p>You'll then be prompted to create a superAdmin account — the global administrator responsible for managing organizations and users within Cortex. </p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/1d81cabe-00c1-4215-bf79-5a08e9090f6b" /></p>
+<p>After creating this account, log in and you'll find that a default cortex organization has already been set up with your account included.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/e771909a-b0c0-49fa-b6dd-ec52a1a89af3" /></p>
+<h2 id="6-create-an-organization">6. Create an organization<a class="headerlink" href="#6-create-an-organization" title="Permanent link">&para;</a></h2>
+<p>The default <code>cortex</code> organization is reserved exclusively for global administration — it can only house users with the <code>superAdmin</code> role and is used to manage organizations and their users. It cannot be used to enable, disable, or configure analyzers.</p>
+<p>To work with analyzers, you must create your own organization. Click the <strong>Add Organization</strong> button to get started.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/b98ef3ef-ddf3-45f1-830e-bccf1ff0210c" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/bef1d1e0-404c-415c-94bb-551a094b077b" /></p>
+<h2 id="7-create-a-organization-administrator">7. Create a organization Administrator<a class="headerlink" href="#7-create-a-organization-administrator" title="Permanent link">&para;</a></h2>
+<p>Once your organization is set up, create an administrator account for it by assigning a user the <code>orgAdmin</code> role.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/6942ee6a-bd6c-445c-80c1-476aba3f70e8" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/63809964-3e31-499a-8499-20901c0efda1" /></p>
+<p>Set a password for this new user, then log out of the <code>superAdmin</code> account and log back in using the newly created <code>orgAdmin</code> credentials.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/2beed374-a98e-4a05-b40f-e0b3bc149b49" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/994ba692-a3d1-432d-8d6d-cde552c12b48" /></p>
+<h3 id="cortex-user-roles">Cortex User Roles<a class="headerlink" href="#cortex-user-roles" title="Permanent link">&para;</a></h3>
+<p>Cortex defines four distinct roles, each with a specific scope of access and permissions:</p>
+<ul>
+<li><strong><code>read</code></strong> — The most limited role. Users can view all jobs and their results, but cannot submit new jobs. This role is not available in the default <code>cortex</code> organization.</li>
+<li><strong><code>analyze</code></strong> — Inherits all <code>read</code> permissions and additionally allows users to submit jobs using any analyzer configured for their organization. Also not available in the default <code>cortex</code> organization.</li>
+<li><strong><code>orgAdmin</code></strong> — Inherits all <code>analyze</code> permissions. Users with this role can manage their organization's users (add users, assign roles), and configure analyzers. Not available in the default <code>cortex</code> organization.</li>
+<li><strong><code>superAdmin</code></strong> — An administrative-only role that is incompatible with all the roles above. Restricted exclusively to the default <code>cortex</code> organization, this role is used solely to manage organizations and their users. The first user created during installation is automatically assigned this role.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th><code>read</code></th>
+<th><code>analyze</code></th>
+<th><code>orgAdmin</code></th>
+<th><code>superAdmin</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read reports</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Run jobs</td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Enable/Disable analyzers</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Configure analyzers</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td>Create/Delete org analysts</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Create/Delete org admins</td>
+<td></td>
+<td></td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Create/Delete organizations</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Create Cortex admin users</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-enable-and-configure-analyzers">8. Enable and configure Analyzers<a class="headerlink" href="#8-enable-and-configure-analyzers" title="Permanent link">&para;</a></h2>
+<p>With your organization and admin account in place, you can now enable the analyzers your team needs. Head to the <strong>Organization</strong> &gt; <strong>Configuration</strong> and <strong>Organization</strong> &gt; <strong>Analyzers</strong> tabs to manage them — including adding API keys and setting rate limits — all from within the Web UI.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/89f820d0-2bc2-485e-9fc8-2e07b70eac06" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/98ba756c-11df-4c4f-b817-be431d704cd6" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/0056302d-7a5b-4bfd-a48e-be9f0bfee114" /></p>
+<h2 id="9-create-an-account-for-thehive-integration">9. Create an account for TheHive integration<a class="headerlink" href="#9-create-an-account-for-thehive-integration" title="Permanent link">&para;</a></h2>
+<p>If you plan to connect TheHive to Cortex, create a dedicated user account within your organization and assign it the <code>read, analyze</code> role. Generate an API key for this account — you will need to add it to your TheHive configuration.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/78538776-58a1-42e7-b2ff-3f5045340070" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/8a6e39fe-5b4b-4765-a5cc-b7cb12c205a1" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/b3169543-a972-440f-985e-a34d8f8d3280" /></p>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2885,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../thehive/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TheHive">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                TheHive
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../misp/" class="md-footer__link md-footer__link--next" aria-label="Next: MISP">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                MISP
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +3068,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

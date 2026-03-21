@@ -6,36 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Virtual machine (VM)">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
+        <link rel="canonical" href="https://hacktardinc.github.io/wazuh/vm/">
       
+      
+        <link rel="prev" href="../stepbystep/">
+      
+      
+        <link rel="next" href="../../windows/">
       
       
         
       
       
-      <link rel="icon" href="/images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Oste's Homelab</title>
+        <title>Virtual machine (VM) - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="/assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="/assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -54,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -88,7 +94,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#hardware-requirements" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -124,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Virtual machine (VM)
             
           </span>
         </div>
@@ -223,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -253,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -282,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -331,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -377,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -434,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -480,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -543,7 +550,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/howto/" class="md-nav__link ">
+            <a href="../../howto/" class="md-nav__link ">
               
   
   
@@ -589,7 +596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/dns-records-guide/" class="md-nav__link">
+      <a href="../../howto/dns-records-guide/" class="md-nav__link">
         
   
   
@@ -619,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-dns/" class="md-nav__link">
+      <a href="../../howto/pentesting-dns/" class="md-nav__link">
         
   
   
@@ -649,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../../howto/file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -679,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../../howto/pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -738,7 +745,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -784,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -879,7 +886,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/cloud/" class="md-nav__link ">
+            <a href="../../cloud/" class="md-nav__link ">
               
   
   
@@ -925,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/introduction/" class="md-nav__link">
+      <a href="../../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -955,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/aws/" class="md-nav__link">
+      <a href="../../cloud/aws/" class="md-nav__link">
         
   
   
@@ -985,7 +992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/azure/" class="md-nav__link">
+      <a href="../../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1015,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/gcp/" class="md-nav__link">
+      <a href="../../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1045,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cloud/tools/" class="md-nav__link">
+      <a href="../../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1104,7 +1111,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1150,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1245,7 +1252,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1291,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1321,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1351,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1381,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1411,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1480,7 +1487,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/socops/" class="md-nav__link ">
+            <a href="../../socops/" class="md-nav__link ">
               
   
   
@@ -1524,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/arkime/" class="md-nav__link">
+      <a href="../../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1554,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/velociraptor/" class="md-nav__link">
+      <a href="../../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1584,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/flarevm/" class="md-nav__link">
+      <a href="../../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1616,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/thehive/" class="md-nav__link">
+      <a href="../../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1646,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/cortex/" class="md-nav__link">
+      <a href="../../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1676,7 +1683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/misp/" class="md-nav__link">
+      <a href="../../socops/misp/" class="md-nav__link">
         
   
   
@@ -1706,7 +1713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/socops/shuffle/" class="md-nav__link">
+      <a href="../../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -1740,6 +1747,8 @@
       
   
   
+    
+  
   
   
     
@@ -1759,15 +1768,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/wazuh/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1793,7 +1802,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1813,7 +1822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/assistant/" class="md-nav__link">
+      <a href="../assistant/" class="md-nav__link">
         
   
   
@@ -1843,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/wazuh/stepbystep/" class="md-nav__link">
+      <a href="../stepbystep/" class="md-nav__link">
         
   
   
@@ -1870,10 +1879,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/wazuh/vm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-cog" viewBox="0 0 24 24"><path d="M11 10.27 7 3.34M11 13.73l-4 6.93M12 22v-2M12 2v2M14 12h8M17 20.66l-1-1.73M17 3.34l-1 1.73M2 12h2M20.66 17l-1.73-1M20.66 7l-1.73 1M3.34 17l1.73-1M3.34 7l1.73 1"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="12" r="8"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual machine (VM)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1891,6 +1927,97 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-and-access-the-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import and access the virtual machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and access the virtual machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-the-wazuh-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the Wazuh dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securing-your-wazuh-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Securing your Wazuh installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wazuh-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Wazuh Updates.
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1932,7 +2059,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="/windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -1978,7 +2105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2008,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2057,6 +2184,86 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-and-access-the-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import and access the virtual machine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Import and access the virtual machine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-the-wazuh-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access the Wazuh dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#securing-your-wazuh-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Securing your Wazuh installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-wazuh-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disable Wazuh Updates.
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2073,11 +2280,328 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Wazuh
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
+  
+  
 
+
+  <h1 id="__skip">Virtual machine (VM)</h1>
+
+<p>Wazuh provides a <a href="https://documentation.wazuh.com/current/deployment-options/virtual-machine/virtual-machine.html">pre-built virtual machine image</a> in Open Virtual Appliance (OVA) format. It includes the Amazon Linux 2023 operating system and the Wazuh central components.</p>
+<ul>
+<li>Wazuh manager 4.14.1</li>
+<li>Filebeat-OSS 7.10.2</li>
+<li>Wazuh indexer 4.14.1</li>
+<li>Wazuh dashboard 4.14.1</li>
+</ul>
+<p>You can import the Wazuh virtual machine image to VirtualBox or other OVA-compatible virtualization systems. This VM runs only on 64-bit systems with x86_64/AMD64 architecture. It does not provide high availability or scalability out of the box.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Architecture</th>
+<th>VM Format</th>
+<th>Version</th>
+<th>Package</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon Linux 2023</td>
+<td>64-bit x86_64/AMD64 architecture</td>
+<td>OVA</td>
+<td>4.14.1</td>
+<td><a href="https://packages.wazuh.com/4.x/vm/wazuh-4.14.1.ova">wazuh-4.14.1.ova</a> (<a href="https://packages.wazuh.com/4.x/checksums/wazuh/4.14.1/wazuh-4.14.1.ova.sha512">sha512</a>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hardware-requirements">Hardware requirements<a class="headerlink" href="#hardware-requirements" title="Permanent link">&para;</a></h3>
+<p>The following requirements have to be in place before the Wazuh VM can be imported into a host operating system:</p>
+<ul>
+<li>The host operating system must be 64-bit with x86_64/AMD64 architecture.</li>
+<li>Enable hardware virtualization in the host firmware.</li>
+<li>Install a virtualization platform, such as VirtualBox, on the host system.</li>
+</ul>
+<p>The Wazuh VM is configured with these specifications by default:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>CPU (cores)</th>
+<th>RAM (GB)</th>
+<th>Storage (GB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wazuh v4.14.1 OVA</td>
+<td>4</td>
+<td>8</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<h3 id="import-and-access-the-virtual-machine">Import and access the virtual machine<a class="headerlink" href="#import-and-access-the-virtual-machine" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Import the <a href="https://packages.wazuh.com/4.x/vm/wazuh-4.14.1.ova">wazuh-4.14.1.ova</a> file to your virtualization platform.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/338c6ce3-94e3-4f13-90e5-ff3bfc8c03bf" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/16e0fe49-361a-492e-abb5-d3cad257e6f8" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/34cbba53-e99a-4c67-8fb9-de916d6eff4a" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/5a8c4241-dd86-477a-a381-09815d579e53" /></p>
+</li>
+<li>
+<p>If you use VirtualBox, set the Graphics Controller to <code>VMSVGA</code>. Other controllers can freeze the VM window.</p>
+<ol>
+<li>Select the imported VM</li>
+<li>Click <strong>Settings</strong> &gt; <strong>Display</strong></li>
+<li>Switch from <strong>Basic</strong> to <strong>Expert</strong> mode at the top-left of the settings window.</li>
+<li>From the <strong>Graphic controller</strong> dropdown, select the <code>VMSVGA</code> option.
+<img alt="image" src="https://gist.github.com/user-attachments/assets/d81bad97-a937-41b7-be00-f87f87ca16c8" /></li>
+</ol>
+</li>
+<li>If you use VirtualBox, the VM might experience time skew when VirtualBox synchronizes the guest machine time. Follow the steps below to avoid this:<ol>
+<li>Select the imported Wazuh VM</li>
+<li>Click on Settings &gt; System.</li>
+<li>Switch from Basic to Expert mode at the top-left of the settings window.</li>
+<li>Click on the Motherboard sub-tab.</li>
+<li>Enable the <code>Hardware Clock in UTC Time</code> option under Features.
+<img alt="image" src="https://gist.github.com/user-attachments/assets/e8a87664-8536-4442-8845-ac387eb243ea" /></li>
+</ol>
+<details class="note">
+<summary>Note</summary>
+<p>By default, the network interface type is set to Bridged Adapter. The VM attempts to obtain an IP address from the network DHCP server. Alternatively, you can set a static IP address by configuring the network files in Amazon Linux.</p>
+</details>
+</li>
+<li>Start the VM.</li>
+<li>
+<p>Log in using these credentials. You can use the virtualization platform or access it via SSH.</p>
+<div class="language-text highlight"><pre><span></span><code>user: wazuh-user
+password: wazuh
+</code></pre></div>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/d5ceadce-d4c9-4df4-85cd-514c8a34face" /></p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/45a9043d-0cbb-44c4-96ee-c8533832c4ed" /></p>
+<p>The SSH <code>root</code> user login is disabled. The <code>wazuh-user</code> has sudo privileges. To switch to root, execute the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>-i
+</span></code></pre></div>
+</li>
+</ol>
+<h4 id="access-the-wazuh-dashboard">Access the Wazuh dashboard<a class="headerlink" href="#access-the-wazuh-dashboard" title="Permanent link">&para;</a></h4>
+<p>After starting the VM, access the Wazuh dashboard in a web browser using these credentials:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>URL:<span class="w"> </span>https://&lt;WAZUH_SERVER_IP&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>user:<span class="w"> </span>admin
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>password:<span class="w"> </span>admin
+</span></code></pre></div>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/ff5733b9-8fce-4dd5-95fc-59ef3b9c7c78" /></p>
+<p>It might take a few seconds to minutes for the Wazuh dashboard to complete initialization. </p>
+<h4 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">&para;</a></h4>
+<p>All components in this virtual image are configured to work out of the box. However, all components can be fully customized. These are the configuration file locations:</p>
+<ul>
+<li>Wazuh manager: <code>/var/ossec/etc/ossec.conf</code></li>
+<li>Wazuh indexer: <code>/etc/wazuh-indexer/opensearch.yml</code></li>
+<li>Filebeat-OSS: <code>/etc/filebeat/filebeat.yml</code>
+Wazuh dashboard:<ul>
+<li><code>/etc/wazuh-dashboard/opensearch_dashboards.yml</code></li>
+<li><code>/usr/share/wazuh-dashboard/data/wazuh/config/wazuh.yml</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="securing-your-wazuh-installation">Securing your Wazuh installation<a class="headerlink" href="#securing-your-wazuh-installation" title="Permanent link">&para;</a></h2>
+<p>It is recommended to change the default credentials to protect your infrastructure from possible attacks.</p>
+<p>Follow the instructions to change the default passwords for both the Wazuh API and the Wazuh indexer users.</p>
+<p>Use the Wazuh passwords tool to change all the internal users' passwords.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/usr/share/wazuh-indexer/plugins/opensearch-security/tools/wazuh-passwords-tool.sh<span class="w"> </span>--api<span class="w"> </span>--change-all<span class="w"> </span>--admin-user<span class="w"> </span>wazuh<span class="w"> </span>--admin-password<span class="w"> </span>wazuh
+</span></code></pre></div>
+<details class="example">
+<summary>Sample Output</summary>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>admin<span class="w"> </span>is<span class="w"> </span>yWOzmNA.?Aoc+rQfDBcF71KZp?1xd7IO
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>kibanaserver<span class="w"> </span>is<span class="w"> </span>nUa+66zY.eDF*2rRl5GKdgLxvgYQA+wo
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>kibanaro<span class="w"> </span>is<span class="w"> </span>0jHq.4i*VAgclnqFiXvZ5gtQq1D5LCcL
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>logstash<span class="w"> </span>is<span class="w"> </span>hWW6U45rPoCT?oR.r.Baw2qaWz2iH8Ml
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>readall<span class="w"> </span>is<span class="w"> </span>PNt5K+FpKDMO2TlxJ6Opb2D0mYl*I7FQ
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>user<span class="w"> </span>snapshotrestore<span class="w"> </span>is<span class="w"> </span>+GGz2noZZr2qVUK7xbtqjUup049tvLq.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>WARNING:<span class="w"> </span>Wazuh<span class="w"> </span>indexer<span class="w"> </span>passwords<span class="w"> </span>changed.<span class="w"> </span>Remember<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>the<span class="w"> </span>password<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>Wazuh<span class="w"> </span>dashboard<span class="w"> </span>and<span class="w"> </span>Filebeat<span class="w"> </span>nodes<span class="w"> </span><span class="k">if</span><span class="w"> </span>necessary,<span class="w"> </span>and<span class="w"> </span>restart<span class="w"> </span>the<span class="w"> </span>services.
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>Wazuh<span class="w"> </span>API<span class="w"> </span>user<span class="w"> </span>wazuh<span class="w"> </span>is<span class="w"> </span>JYWz5Zdb3Yq+uOzOPyUU4oat0n60VmWI
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>INFO:<span class="w"> </span>The<span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>Wazuh<span class="w"> </span>API<span class="w"> </span>user<span class="w"> </span>wazuh-wui<span class="w"> </span>is<span class="w"> </span>+fLddaCiZePxh24*?jC0nyNmgMGCKE+2
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>INFO:<span class="w"> </span>Updated<span class="w"> </span>wazuh-wui<span class="w"> </span>user<span class="w"> </span>password<span class="w"> </span><span class="k">in</span><span class="w"> </span>wazuh<span class="w"> </span>dashboard.<span class="w"> </span>Remember<span class="w"> </span>to<span class="w"> </span>restart<span class="w"> </span>the<span class="w"> </span>service.
+</span></code></pre></div>
+</details>
+<h2 id="disable-wazuh-updates">Disable Wazuh Updates.<a class="headerlink" href="#disable-wazuh-updates" title="Permanent link">&para;</a></h2>
+<p>It is recommended to disable the Wazuh package repositories after installation to prevent accidental upgrades that could break the environment.</p>
+<p>Execute the following command to disable the Wazuh repository:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;s/^deb /#deb /&quot;</span><span class="w"> </span>/etc/apt/sources.list.d/wazuh.list
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>apt<span class="w"> </span>update
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+                Thanks for your feedback! Help us improve this page by
+  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+
+<script src="https://giscus.app/client.js"
+        data-repo="hacktardinc/hacktardinc.github.io"
+        data-repo-id="R_kgDORs4YuA"
+        data-category="Q&A"
+        data-category-id="DIC_kwDORs4YuM4C48_S"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_tritanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
               </article>
             </div>
           
@@ -2097,6 +2621,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../stepbystep/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Step by step">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Step by step
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../windows/" class="md-footer__link md-footer__link--next" aria-label="Next: Windows">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Windows
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -2242,10 +2804,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":"/","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"/assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="/assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>
