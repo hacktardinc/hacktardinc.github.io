@@ -1,7 +1,7 @@
 ---
 title: Velociraptor
 description: Velociraptor
-icon: simple/cloudflare
+icon: lucide/server
 # status: new # deprecated
 comments: true
 # hide:

@@ -1,7 +1,7 @@
 ---
 title: How To
 description: How To
-icon: lucide/container
+icon: material/lightbulb-question-outline
 # status: new # deprecated
 comments: true
 # hide:

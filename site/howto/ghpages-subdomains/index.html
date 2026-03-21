@@ -6,40 +6,42 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Oste's Homelab Documentation for various projects and setups.">
+        <meta name="description" content="Set Up a Custom Subdomain for GitHub Pages Using Cloudflare">
       
       
         <meta name="author" content="Stephen Kageche">
       
       
-        <link rel="canonical" href="https://docs.ostehomelab.site/">
+        <link rel="canonical" href="https://docs.ostehomelab.site/howto/ghpages-subdomains/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="./markdown/">
+      
+        <link rel="next" href="../dns-records-guide/">
       
       
         
       
       
-      <link rel="icon" href="./images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="zensical-0.0.28">
     
     
       
-        <title>Get started - Oste's Homelab</title>
+        <title>Set Up a Custom Subdomain for GitHub Pages Using Cloudflare - Oste's Homelab</title>
       
     
     
       
         
       
-      <link rel="stylesheet" href="./assets/stylesheets/modern/main.6f2fbb28.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/modern/main.6f2fbb28.min.css">
       
         
           
         
-        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.dfe2e883.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/modern/palette.dfe2e883.min.css">
       
       
 
@@ -58,7 +60,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
   
@@ -93,7 +95,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#get-started" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="" title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-header__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -129,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get started
+              Set Up a Custom Subdomain for GitHub Pages Using Cloudflare
             
           </span>
         </div>
@@ -228,7 +230,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="" title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
+    <a href="../.." title="Oste&#x27;s Homelab" class="md-nav__button md-logo" aria-label="Oste's Homelab" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-brick-wall-shield" viewBox="0 0 24 24"><path d="M12 9v1.258M16 3v5.46M21 9.118V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5.75"/><path d="M22 17.5c0 2.499-1.75 3.749-3.83 4.474a.5.5 0 0 1-.335-.005c-2.085-.72-3.835-1.97-3.835-4.47V14a.5.5 0 0 1 .5-.499c1 0 2.25-.6 3.12-1.36a.6.6 0 0 1 .76-.001c.875.765 2.12 1.36 3.12 1.36a.5.5 0 0 1 .5.5zM3 15h7M3 9h12.142M8 15v6M8 3v6"/></svg>
@@ -255,39 +257,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -305,176 +278,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#admonitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Admonitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Details
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-tabs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Content tabs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagrams
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Footnotes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formatting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icons-emojis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Icons, Emojis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maths" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Maths
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task Lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tooltips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tooltips
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -486,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./markdown/" class="md-nav__link">
+      <a href="../../markdown/" class="md-nav__link">
         
   
   
@@ -535,7 +338,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./docker/" class="md-nav__link ">
+            <a href="../../docker/" class="md-nav__link ">
               
   
   
@@ -581,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./docker/cheatsheet/" class="md-nav__link">
+      <a href="../../docker/cheatsheet/" class="md-nav__link">
         
   
   
@@ -638,7 +441,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./research/" class="md-nav__link ">
+            <a href="../../research/" class="md-nav__link ">
               
   
   
@@ -684,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./research/CVE-2025-68613/" class="md-nav__link">
+      <a href="../../research/CVE-2025-68613/" class="md-nav__link">
         
   
   
@@ -718,6 +521,8 @@
       
   
   
+    
+  
   
   
     
@@ -741,15 +546,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./howto/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -775,7 +580,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -792,10 +597,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="./howto/ghpages-subdomains/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Set Up a Custom Subdomain for GitHub Pages Using Cloudflare
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -813,6 +645,130 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-configure-the-custom-domain-on-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1 — Configure the Custom Domain on GitHub
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-a-cname-record-in-cloudflare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Add a CNAME Record in Cloudflare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-verify-dns-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Verify DNS Propagation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3 — Verify DNS Propagation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via terminal:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-browser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via browser:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-confirm-on-github-and-enable-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4 — Confirm on GitHub and Enable HTTPS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -825,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./howto/dns-records-guide/" class="md-nav__link">
+      <a href="../dns-records-guide/" class="md-nav__link">
         
   
   
@@ -855,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./howto/pentesting-dns/" class="md-nav__link">
+      <a href="../pentesting-dns/" class="md-nav__link">
         
   
   
@@ -885,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./howto/file-transfer-cheatsheet/" class="md-nav__link">
+      <a href="../file-transfer-cheatsheet/" class="md-nav__link">
         
   
   
@@ -915,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./howto/pentesting-tunneling/" class="md-nav__link">
+      <a href="../pentesting-tunneling/" class="md-nav__link">
         
   
   
@@ -974,7 +930,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./osint/" class="md-nav__link ">
+            <a href="../../osint/" class="md-nav__link ">
               
   
   
@@ -1020,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./osint/google-dorking-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/google-dorking-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1050,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./osint/shodan-queries-cheatsheet/" class="md-nav__link">
+      <a href="../../osint/shodan-queries-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1115,7 +1071,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./cloud/" class="md-nav__link ">
+            <a href="../../cloud/" class="md-nav__link ">
               
   
   
@@ -1161,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./cloud/introduction/" class="md-nav__link">
+      <a href="../../cloud/introduction/" class="md-nav__link">
         
   
   
@@ -1191,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./cloud/aws/" class="md-nav__link">
+      <a href="../../cloud/aws/" class="md-nav__link">
         
   
   
@@ -1221,7 +1177,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./cloud/azure/" class="md-nav__link">
+      <a href="../../cloud/azure/" class="md-nav__link">
         
   
   
@@ -1251,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./cloud/gcp/" class="md-nav__link">
+      <a href="../../cloud/gcp/" class="md-nav__link">
         
   
   
@@ -1281,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./cloud/tools/" class="md-nav__link">
+      <a href="../../cloud/tools/" class="md-nav__link">
         
   
   
@@ -1340,7 +1296,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./pentesting-containers/" class="md-nav__link ">
+            <a href="../../pentesting-containers/" class="md-nav__link ">
               
   
   
@@ -1386,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/docker-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1416,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-containers/kubernetes-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1481,7 +1437,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./pentesting-databases/" class="md-nav__link ">
+            <a href="../../pentesting-databases/" class="md-nav__link ">
               
   
   
@@ -1527,7 +1483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mongodb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1557,7 +1513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/mysql-mariadb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1587,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/postgres-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1617,7 +1573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/redis-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1647,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
+      <a href="../../pentesting-databases/couchdb-pentesting-cheatsheet/" class="md-nav__link">
         
   
   
@@ -1716,7 +1672,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./socops/" class="md-nav__link ">
+            <a href="../../socops/" class="md-nav__link ">
               
   
   
@@ -1760,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/arkime/" class="md-nav__link">
+      <a href="../../socops/arkime/" class="md-nav__link">
         
   
   
@@ -1790,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/velociraptor/" class="md-nav__link">
+      <a href="../../socops/velociraptor/" class="md-nav__link">
         
   
   
@@ -1820,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/flarevm/" class="md-nav__link">
+      <a href="../../socops/flarevm/" class="md-nav__link">
         
   
   
@@ -1852,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/thehive/" class="md-nav__link">
+      <a href="../../socops/thehive/" class="md-nav__link">
         
   
   
@@ -1882,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/cortex/" class="md-nav__link">
+      <a href="../../socops/cortex/" class="md-nav__link">
         
   
   
@@ -1912,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/misp/" class="md-nav__link">
+      <a href="../../socops/misp/" class="md-nav__link">
         
   
   
@@ -1942,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./socops/shuffle/" class="md-nav__link">
+      <a href="../../socops/shuffle/" class="md-nav__link">
         
   
   
@@ -2003,7 +1959,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./wazuh/" class="md-nav__link ">
+            <a href="../../wazuh/" class="md-nav__link ">
               
   
   
@@ -2049,7 +2005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./wazuh/assistant/" class="md-nav__link">
+      <a href="../../wazuh/assistant/" class="md-nav__link">
         
   
   
@@ -2079,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./wazuh/stepbystep/" class="md-nav__link">
+      <a href="../../wazuh/stepbystep/" class="md-nav__link">
         
   
   
@@ -2109,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./wazuh/vm/" class="md-nav__link">
+      <a href="../../wazuh/vm/" class="md-nav__link">
         
   
   
@@ -2168,7 +2124,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./windows/" class="md-nav__link ">
+            <a href="../../windows/" class="md-nav__link ">
               
   
   
@@ -2214,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./windows/defender/" class="md-nav__link">
+      <a href="../../windows/defender/" class="md-nav__link">
         
   
   
@@ -2244,7 +2200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./windows/update/" class="md-nav__link">
+      <a href="../../windows/update/" class="md-nav__link">
         
   
   
@@ -2292,8 +2248,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2302,10 +2256,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
+        Prerequisites
       
     </span>
   </a>
@@ -2313,22 +2267,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#step-1-configure-the-custom-domain-on-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples
+        Step 1 — Configure the Custom Domain on GitHub
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-add-a-cname-record-in-cloudflare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2 — Add a CNAME Record in Cloudflare
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-verify-dns-propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3 — Verify DNS Propagation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3 — Verify DNS Propagation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#admonitions" class="md-nav__link">
+  <a href="#via-terminal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Admonitions
+        Via terminal:
       
     </span>
   </a>
@@ -2336,10 +2312,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
+  <a href="#via-browser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Details
+        Via browser:
       
     </span>
   </a>
@@ -2352,10 +2328,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
+  <a href="#step-4-confirm-on-github-and-enable-https" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Code Blocks
+        Step 4 — Confirm on GitHub and Enable HTTPS
       
     </span>
   </a>
@@ -2363,10 +2339,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#content-tabs" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Content tabs
+        How It Works
       
     </span>
   </a>
@@ -2374,76 +2350,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#diagrams" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Diagrams
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Footnotes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formatting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icons-emojis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Icons, Emojis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maths" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Maths
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task Lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tooltips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tooltips
+        Troubleshooting
       
     </span>
   </a>
@@ -2468,6 +2378,46 @@
   
 
 
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    How To
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
               
               <article class="md-content__inner md-typeset">
                 
@@ -2476,170 +2426,167 @@
   
 
 
-<h1 id="get-started">Get started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://zensical.org/docs/">zensical.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+  <h1 id="__skip">Set Up a Custom Subdomain for GitHub Pages Using Cloudflare</h1>
+
+<p>When deploying a documentation site or any static site to GitHub Pages, you may want it to live on a clean custom subdomain like <code>docs.yourdomain.com</code> instead of the default <code>username.github.io</code>. This guide walks you through doing exactly that — using Cloudflare as your DNS provider and GitHub Actions as your deployment source.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://zensical.org/docs/usage/new/"><code>zensical new</code></a> - Create a new project</li>
-<li><a href="https://zensical.org/docs/usage/preview/"><code>zensical serve</code></a> - Start local web server</li>
-<li><a href="https://zensical.org/docs/usage/build/"><code>zensical build</code></a> - Build your site</li>
+<li>A GitHub repository with GitHub Pages enabled and deployed via <strong>GitHub Actions</strong></li>
+<li>A domain registered and managed on <strong>Cloudflare</strong></li>
+<li>Admin access to your GitHub repository settings</li>
 </ul>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<h3 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/admonitions/">documentation</a></p>
-</blockquote>
+<hr />
+<h2 id="step-1-configure-the-custom-domain-on-github">Step 1 — Configure the Custom Domain on GitHub<a class="headerlink" href="#step-1-configure-the-custom-domain-on-github" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Go to your repository on GitHub</li>
+<li>Click <strong>Settings</strong> → <strong>Pages</strong> (under the <em>Code and automation</em> section)</li>
+<li>Under <strong>Custom domain</strong>, enter your desired subdomain:
+   <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docs.yourdomain.com
+</span></code></pre></div></li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/5ff2e927-6528-4d04-959f-317c4c38e35d" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is a <strong>note</strong> admonition. Use it to provide helpful information.</p>
+<p>Since you are publishing via GitHub Actions (not a branch), GitHub will <strong>not</strong> create a <code>CNAME</code> file in your repository — and none is required. You can safely ignore any mention of a CNAME file in the GitHub docs.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a <strong>warning</strong> admonition. Be careful!</p>
-</div>
-<h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/admonitions/#collapsible-blocks">documentation</a></p>
-</blockquote>
-<details class="info">
-<summary>Click to expand for more info</summary>
-<p>This content is hidden until you click to expand it.
-Great for FAQs or long explanations.</p>
-</details>
-<h2 id="code-blocks">Code Blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/code-blocks/">documentation</a></p>
-</blockquote>
-<div class="language-python highlight"><span class="filename">Code blocks</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
-</span></span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<ol>
-<li>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/code-blocks/#code-annotations">documentation</a></p>
-</blockquote>
-<p>Code annotations allow to attach notes to lines of code.</p>
-</li>
-</ol>
-<p>Code can also be highlighted inline: <code class="language-python highlight"><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span></code>.</p>
-<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/content-tabs/">documentation</a></p>
-</blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="content-tabs-python" name="__tabbed_1" type="radio" /><input id="content-tabs-rust" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="content-tabs-python">Python</label><label for="content-tabs-rust">Rust</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from Python!&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-rs highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello from Rust!&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/diagrams/">documentation</a></p>
-</blockquote>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/footnotes/">documentation</a></p>
-</blockquote>
-<p>Here's a sentence with a footnote.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Hover it, to see a tooltip.</p>
-<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/formatting/">documentation</a></p>
-</blockquote>
-<ul>
-<li><mark>This was marked (highlight)</mark></li>
-<li><ins>This was inserted (underline)</ins></li>
-<li><del>This was deleted (strikethrough)</del></li>
-<li>H<sub>2</sub>O</li>
-<li>A<sup>T</sup>A</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
-</ul>
-<h2 id="icons-emojis">Icons, Emojis<a class="headerlink" href="#icons-emojis" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/icons-emojis/">documentation</a></p>
-</blockquote>
-<ul>
-<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:" /> <code>:sparkles:</code></li>
-<li><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" title=":rocket:" /> <code>:rocket:</code></li>
-<li><img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f389.svg" title=":tada:" /> <code>:tada:</code></li>
-<li><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4dd.svg" title=":memo:" /> <code>:memo:</code></li>
-<li><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f440.svg" title=":eyes:" /> <code>:eyes:</code></li>
-</ul>
-<h2 id="maths">Maths<a class="headerlink" href="#maths" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/math/">documentation</a></p>
-</blockquote>
-<p>$$
-\cos x=\sum_{k=0}<sup>{\infty}\frac{(-1)</sup>k}{(2k)!}x^{2k}
-$$</p>
-<div class="admonition warning">
-<p class="admonition-title">Needs configuration</p>
-<p>Note that MathJax is included via a <code>script</code> tag on this page and is not
-configured in the generated default configuration to avoid including it
-in a pages that do not need it. See the documentation for details on how
-to configure it on all your pages if they are more Maths-heavy than these
-simple starter pages.</p>
-</div>
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-<h2 id="task-lists">Task Lists<a class="headerlink" href="#task-lists" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/lists/#using-task-lists">documentation</a></p>
-</blockquote>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install Zensical</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configure <code>zensical.toml</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Write amazing documentation</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Deploy anywhere</li>
-</ul>
-<h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/tooltips/">documentation</a></p>
-</blockquote>
-<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
-<div class="footnote">
 <hr />
+<h2 id="step-2-add-a-cname-record-in-cloudflare">Step 2 — Add a CNAME Record in Cloudflare<a class="headerlink" href="#step-2-add-a-cname-record-in-cloudflare" title="Permanent link">&para;</a></h2>
 <ol>
-<li id="fn:1">
-<p>This is the footnote.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li>Log in to your <strong>Cloudflare dashboard</strong> and select your domain</li>
+<li>Navigate to <strong>DNS</strong> → <strong>Records</strong> → <strong>Add record</strong></li>
+<li>
+<p>Fill in the following:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td><code>CNAME</code></td>
+</tr>
+<tr>
+<td><strong>Name</strong></td>
+<td><code>docs</code></td>
+</tr>
+<tr>
+<td><strong>Content</strong></td>
+<td><code>your-username.github.io</code></td>
+</tr>
+<tr>
+<td><strong>Proxy status</strong></td>
+<td>DNS only <em>(grey cloud)</em></td>
+</tr>
+<tr>
+<td><strong>TTL</strong></td>
+<td>Auto</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Save</strong></p>
 </li>
 </ol>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/fa80b6c9-fa87-4f98-9efc-ec9bf45c9cfe" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Important</p>
+<p>Make sure the proxy status is set to <strong>"DNS only" (grey cloud 🌫️)</strong> and NOT <strong>"Proxied" (orange cloud 🟠)</strong>. The orange cloud routes traffic through Cloudflare's proxy, which interferes with GitHub Pages' automatic SSL certificate provisioning and will cause an <code>InvalidDNSError</code>.</p>
 </div>
+<hr />
+<h2 id="step-3-verify-dns-propagation">Step 3 — Verify DNS Propagation<a class="headerlink" href="#step-3-verify-dns-propagation" title="Permanent link">&para;</a></h2>
+<p>DNS changes don't take effect instantly. Before GitHub can validate your domain, the records need to propagate. You can check this in two ways:</p>
+<h3 id="via-terminal"><strong>Via terminal:</strong><a class="headerlink" href="#via-terminal" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>dig<span class="w"> </span>docs.yourdomain.com<span class="w"> </span>+noall<span class="w"> </span>+answer
+</span></code></pre></div>
+<p>The output should resolve through to <code>your-username.github.io</code>. If it does, DNS is propagated on your end.</p>
+<div class="admonition example">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>➜<span class="w">  </span>~<span class="w"> </span>dig<span class="w"> </span>docs.ostehomelab.site<span class="w"> </span>+noall<span class="w"> </span>+answer
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docs.ostehomelab.site.<span class="w">  </span><span class="m">300</span><span class="w">     </span>IN<span class="w">      </span>CNAME<span class="w">   </span>your-username.github.io.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>your-username.github.io.<span class="w">  </span><span class="m">3600</span><span class="w">    </span>IN<span class="w">      </span>A<span class="w">       </span><span class="m">185</span>.199.110.153
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>your-username.github.io.<span class="w">  </span><span class="m">3600</span><span class="w">    </span>IN<span class="w">      </span>A<span class="w">       </span><span class="m">185</span>.199.111.153
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>your-username.github.io.<span class="w">  </span><span class="m">3600</span><span class="w">    </span>IN<span class="w">      </span>A<span class="w">       </span><span class="m">185</span>.199.108.153
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>your-username.github.io.<span class="w">  </span><span class="m">3600</span><span class="w">    </span>IN<span class="w">      </span>A<span class="w">       </span><span class="m">185</span>.199.109.153
+</span></code></pre></div>
+</div>
+<h3 id="via-browser"><strong>Via browser:</strong><a class="headerlink" href="#via-browser" title="Permanent link">&para;</a></h3>
+<p>Visit <a href="https://dnschecker.org">dnschecker.org</a>, enter <code>docs.yourdomain.com</code>, and confirm it is resolving globally across different regions.</p>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/d583a9c1-3bc8-473e-b8b5-7df8c375173c" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>As confirmed on DNSChecker.org, docs.ostehomelab.site has successfully propagated across all global regions — including the US, Canada, Russia, South Africa, and Asia. All DNS servers are resolving the domain to the same four IP addresses (185.199.108–111.153), which are the official GitHub Pages servers as documented in the <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">GitHub Pages DNS configuration guide</a>. This confirms that the custom subdomain is correctly wired up and accessible worldwide. 🌍</p>
+</div>
+<hr />
+<h2 id="step-4-confirm-on-github-and-enable-https">Step 4 — Confirm on GitHub and Enable HTTPS<a class="headerlink" href="#step-4-confirm-on-github-and-enable-https" title="Permanent link">&para;</a></h2>
+<p>Once DNS has propagated:</p>
+<ol>
+<li>Go back to <strong>Settings</strong> → <strong>Pages</strong> in your repository</li>
+<li>Click <strong>"Check again"</strong> next to the DNS check status</li>
+<li>Wait for the green <strong>"DNS check successful"</strong> confirmation</li>
+<li>Once confirmed, tick <strong>"Enforce HTTPS"</strong> to enable SSL</li>
+</ol>
+<p><img alt="image" src="https://gist.github.com/user-attachments/assets/a9ccfc51-32c5-4d69-88cd-9436e02ca713" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DNS propagation can take anywhere from a few minutes to 24 hours depending on your DNS provider and region. If you see <code>InvalidDNSError</code>, simply wait 10–15 minutes and click "Check again".</p>
+</div>
+<hr />
+<h2 id="how-it-works">How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<p>Here's a quick overview of the full request flow once everything is configured:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>User visits docs.yourdomain.com
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        │
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        ▼
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Cloudflare DNS resolves CNAME
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        │
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        ▼
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Resolves to your-username.github.io
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        │
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        ▼
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>GitHub Pages serves your site
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        │
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        ▼
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>HTTPS certificate issued by GitHub (via Let&#39;s Encrypt)
+</span></code></pre></div>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>InvalidDNSError</code> on GitHub</td>
+<td>DNS hasn't propagated yet</td>
+<td>Wait and click "Check again"</td>
+</tr>
+<tr>
+<td>SSL certificate not provisioning</td>
+<td>Cloudflare proxy is enabled (orange cloud)</td>
+<td>Switch to "DNS only" (grey cloud)</td>
+</tr>
+<tr>
+<td>Site loads but shows wrong content</td>
+<td>Old CNAME record still cached</td>
+<td>Flush DNS cache or wait for TTL to expire</td>
+</tr>
+<tr>
+<td><code>docs.yourdomain.com</code> not resolving</td>
+<td>CNAME record not saved correctly</td>
+<td>Double-check the record name and content in Cloudflare</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>That's it! Your GitHub Pages site will now be accessible at your custom subdomain with a valid HTTPS certificate managed automatically by GitHub.</p>
 
 
 
@@ -2790,15 +2737,31 @@ simple starter pages.</p>
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: How To">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                How To
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="./markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="../dns-records-guide/" class="md-footer__link md-footer__link--next" aria-label="Next: DNS Records">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About
+                DNS Records
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2953,10 +2916,10 @@ simple starter pages.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"./assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.instant.progress","navigation.path","navigation.top","navigation.tracking","search.highlight"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="./assets/javascripts/bundle.c2b142ea.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2b142ea.min.js"></script>
       
     
   </body>

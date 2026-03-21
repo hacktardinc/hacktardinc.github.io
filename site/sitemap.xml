@@ -1,135 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://hacktardinc.github.io/</loc>
+        <loc>https://docs.ostehomelab.site/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/markdown/</loc>
+        <loc>https://docs.ostehomelab.site/markdown/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/docker/</loc>
+        <loc>https://docs.ostehomelab.site/docker/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/docker/cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/docker/cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/research/</loc>
+        <loc>https://docs.ostehomelab.site/research/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/research/CVE-2025-68613/</loc>
+        <loc>https://docs.ostehomelab.site/research/CVE-2025-68613/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/howto/</loc>
+        <loc>https://docs.ostehomelab.site/howto/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/howto/dns-records-guide/</loc>
+        <loc>https://docs.ostehomelab.site/howto/ghpages-subdomains/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/howto/pentesting-dns/</loc>
+        <loc>https://docs.ostehomelab.site/howto/dns-records-guide/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/howto/file-transfer-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/howto/pentesting-dns/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/howto/pentesting-tunneling/</loc>
+        <loc>https://docs.ostehomelab.site/howto/file-transfer-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/osint/</loc>
+        <loc>https://docs.ostehomelab.site/howto/pentesting-tunneling/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/osint/google-dorking-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/osint/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/osint/shodan-queries-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/osint/google-dorking-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/</loc>
+        <loc>https://docs.ostehomelab.site/osint/shodan-queries-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/introduction/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/aws/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/introduction/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/azure/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/aws/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/gcp/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/azure/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/cloud/tools/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/gcp/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-containers/</loc>
+        <loc>https://docs.ostehomelab.site/cloud/tools/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-containers/docker-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-containers/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-containers/kubernetes-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-containers/docker-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-containers/kubernetes-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/mongodb-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/mongodb-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/postgres-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/mysql-mariadb-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/redis-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/postgres-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/pentesting-databases/couchdb-pentesting-cheatsheet/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/redis-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/arkime/</loc>
+        <loc>https://docs.ostehomelab.site/pentesting-databases/couchdb-pentesting-cheatsheet/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/velociraptor/</loc>
+        <loc>https://docs.ostehomelab.site/socops/arkime/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/flarevm/</loc>
+        <loc>https://docs.ostehomelab.site/socops/velociraptor/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/</loc>
+        <loc>https://docs.ostehomelab.site/socops/flarevm/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/thehive/</loc>
+        <loc>https://docs.ostehomelab.site/socops/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/cortex/</loc>
+        <loc>https://docs.ostehomelab.site/socops/thehive/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/misp/</loc>
+        <loc>https://docs.ostehomelab.site/socops/cortex/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/socops/shuffle/</loc>
+        <loc>https://docs.ostehomelab.site/socops/misp/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/wazuh/</loc>
+        <loc>https://docs.ostehomelab.site/socops/shuffle/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/wazuh/assistant/</loc>
+        <loc>https://docs.ostehomelab.site/wazuh/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/wazuh/stepbystep/</loc>
+        <loc>https://docs.ostehomelab.site/wazuh/assistant/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/wazuh/vm/</loc>
+        <loc>https://docs.ostehomelab.site/wazuh/stepbystep/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/windows/</loc>
+        <loc>https://docs.ostehomelab.site/wazuh/vm/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/windows/defender/</loc>
+        <loc>https://docs.ostehomelab.site/windows/</loc>
       </url>
       <url>
-        <loc>https://hacktardinc.github.io/windows/update/</loc>
+        <loc>https://docs.ostehomelab.site/windows/defender/</loc>
+      </url>
+      <url>
+        <loc>https://docs.ostehomelab.site/windows/update/</loc>
       </url>
 </urlset>

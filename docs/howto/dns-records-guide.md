@@ -1,7 +1,7 @@
 ---
 title: DNS Records
 description: DNS Records
-icon: fontawesome/brands/docker
+icon: material/dns
 # status: new # deprecated
 comments: true
 # hide:

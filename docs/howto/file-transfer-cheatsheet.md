@@ -1,7 +1,7 @@
 ---
 title: File Transfer
 description: File Transfer
-icon: fontawesome/brands/docker
+icon: material/file-swap-outline
 # status: new # deprecated
 comments: true
 # hide:

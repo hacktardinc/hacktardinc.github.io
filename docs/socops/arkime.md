@@ -1,7 +1,7 @@
 ---
 title: Arkime
 description: Arkime
-icon: simple/cloudflare
+icon: material/owl
 # status: new # deprecated
 comments: true
 # hide:

@@ -18,6 +18,7 @@ nav = [
   ]},
   {"How To" = [
      "howto/index.md",
+     "howto/ghpages-subdomains.md",
      "howto/dns-records-guide.md",
      "howto/pentesting-dns.md",
      "howto/file-transfer-cheatsheet.md",
