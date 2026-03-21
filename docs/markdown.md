@@ -1,5 +1,6 @@
 ---
 icon: simple/markdown
+comments: true
 ---
 
 # Markdown in 5min

@@ -146,6 +146,7 @@ site_url = "https://hacktardinc.github.io/"
 variant = "modern"
 favicon = "images/favicon.ico"
 language = "en"
+custom_dir = "overrides"
 
 
 # ============================================================================
@@ -380,3 +381,9 @@ custom_checkbox = true
 [project.extra.status]
 new = "Recently added"
 deprecated = "Outdated content"
+
+
+# Project Analytics
+[project.extra.analytics]
+provider = "google"
+property = "G-4VCD4P0EJ3"
