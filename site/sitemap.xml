@@ -4,7 +4,7 @@
         <loc>https://docs.ostehomelab.site/</loc>
       </url>
       <url>
-        <loc>https://docs.ostehomelab.site/markdown/</loc>
+        <loc>https://docs.ostehomelab.site/about/</loc>
       </url>
       <url>
         <loc>https://docs.ostehomelab.site/docker/</loc>
@@ -44,6 +44,9 @@
       </url>
       <url>
         <loc>https://docs.ostehomelab.site/osint/shodan-queries-cheatsheet/</loc>
+      </url>
+      <url>
+        <loc>https://docs.ostehomelab.site/osint/secrets-leak/</loc>
       </url>
       <url>
         <loc>https://docs.ostehomelab.site/cloud/</loc>

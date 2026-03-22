@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="./markdown/">
+        <link rel="next" href="./about/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Get started - Oste's Homelab</title>
+        <title>Oste's Homelab - Oste's Homelab</title>
       
     
     
@@ -74,6 +74,311 @@
 
     
     
+<!--
+  FONTS: JetBrains Mono is pulled from Google Fonts (the @import below).
+  If you prefer to go fully offline / self-hosted, delete that line and
+  add  extra_css: [stylesheets/jetbrains-mono.css]  in your config,
+  pointing at a locally downloaded copy.
+
+  ICONS: The knowledge-modules section has been removed so SVG icons are
+  no longer used on this page. If you add icon elements elsewhere, Lucide
+  icons are available in Zensical via the normal  :lucide-<name>:  syntax
+  inside Markdown, or as  <span class="twemoji lucide--name"></span>  in
+  raw HTML — no extra CDN needed.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+
+/* ── Variables ── */
+:root {
+  --hk-red:      #cc0000;
+  --hk-red-b:    #ff2222;
+  --hk-red-d:    #550000;
+  --hk-red-glow: rgba(204,0,0,0.18);
+  --hk-green:    #00ff41;
+  --hk-green-d:  #008822;
+  --hk-bd-d:     #1e0000;
+  --hk-t:        #e8e8e8;
+  --hk-td:       #666666;
+  --hk-tm:       #3a3a3a;
+  --hk-mono:     'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ════════════════════════════════════
+   RESET — pitch black everywhere,
+   no sidebars, no content gutters.
+   Dark theme is the only theme here.
+   ════════════════════════════════════ */
+html, body,
+.md-container, .md-main, .md-content,
+.md-main__inner, .md-content__inner {
+  background: #0b0c0f !important;
+  color: #e8e8e8 !important;
+}
+
+/* Hide both sidebars */
+.md-sidebar,
+.md-sidebar--primary,
+.md-sidebar--secondary { display: none !important; }
+
+/* Content column fills full width */
+.md-main__inner {
+  display: block !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  grid-template-columns: unset !important;
+}
+.md-content {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+.md-content__inner { padding: 0 !important; margin: 0 !important; }
+
+/* ════════════════════════════════════
+   SCROLLBAR / SELECTION
+   ════════════════════════════════════ */
+::-webkit-scrollbar { width: 5px; background: #0b0c0f; }
+::-webkit-scrollbar-thumb { background: var(--hk-red-d); }
+::-webkit-scrollbar-thumb:hover { background: var(--hk-red); }
+::selection { background: var(--hk-red); color: #fff; }
+
+/* ════════════════════════════════════
+   PAGE WRAPPER
+   ════════════════════════════════════ */
+.hk-page {
+  background: #0b0c0f;
+  color: var(--hk-t);
+  font-family: var(--hk-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* ════════════════════════════════════
+   HERO — full viewport, pitch black
+   ════════════════════════════════════ */
+.hk-hero {
+  position: relative;
+  min-height: calc(100vh - 48px);
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 3rem;
+  align-items: start;          /* ← was center, now hugs top */
+  padding: 2rem 5rem 3.5rem;   /* ← reduce top padding too */
+  border-bottom: 1px solid var(--hk-bd-d);
+  overflow: hidden;
+  background: #0b0c0f;
+}
+
+/* Very subtle red corner glow — barely visible on black */
+.hk-hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 45%; height: 45%;
+  background: #0b0c0f;
+  pointer-events: none; z-index: 0;
+}
+
+/* Scanlines */
+.hk-hero::after {
+  content: '';
+  pointer-events: none;
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(rgba(255,255,255,0)) 2px, rgba(rgba(255,255,255,0)) 4px
+  );
+  z-index: 0;
+}
+
+.hk-hi { position: relative; z-index: 1; }
+
+/* ── SYSTEM ONLINE badge ── */
+.hk-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: .15em;
+  color: var(--hk-green);
+  border: 1px solid var(--hk-green-d);
+  padding: 4px 12px; margin-bottom: 22px;
+  animation: hk-pb 2.4s infinite;
+}
+@keyframes hk-pb {
+  0%,100% { border-color: var(--hk-green-d); }
+  50%      { border-color: var(--hk-green); box-shadow: 0 0 8px rgba(0,255,65,.25); }
+}
+.hk-bdot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--hk-green);
+  animation: hk-bl 1.2s step-end infinite;
+}
+@keyframes hk-bl { 50% { opacity: 0; } }
+
+/* ── ASCII art title ── */
+.hk-ascii {
+  font-family: var(--hk-mono);
+  font-size: clamp(.28rem, .58vw, .48rem);
+  line-height: 1.2; color: var(--hk-red);
+  margin: 0 0 22px; white-space: pre; letter-spacing: 0;
+  text-shadow: 0 0 12px rgba(200,0,0,.5);
+}
+
+/* ── Typewriter prompt line ── */
+.hk-pl {
+  font-size: clamp(.95rem, 1.7vw, 1.2rem); font-weight: 500;
+  color: var(--hk-t); margin: 0 0 14px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+}
+.hk-prompt { color: var(--hk-green); }
+.hk-tw     { color: var(--hk-red-b); }
+.hk-cur    { color: var(--hk-red); animation: hk-bl .8s step-end infinite; }
+.hk-cursm  { color: var(--hk-red); animation: hk-bl .8s step-end infinite; }
+
+/* ── Subtitle ── */
+.hk-sub {
+  font-size: 13px; line-height: 1.75;
+  color: var(--hk-td); max-width: 480px; margin: 0 0 26px;
+}
+.hk-acc { color: var(--hk-red-b); }
+
+/* ── Stats row ── */
+.hk-stats { display: flex; align-items: center; gap: 20px; margin-bottom: 34px; }
+.hk-stat  { display: flex; align-items: baseline; gap: 6px; }
+.hk-sv {
+  font-size: 2rem; font-weight: 700;
+  color: var(--hk-red-b);
+  text-shadow: 0 0 14px rgba(255,34,34,.35);
+  line-height: 1;
+}
+.hk-sl   { font-size: 11px; color: var(--hk-tm); }
+.hk-pipe { color: #1e0000; font-size: 1.4rem; }
+
+/* ── CTA Buttons ── */
+.hk-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.hk-btn {
+  display: inline-block; font-family: var(--hk-mono);
+  font-size: 12px; font-weight: 500; letter-spacing: .1em;
+  text-decoration: none !important; padding: 10px 22px;
+  border: 1px solid var(--hk-red); transition: all .15s ease;
+  cursor: pointer;
+}
+
+/* ENTER LAB — black default, blinks red on hover */
+.hk-btn-p {
+  background: #0b0c0f;
+  color: var(--hk-red) !important;
+  border-color: var(--hk-red-d);
+}
+.hk-btn-p:hover {
+  color: #fff !important;
+  border-color: var(--hk-red-b);
+  animation: hk-btn-blink .18s step-end 3;
+  background: var(--hk-red);
+}
+@keyframes hk-btn-blink {
+  0%   { background: var(--hk-red);   color: #fff; }
+  50%  { background: #0b0c0f;             color: var(--hk-red); }
+  100% { background: var(--hk-red);   color: #fff; }
+}
+
+/* ABOUT (was SEARCH) — ghost outline */
+.hk-btn-g {
+  background: transparent;
+  color: var(--hk-td) !important;
+  border-color: #1e1e1e;
+}
+.hk-btn-g:hover {
+  border-color: var(--hk-red);
+  color: var(--hk-red) !important;
+  background: rgba(204,0,0,.06);
+}
+
+/* ════════════════════════════════════
+   TERMINAL WIDGET
+   ════════════════════════════════════ */
+.hk-term {
+  position: relative; z-index: 1;
+  border: 1px solid var(--hk-red);
+  box-shadow: 0 0 28px rgba(180,0,0,.12);
+  font-family: var(--hk-mono); font-size: 12.5px;
+  background: #0b0c0f;
+}
+.hk-tbar {
+  background: #000;
+  border-bottom: 1px solid var(--hk-bd-d);
+  padding: 8px 14px;
+  display: flex; align-items: center; gap: 6px;
+}
+.hk-dot { width: 11px; height: 11px; border-radius: 50%; }
+.hk-dr { background: #ff5f56; }
+.hk-dy { background: #ffbd2e; }
+.hk-dg { background: #27c93f; }
+.hk-tttl { margin-left: auto; font-size: 10px; color: var(--hk-tm); }
+.hk-tbody {
+  background: #0b0c0f;
+  padding: 16px 20px;
+  min-height: 300px; line-height: 1.9;
+}
+.hk-tl  { color: var(--hk-t); }
+.hk-to  { color: var(--hk-td); padding-left: 8px; }
+.hk-gr  { color: var(--hk-green); }
+.hk-rd  { color: var(--hk-red-b); }
+
+/* ════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════ */
+.hk-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 5rem;
+  border-top: 1px solid var(--hk-bd-d);
+  font-size: 12px; color: var(--hk-tm);
+  background: #0b0c0f; flex-wrap: wrap; gap: 12px;
+}
+.hk-footer a { color: var(--hk-red-b) !important; text-decoration: none !important; }
+
+/* ════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .hk-hero { grid-template-columns: 1fr; padding: 2.5rem 2.5rem 3rem; min-height: auto; }
+  .hk-term { display: none; }
+  .hk-footer { padding: 14px 2.5rem; }
+}
+@media (max-width: 640px) {
+  .hk-hero  { padding: 2rem 1.5rem 2.5rem; }
+  .hk-ascii { display: none; }
+  .hk-footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* ════════════════════════════════════
+   GLOBAL SITE OVERRIDES
+   (header, nav, code blocks, links …)
+   ════════════════════════════════════ */
+.md-header {
+  background: #0b0c0f !important;
+  border-bottom: 1px solid #1a0000 !important;
+  box-shadow: none !important;
+}
+.md-header__title { font-family: var(--hk-mono) !important; font-weight: 700 !important; }
+.md-nav__link:hover, .md-nav__link--active { color: #ff2222 !important; }
+.md-search__input {
+  background: #0a0a0a !important; border: 1px solid #1e0000 !important;
+  color: #e8e8e8 !important; font-family: var(--hk-mono) !important;
+}
+.md-search__input:focus { border-color: var(--hk-red) !important; }
+.md-typeset code       { font-family: var(--hk-mono) !important; }
+.md-typeset pre        { background: #0a0a0a !important; border: 1px solid #1e0000 !important; border-left: 3px solid var(--hk-red) !important; }
+.md-typeset h1         { color: var(--hk-red-b) !important; font-family: var(--hk-mono) !important; }
+.md-typeset h2, .md-typeset h3 { font-family: var(--hk-mono) !important; }
+.md-typeset a          { color: var(--hk-red-b) !important; }
+.md-typeset a:hover    { color: #fff !important; }
+.md-typeset table:not([class]) th { background: #0d0000 !important; color: var(--hk-red-b) !important; }
+.md-typeset .admonition { border-left-color: var(--hk-red) !important; }
+</style>
+
   </head>
   
   
@@ -84,7 +389,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="red">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,8 +397,7 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#get-started" class="md-skip">
+        <a href="#__skip" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +433,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Get started
+              Oste's Homelab
             
           </span>
         </div>
@@ -142,27 +446,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="red"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="red"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
@@ -219,7 +503,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -264,34 +550,10 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="" class="md-nav__link md-nav__link--active">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
   
   <span class="md-ellipsis">
     
@@ -306,175 +568,6 @@
 
       </a>
       
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#admonitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Admonitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Details
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-tabs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Content tabs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagrams
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Footnotes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formatting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icons-emojis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Icons, Emojis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maths" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Maths
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task Lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tooltips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tooltips
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -486,11 +579,9 @@
   
   
     <li class="md-nav__item">
-      <a href="./markdown/" class="md-nav__link">
+      <a href="./about/" class="md-nav__link">
         
   
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.27 19.385H1.73A1.73 1.73 0 0 1 0 17.655V6.345a1.73 1.73 0 0 1 1.73-1.73h20.54A1.73 1.73 0 0 1 24 6.345v11.308a1.73 1.73 0 0 1-1.73 1.731zM5.769 15.923v-4.5l2.308 2.885 2.307-2.885v4.5h2.308V8.078h-2.308l-2.307 2.885-2.308-2.885H3.46v7.847zM21.232 12h-2.309V8.077h-2.307V12h-2.308l3.461 4.039z"/></svg>
   
   <span class="md-ellipsis">
     
@@ -962,6 +1053,8 @@
       
         
       
+        
+      
     
     
     
@@ -1060,6 +1153,36 @@
     
   
     Shodan Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./osint/secrets-leak/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M500 261.8C500 403.3 403.1 504 260 504 122.8 504 12 393.2 12 256S122.8 8 260 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C270.5 52.6 106.3 116.6 106.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H260v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Git & Secrets Leak
   
 
     
@@ -2282,7 +2405,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -2292,165 +2417,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commands
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#admonitions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Admonitions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Details
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#code-blocks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Code Blocks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#content-tabs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Content tabs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diagrams" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Diagrams
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#footnotes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Footnotes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formatting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Formatting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#icons-emojis" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Icons, Emojis
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maths" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Maths
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task Lists
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tooltips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tooltips
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2463,6 +2429,8 @@
               
                 
 
+  
+
 
 
   
@@ -2471,302 +2439,161 @@
               
               <article class="md-content__inner md-typeset">
                 
-                  
-  
-  
+<div class="hk-page">
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hk-hero">
+
+    <!-- LEFT — content -->
+    <div class="hk-hi">
+      <div class="hk-badge"><span class="hk-bdot"></span>SYSTEM ONLINE</div>
+
+      <pre class="hk-ascii"> '||'  |'                               '||               '||                     '||                             
+ || .'    .. ...     ...   ... ... ...  ||    ....     .. ||    ... .   ....      || ...   ....    ....    ....  
+ ||'|.     ||  ||  .|  '|.  ||  ||  |   ||  .|...||  .'  '||   || ||  .|...||     ||'  || '' .||  ||. '  .|...|| 
+ ||  ||    ||  ||  ||   ||   ||| |||    ||  ||       |.   ||    |''   ||          ||    | .|' ||  . '|.. ||      
+.||.  ||. .||. ||.  '|..|'    |   |    .||.  '|...'  '|..'||.  '||||.  '|...'     '|...'  '|..'|' |'..|'  '|...' 
+                                                              .|....'                                            
+                                                                                                                 </pre>
+
+      <div class="hk-pl">
+        <span class="hk-prompt">root@homelab:~$</span>
+        <span class="hk-tw" id="hkTw"></span>
+        <span class="hk-cur">█</span>
+      </div>
+
+      <p class="hk-sub">
+        A personal knowledge base spanning <span class="hk-acc">offensive &amp; defensive operations</span>, 
+security research, cloud pentesting, homelab builds, Dev/SecOps, OSINT, 
+cheatsheets &amp; everything in between. 
+<span style="color:#444">// explore at your own risk.</span>
+      </p>
 
 
-<h1 id="get-started">Get started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
-<p>For full documentation visit <a href="https://zensical.org/docs/">zensical.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://zensical.org/docs/usage/new/"><code>zensical new</code></a> - Create a new project</li>
-<li><a href="https://zensical.org/docs/usage/preview/"><code>zensical serve</code></a> - Start local web server</li>
-<li><a href="https://zensical.org/docs/usage/build/"><code>zensical build</code></a> - Build your site</li>
-</ul>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<h3 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/admonitions/">documentation</a></p>
-</blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a <strong>note</strong> admonition. Use it to provide helpful information.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is a <strong>warning</strong> admonition. Be careful!</p>
-</div>
-<h3 id="details">Details<a class="headerlink" href="#details" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/admonitions/#collapsible-blocks">documentation</a></p>
-</blockquote>
-<details class="info">
-<summary>Click to expand for more info</summary>
-<p>This content is hidden until you click to expand it.
-Great for FAQs or long explanations.</p>
-</details>
-<h2 id="code-blocks">Code Blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/code-blocks/">documentation</a></p>
-</blockquote>
-<div class="language-python highlight"><span class="filename">Code blocks</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="hll">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span> <span class="c1"># (1)!</span>
-</span></span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<ol>
-<li>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/code-blocks/#code-annotations">documentation</a></p>
-</blockquote>
-<p>Code annotations allow to attach notes to lines of code.</p>
-</li>
-</ol>
-<p>Code can also be highlighted inline: <code class="language-python highlight"><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span></code>.</p>
-<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/content-tabs/">documentation</a></p>
-</blockquote>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="content-tabs-python" name="__tabbed_1" type="radio" /><input id="content-tabs-rust" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="content-tabs-python">Python</label><label for="content-tabs-rust">Rust</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello from Python!&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-rs highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello from Rust!&quot;</span><span class="p">);</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/diagrams/">documentation</a></p>
-</blockquote>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/footnotes/">documentation</a></p>
-</blockquote>
-<p>Here's a sentence with a footnote.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<p>Hover it, to see a tooltip.</p>
-<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/formatting/">documentation</a></p>
-</blockquote>
-<ul>
-<li><mark>This was marked (highlight)</mark></li>
-<li><ins>This was inserted (underline)</ins></li>
-<li><del>This was deleted (strikethrough)</del></li>
-<li>H<sub>2</sub>O</li>
-<li>A<sup>T</sup>A</li>
-<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></li>
-</ul>
-<h2 id="icons-emojis">Icons, Emojis<a class="headerlink" href="#icons-emojis" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/icons-emojis/">documentation</a></p>
-</blockquote>
-<ul>
-<li><img alt="✨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/2728.svg" title=":sparkles:" /> <code>:sparkles:</code></li>
-<li><img alt="🚀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f680.svg" title=":rocket:" /> <code>:rocket:</code></li>
-<li><img alt="🎉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f389.svg" title=":tada:" /> <code>:tada:</code></li>
-<li><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4dd.svg" title=":memo:" /> <code>:memo:</code></li>
-<li><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f440.svg" title=":eyes:" /> <code>:eyes:</code></li>
-</ul>
-<h2 id="maths">Maths<a class="headerlink" href="#maths" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/math/">documentation</a></p>
-</blockquote>
-<p>$$
-\cos x=\sum_{k=0}<sup>{\infty}\frac{(-1)</sup>k}{(2k)!}x^{2k}
-$$</p>
-<div class="admonition warning">
-<p class="admonition-title">Needs configuration</p>
-<p>Note that MathJax is included via a <code>script</code> tag on this page and is not
-configured in the generated default configuration to avoid including it
-in a pages that do not need it. See the documentation for details on how
-to configure it on all your pages if they are more Maths-heavy than these
-simple starter pages.</p>
-</div>
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-<h2 id="task-lists">Task Lists<a class="headerlink" href="#task-lists" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/lists/#using-task-lists">documentation</a></p>
-</blockquote>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install Zensical</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configure <code>zensical.toml</code></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Write amazing documentation</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Deploy anywhere</li>
-</ul>
-<h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>Go to <a href="https://zensical.org/docs/authoring/tooltips/">documentation</a></p>
-</blockquote>
-<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>This is the footnote.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-  
-
-
-
-  <form class="md-feedback" name="feedback" hidden>
-    <fieldset>
-      <legend class="md-feedback__title">
-        Was this page helpful?
-      </legend>
-      <div class="md-feedback__inner">
-        <div class="md-feedback__list">
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z"/></svg>
-            </button>
-          
-            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15V3h4v12zM15 3a2 2 0 0 1 2 2v10c0 .55-.22 1.05-.59 1.41L9.83 23l-1.06-1.06c-.27-.27-.44-.64-.44-1.06l.03-.31.95-4.57H3a2 2 0 0 1-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3zm0 2H5.97L3 12v2h8.78l-1.13 5.32L15 14.97z"/></svg>
-            </button>
-          
+      
+      <div class="hk-stats">
+        <div class="hk-stat">
+          <span class="hk-sv" id="hkC1">0</span>
+          <span class="hk-sl">// notes</span>
         </div>
-        <div class="md-feedback__note">
-          
-            <div data-md-value="1" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-              Thanks for your feedback!
-            </div>
-          
-            <div data-md-value="0" hidden>
-              
-              
-                
-              
-              
-              
-                
-                
-              
-                Thanks for your feedback! Help us improve this page by
-  using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-
-            </div>
-          
+        <span class="hk-pipe">|</span>
+        <div class="hk-stat">
+          <span class="hk-sv" id="hkC2">0</span>
+          <span class="hk-sl">// categories</span>
+        </div>
+        <span class="hk-pipe">|</span>
+        <div class="hk-stat">
+          <span class="hk-sv" id="hkC3">0</span>
+          <span class="hk-sl">// uptime %</span>
         </div>
       </div>
-    </fieldset>
-  </form>
 
+      <div class="hk-cta">
+        <!-- Black by default, blinks red on hover -->
+        <a href="docker/" class="hk-btn hk-btn-p">[ Dive In ]</a>
+        <!-- Takes user to About page -->
+        <a href="about/" class="hk-btn hk-btn-g">[ About ]</a>
+      </div>
+    </div>
 
-  <h2 id="__comments">Comments</h2>
-  <!-- Insert generated snippet here -->
+    <!-- RIGHT — terminal widget -->
+    <div class="hk-term">
+      <div class="hk-tbar">
+        <span class="hk-dot hk-dr"></span>
+        <span class="hk-dot hk-dy"></span>
+        <span class="hk-dot hk-dg"></span>
+        <span class="hk-tttl">bash — 80×24</span>
+      </div>
+      <div class="hk-tbody">
+        <div class="hk-tl"><span class="hk-gr">┌──(</span><span class="hk-rd">root㉿homelab</span><span class="hk-gr">)-[~]</span></div>
+        <div class="hk-tl"><span class="hk-gr">└─</span><span class="hk-rd">#</span> cat welcome.txt</div>
+        <div class="hk-to">&nbsp;</div>
+        <div class="hk-to"><span class="hk-rd">██</span> Welcome to Oste's Homelab KB.</div>
+        <div class="hk-to"><span class="hk-rd">██</span> All notes are for educational purposes.</div>
+        <div class="hk-to"><span class="hk-rd">██</span> Stay curious. ☠</div>
+        <div class="hk-to">&nbsp;</div>
+        <div class="hk-tl"><span class="hk-gr">┌──(</span><span class="hk-rd">root㉿homelab</span><span class="hk-gr">)-[~]</span></div>
+        <div class="hk-tl"><span class="hk-gr">└─</span><span class="hk-rd">#</span> ls -la /docs</div>
+        <div class="hk-to">drwxr-xr-x  docker/</div>
+        <div class="hk-to">drwxr-xr-x  research/</div>
+        <div class="hk-to">drwxr-xr-x  osint/</div>
+        <div class="hk-to">drwxr-xr-x  cloud-pentest/</div>
+        <div class="hk-to">drwxr-xr-x  wazuh/</div>
+        <div class="hk-to">drwxr-xr-x  socops/</div>
+        <div class="hk-to">&nbsp;</div>
+        <div class="hk-tl"><span class="hk-gr">┌──(</span><span class="hk-rd">root㉿homelab</span><span class="hk-gr">)-[~]</span></div>
+        <div class="hk-tl"><span class="hk-gr">└─</span><span class="hk-rd">#</span> <span class="hk-cursm">▌</span></div>
+      </div>
+    </div>
 
-<script src="https://giscus.app/client.js"
-        data-repo="hacktardinc/hacktardinc.github.io"
-        data-repo-id="R_kgDORs4YuA"
-        data-category="Q&A"
-        data-category-id="DIC_kwDORs4YuM4C48_S"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark_tritanopia"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="hk-footer">
+    <span>
+      <span style="color:#ff2222">root@homelab</span><span style="color:#333">:~$</span>
+      echo "Stay curious. Stay hungry. ☠"
+    </span>
+    <span>Built with <a href="https://zensical.org">Zensical</a> &nbsp;·&nbsp; <span id="hkClk"></span></span>
+  </footer>
+
+</div>
+<script>
+(function () {
+  /* ── Typewriter ── */
+  var phrases = [
+    'recon --target all',
+    'nmap -sC -sV -p-',
+    'volatility -f mem.raw',
+    'gobuster dir -u ...',
+    'exploit --chain ad',
+    'knowledge --base load'
+  ];
+  var pi = 0, ci = 0, del = false, pausing = false;
+  var tw = document.getElementById('hkTw');
+  if (tw) {
+    (function type() {
+      var p = phrases[pi];
+      if (pausing) { pausing = false; del = true; setTimeout(type, 1200); return; }
+      if (!del) {
+        tw.textContent = p.slice(0, ++ci);
+        if (ci === p.length) { pausing = true; setTimeout(type, 2400); return; }
+      } else {
+        tw.textContent = p.slice(0, --ci);
+        if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; }
+      }
+      setTimeout(type, del ? 30 : 70);
+    })();
+  }
+
+  /* ── Counters — update these numbers to match your real totals ── */
+  function cnt(id, target) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var step = Math.ceil(target / 40), c = 0;
+    var iv = setInterval(function () {
+      c = Math.min(c + step, target);
+      el.textContent = c;
+      if (c >= target) clearInterval(iv);
+    }, 28);
+  }
+  cnt('hkC1', 47);  /* ← your note count     */
+  cnt('hkC2', 12);  /* ← your category count  */
+  cnt('hkC3', 99);  /* ← uptime %             */
+
+  /* ── Live clock ── */
+  var clk = document.getElementById('hkClk');
+  if (clk) {
+    (function tick() {
+      var n = new Date(), p = function (x) { return String(x).padStart(2, '0'); };
+      clk.textContent = n.getFullYear() + '-' + p(n.getMonth() + 1) + '-' + p(n.getDate())
+        + ' ' + p(n.getHours()) + ':' + p(n.getMinutes()) + ':' + p(n.getSeconds());
+      setTimeout(tick, 1000);
+    })();
+  }
+})();
 </script>
 
-  <!-- Synchronize Giscus theme with palette -->
-  <script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-      var theme = palette.color.scheme === "slate"
-        ? "transparent_dark"
-        : "light"
-
-      // Instruct Giscus to set theme
-      giscus.setAttribute("data-theme", theme) 
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      var ref = document.querySelector("[data-md-component=palette]")
-      ref.addEventListener("change", function() {
-        var palette = __md_get("__palette")
-        if (palette && typeof palette.color === "object") {
-          var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-          // Instruct Giscus to change theme
-          var frame = document.querySelector(".giscus-frame")
-          frame.contentWindow.postMessage(
-            { giscus: { setConfig: { theme } } },
-            "https://giscus.app"
-          )
-        }
-      })
-    })
-  </script>
-
-                
               </article>
             </div>
           
@@ -2788,11 +2615,13 @@ simple starter pages.</p>
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
         
           
-          <a href="./markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
+          <a href="./about/" class="md-footer__link md-footer__link--next" aria-label="Next: About">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
